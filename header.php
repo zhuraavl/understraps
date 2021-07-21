@@ -66,7 +66,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Facebook Pixel Code -->
 
 
-	
+<link rel='stylesheet' id='pwb-lib-slick-css'  href='/wp-content/plugins/perfect-woocommerce-brands/assets/lib/slick/slick.css' type='text/css' media='all' />
+<script type='text/javascript' src='/wp-content/plugins/perfect-woocommerce-brands/assets/lib/slick/slick.min.js' id='pwb-lib-slick-js'></script>
 	
 </head>
 
