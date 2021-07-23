@@ -69,6 +69,79 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel='stylesheet' id='pwb-lib-slick-css'  href='/wp-content/plugins/perfect-woocommerce-brands/assets/lib/slick/slick.css' type='text/css' media='all' />
 <script type='text/javascript' src='/wp-content/plugins/perfect-woocommerce-brands/assets/lib/slick/slick.min.js' id='pwb-lib-slick-js'></script>
 	
+<style>
+    #hedaer {
+    	background: white;
+    }
+    .volume-icon,
+    .volume-icon-box {
+    	margin-top: 68px;
+    }
+    #hedaer .py-2 {
+    	padding: 0 !important;
+    }
+    .header-slim > li {
+    	width: auto !important;
+    }
+    body header#hedaer ul.dropdown-menu.show {
+    	top: 40px!important;
+    	padding-top: 100px;
+    	padding-bottom: 100px;
+    }
+    #main-menu > li > ul {
+    	padding-left: 10%;
+    	padding-right: 10%;
+    }
+    #main-menu > li > ul > li {
+    	width: 19%;
+    	overflow: revert;
+    	height: 30px;
+    }
+    #main-menu > li > ul > li  a {
+    	font-family: Standard Book;
+        font-size: 14px !important;
+        line-height: 30px !important;
+        text-align: center;
+        color: #000000;
+    	padding: 0 !important;
+    	border: 0px solid #000 !important;
+    }
+    #main-menu > li > ul > li.menu-item-object-custom > a {
+    	font-family: Roboto;
+        font-size: 12px !important;
+        line-height: 14px !important;
+        text-transform: capitalize;
+        color: #000000;
+        opacity: 0.7;
+    }
+    #main-menu > li > ul > li > ul {
+    	position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        z-index: 1000;
+        display: inline-block !important;
+    	border: 0px solid #000 !important;
+    	padding-bottom: 20px !important;
+    	padding-top: 20px !important;
+    	overflow: hidden !important;
+    	
+    	
+    }
+    #main-menu > li > ul > li > ul >li {
+    	width: 100% !important;
+    }
+
+</style>
+	
+<script>
+	jQuery(document).ready(function() {
+        jQuery('#main-menu > li > ul > li.menu-item-object-custom > a').attr('href', '#');
+        jQuery( "#main-menu > li > ul > li.menu-item-object-custom > a" ).click(function( event ) {
+      	  event.preventDefault();
+      	});
+	});
+</script>
+	
 </head>
 
 <body <?php body_class(); ?>>
@@ -113,6 +186,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span></span>
             <span></span>
           </div>
+          
            <?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
@@ -126,15 +200,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					)
 				); ?>
         </li>
-        
-        
-        <li>
-           
-        </li>
-        
-         
-      
-        
+
         <li>
           <ul class="side-right-menu">
           <li>
