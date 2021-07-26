@@ -358,17 +358,7 @@ foreach ( $cats as $category ) {
 	</div>
     -->
     
-<div class="hero-box">
-    <h2 class="">Subscribe to our<br/>updates</h2>
-</div>
-<div class="mainpage-subscribe">
-	<?php echo do_shortcode('[contact-form-7 id="233" title="Contact form 1"]') ?>  
-	<div class="big-dots">
-		<div></div>
-		<div></div>
-		<div></div>
-	</div>
-</div>
+
              
 
 	
