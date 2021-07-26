@@ -321,3 +321,17 @@ function vnm_wc_redirect_account_dashboard( $wp ) {
 add_action( 'parse_request', 'vnm_wc_redirect_account_dashboard', 10, 1 );
 
 
+
+
+add_filter( 'woocommerce_product_tabs', 'misha_rename_additional_info_tab' );
+
+function misha_rename_additional_info_tab( $tabs ) {
+
+	$tabs['description']['title'] = 'INFO';
+	$tabs['additional_information']['title'] = 'DETAILS';
+
+	return $tabs;
+
+}
+
+
