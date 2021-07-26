@@ -75,7 +75,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     .volume-icon,
     .volume-icon-box {
-    	margin-top: 68px;
+    	margin-top: 50px;
     }
     #hedaer .py-2 {
     	padding: 0 !important;
@@ -94,8 +94,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     #main-menu > li > ul > li {
     	width: 19%;
-    	overflow: revert;
-    	height: 30px;
+    	vertical-align: top;
+    }
+    #main-menu > li > ul.brand-dropdown {
+    	width: 100% !important;
+    	column-width: 18%;
+    	column-count: 5;
+    	column-gap: 1%;
+    }
+    #main-menu > li > ul.brand-dropdown > li {
+    	width: 100% !important;
     }
     #main-menu > li > ul > li  a {
     	font-family: Standard Book;
@@ -105,6 +113,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         color: #000000;
     	padding: 0 !important;
     	border: 0px solid #000 !important;
+    	cursor: pointer;
     }
     #main-menu > li > ul > li.menu-item-object-custom > a {
     	font-family: Roboto;
@@ -113,6 +122,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         text-transform: capitalize;
         color: #000000;
         opacity: 0.7;
+    	padding-bottom: 20px !important;
     }
     #main-menu > li > ul > li > ul {
     	position: relative !important;
@@ -124,13 +134,120 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     	padding-bottom: 20px !important;
     	padding-top: 20px !important;
     	overflow: hidden !important;
-    	
-    	
     }
     #main-menu > li > ul > li > ul >li {
     	width: 100% !important;
     }
-
+    #main-menu div > ul > li {
+    	width: 100%;
+    }
+    .menu-new-menu-container .left-side-menu li.newsymbol {
+    	padding-bottom: 30px !important;
+    }
+    .serch-menu-item {
+    	width: 50% !important;
+    }    
+    .serch-menu-item .dgwt-wcas-no-submit .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input {
+    	text-align: center !important;
+    	border: 0px solid #ddd !important;
+    	border-bottom: 1px solid #000000 !important;
+    	border-radius: 0 !important;
+    }
+    .serch-menu-item .dgwt-wcas-no-submit .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input {
+        font-family: Standard Book;
+        font-size: 16px;
+        line-height: 19px;
+        color: #000000;
+    	font-style: normal !important;
+        font-weight: normal !important;
+    }
+    .serch-menu-item .dgwt-wcas-no-submit .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input::placeholder {
+        opacity: 0.5;
+    	font-style: normal !important;
+        font-weight: normal !important;
+    }
+    .serch-menu-item .dgwt-wcas-no-submit .dgwt-wcas-sf-wrapp svg,
+    .dgwt-wcas-suggestions-wrapp {
+    	display: none !important;
+    }
+    .custom-answer .dgwt-wcas-suggestion {
+    	display: inline-block !important;
+    	width: 100% !important;
+    }
+    .custom-answer .dgwt-wcas-suggestion .dgwt-wcas-si,
+    .custom-answer .dgwt-wcas-suggestion .dgwt-wcas-content-wrapp {
+    	display: inline-block !important;
+    	vertical-align: top;
+    	margin: 10px 0 10px 0;
+    }
+    .custom-answer .dgwt-wcas-suggestion .dgwt-wcas-content-wrapp {
+    	width: auto !important;
+    }
+    .custom-answer .dgwt-wcas-suggestion .dgwt-wcas-content-wrapp .dgwt-wcas-st-title {
+    	line-height: 50px !important;
+    }
+    #main-menu > li > ul.search-dropdown > li .custom-answer .dgwt-wcas-suggestion-more .dgwt-wcas-st-more {
+    	width: 217px !important;
+        height: 42px !important;
+    	display: inline-block !important;
+    	border: 1px solid #000000 !important;
+        box-sizing: border-box;
+        border-radius: 50px;
+    	font-family: Standard Book;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 42px;
+        color: #000000;
+    }
+    #main-menu .cart-customlocation {
+    	width: auto !important;
+        border: 0px solid !important;
+    }
+    @media (max-width: 600px) {
+        #main-menu > li > ul > li {
+        	width: 48%;
+        	vertical-align: top;
+        }
+        #main-menu > li > ul.brand-dropdown {
+        	width: 100% !important;
+        	column-width: 48%;
+        	column-count: 2;
+        	column-gap: 1%;
+        }
+        .serch-menu-item {
+        	width: 100% !important;
+        }    
+        header#hedaer ul.dropdown-menu.show {
+        	width: 100% !important;
+        }
+        .volume-icon-box {
+        	top: 0 !important;
+        } 
+        .menu-new-menu-container {
+        	display: inline-block !important;
+        	top: 10px !important;
+        }
+        body header#hedaer ul.dropdown-menu.show {
+        	padding-top: 100px !important;
+        }
+        .wo-men-dropdown > li:first-child,
+        .wo-men-dropdown > li:last-child {
+        	float: left;
+        }
+        .wo-men-dropdown > li:last-child {
+        	padding-top: 35px !important;
+        }
+        .js-dgwt-wcas-enable-mobile-form {
+        	display: none !important;
+        }
+        .bag-title {
+        	display: inline-block !important;
+        }
+        body header#hedaer .menu-new-menu-container .left-side-menu > li {
+        	padding: 0 10px !important;
+        }
+    }
 </style>
 	
 <script>
@@ -139,6 +256,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         jQuery( "#main-menu > li > ul > li.menu-item-object-custom > a" ).click(function( event ) {
       	  event.preventDefault();
       	});
+
+        jQuery("body").on('DOMSubtreeModified', ".dgwt-wcas-suggestions-wrapp", function() {
+        	jQuery( ".custom-answer").html('');
+        	jQuery( ".custom-answer").prepend( jQuery( ".dgwt-wcas-suggestions-wrapp > a" ) );
+        	jQuery( ".dgwt-wcas-st-more").html(jQuery( ".dgwt-wcas-st-more").html().replace('...',''));
+        });
+
+        jQuery("#main-menu > li > a").on('click', function() {
+        	jQuery('.volume-icon').each(function () {
+                var num = Math.floor(Math.random() * 2 + 1),
+                    img = jQuery(this);
+                img.attr('src', '/log/' + num + '.svg');
+                img.attr('alt', 'Src: ' + img.attr('src'));
+              });
+        });
+        
+        
+        
+        
 	});
 </script>
 	
@@ -181,34 +317,203 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        
        
         <li>
-          <div class="open-mobil">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          
-           <?php wp_nav_menu(
-					array(
-						'theme_location'  => 'primary',
-						'container_class' => '',
-						'container_id'    => '',
-						'menu_class'      => 'left-side-menu',
-						'fallback_cb'     => '',
-						'menu_id'         => 'main-menu',
-						'depth'           => 3,
-						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-					)
-				); ?>
-        </li>
+          <div class="menu-new-menu-container">
+          	<ul id="main-menu" class="left-side-menu">
+          		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6917" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-6917 nav-item">
+          			<a title="women" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-6917">women</a>
+					<ul class="dropdown-menu wo-men-dropdown" aria-labelledby="menu-item-dropdown-6917" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(372px, 38px, 0px);">
+						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-10963" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-10963 nav-item">
+							<a title="Shop Women" href="#" class="dropdown-item">Shop Women</a>
+    						<?php wp_nav_menu(
+            					array(
+            						'theme_location'  => 'primary',
+            					    'menu'            => 'shop-women',
+            						'container_class' => '',
+            						'container_id'    => '',
+            						'menu_class'      => 'menu-under',
+            						'fallback_cb'     => '',
+            						'menu_id'         => 'shop-women',
+            						'depth'           => 1,
+            						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+            					)
+            				); ?>
+						</li>
+						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-109631" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-109631 nav-item">
+							<a title="Women Clothing" href="#" class="dropdown-item">Women Clothing</a>
+    						<?php wp_nav_menu(
+            					array(
+            						'theme_location'  => 'primary',
+            					    'menu'            => 'women-clothing',
+            						'container_class' => '',
+            						'container_id'    => '',
+            						'menu_class'      => 'menu-under',
+            						'fallback_cb'     => '',
+            						'menu_id'         => 'women-clothing',
+            						'depth'           => 1,
+            						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+            					)
+            				); ?>
+						</li>
+						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-109631" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-109631 nav-item">
+							<a title="Shoes & Accessories" href="#" class="dropdown-item">Shoes & Accessories</a>
+    						<?php wp_nav_menu(
+            					array(
+            						'theme_location'  => 'primary',
+            					    'menu'            => 'shoes-accessories',
+            						'container_class' => '',
+            						'container_id'    => '',
+            						'menu_class'      => 'menu-under',
+            						'fallback_cb'     => '',
+            						'menu_id'         => 'shoes-accessories',
+            						'depth'           => 1,
+            						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+            					)
+            				); ?>
+						</li>
+					</ul>
+				</li>
+				<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6917" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-6917 nav-item">
+          			<a title="men" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-6917">men</a>
+					<ul class="dropdown-menu wo-men-dropdown" aria-labelledby="menu-item-dropdown-6917" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(372px, 38px, 0px);">
+						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-10963" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-10963 nav-item">
+							<a title="Shop Men" href="#" class="dropdown-item">Shop Men</a>
+    						<?php wp_nav_menu(
+            					array(
+            						'theme_location'  => 'primary',
+            					    'menu'            => 'shop-men',
+            						'container_class' => '',
+            						'container_id'    => '',
+            						'menu_class'      => 'menu-under',
+            						'fallback_cb'     => '',
+            						'menu_id'         => 'shop-men',
+            						'depth'           => 1,
+            						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+            					)
+            				); ?>
+						</li>
+						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-109631" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-109631 nav-item">
+							<a title="Men Clothing" href="#" class="dropdown-item">Men Clothing</a>
+    						<?php wp_nav_menu(
+            					array(
+            						'theme_location'  => 'primary',
+            					    'menu'            => 'men-clothing',
+            						'container_class' => '',
+            						'container_id'    => '',
+            						'menu_class'      => 'menu-under',
+            						'fallback_cb'     => '',
+            						'menu_id'         => 'men-clothing',
+            						'depth'           => 1,
+            						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+            					)
+            				); ?>
+						</li>
+						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-109631" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-109631 nav-item">
+							<a title="Shoes & Accessories" href="#" class="dropdown-item">Shoes & Accessories</a>
+    						<?php wp_nav_menu(
+            					array(
+            						'theme_location'  => 'primary',
+            					    'menu'            => 'shoes-accessories-men',
+            						'container_class' => '',
+            						'container_id'    => '',
+            						'menu_class'      => 'menu-under',
+            						'fallback_cb'     => '',
+            						'menu_id'         => 'shoes-accessories-men',
+            						'depth'           => 1,
+            						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+            					)
+            				); ?>
+						</li>
+					</ul>
+				</li>
+				
+				<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6917" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-6917 nav-item">
+          			<a title="brands" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-6917">brands</a>
+					<ul class="dropdown-menu brand-dropdown" aria-labelledby="menu-item-dropdown-6917" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(372px, 38px, 0px);">
+						
+						<?php  
+                    	$brands = array();
+                    	$brands = \Perfect_Woocommerce_Brands\Perfect_Woocommerce_Brands::get_brands(true);
+                    	
+                    	$lastsymbol = '';
+                    	$newsymbol = '';
+                 
+                    	$i = 1;
+                    	$brandss = array();
+                    	
+                    	foreach ($brands as $brand) {
+                    	    $brandss[$i] = $brand;
+                    	    $i++;
+                    	}
+                    	
+                    	foreach ($brandss as $key => $brand) {
+                    	    $lastsymbol = mb_strtolower(mb_substr($brand->name,0,1));
+                    	    if(isset($brandss[$key+1])) {
+                    	        $newsymbol = mb_strtolower(mb_substr($brandss[$key+1]->name,0,1));
+                    	    } else {
+                    	        $newsymbol = '';
+                    	    }
+                    	    if($lastsymbol != $newsymbol) {
+                    	?>
+                        	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-10963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10965 nav-item newsymbol">
+    							<a title="<?php echo $brand->name ?>" href="/brand/<?php echo $brand->slug ?>/" class="nav-link"><?php echo $brand->name ?></a>
+    						</li>
+                        <?php
+                    	    } else {
+                    	?>
+                    		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-10963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10965 nav-item">
+    							<a title="<?php echo $brand->name ?>" href="/brand/<?php echo $brand->slug ?>/" class="nav-link"><?php echo $brand->name ?></a>
+    						</li>
+                    	<?php 
+                    	    }
+                        }
+                    	?>
+						
+					</ul>
+				</li>
+				<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6917" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-6917 nav-item">
+          			<a title="search" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-6917">search</a>
+					<ul class="dropdown-menu search-dropdown" aria-labelledby="menu-item-dropdown-6917" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(372px, 38px, 0px);">
+						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-10963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10965 nav-item serch-menu-item">
+							<?php echo do_shortcode('[fibosearch]'); ?>
+							<div class="custom-answer">
+							</div>	
+						</li>
+					</ul>
+				</li>
+				<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6917" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-6917 nav-item">
+				
+					<div style="display: none !important"><?php echo do_shortcode('[woo-currency-switcher]')?></div>
+				
+					<?php 
+					   $modsss = frameWcu::_()->getModule('currency');
+					  
+					   $currencyModel = frameWcu::_()->getModule('currency')->getModel();
+					   $currencies = $currencyModel->getCurrencies();
+					   
+					   
+					?>
 
-        <li>
-          <ul class="side-right-menu">
-          <li>
-           <?php echo do_shortcode('[fibosearch]'); ?>
-            
-          </li>
-           <li><?php echo do_shortcode('[woo-currency-switcher]')?></li>
-           
+          			<a title="currency" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-6917"><?php echo $modsss->currentCurrency ?></a>
+					<ul class="dropdown-menu currency-dropdown" aria-labelledby="menu-item-dropdown-6917" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(372px, 38px, 0px);">
+						<?php foreach ($currencies as $key => $currency) {?>
+							<?php if($modsss->currentCurrency != $currency['name']) { ?>
+    							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-10963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10965 nav-item serch-menu-item">
+        							<a title="<?php echo $currency['name']?>" class="nav-link" onclick="wcuUpdateUrlParam('currency', '<?php echo $currency['name']?>');"><?php echo $currency['name']?></a>
+        						</li>
+							<?php }?>
+						<?php }?>
+					</ul>
+				</li>
+				<li><a href="/cart" class="nav-link xoo-wsc-cart-trigger"><span class="bag-title">Bag</span>  <span class="cart-customlocation"><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a></li>
+			</ul>
+		</div>
+          
+          
+          
+          
+          
+          
+          
            
 <!--
            <?php
@@ -219,11 +524,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 }?>
 -->
            
-          
-			   
-			    
-			    <li><a href="/cart" class="nav-link xoo-wsc-cart-trigger"><span class="bag-title">Bag</span>  <span class="cart-customlocation"><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a></li>
-			  </ul>
+
            <?php global $woocommerce; ?>
 <!--
  <a class="your-class-name" href="<?php echo $woocommerce->cart->get_cart_url(); ?>"
@@ -232,10 +533,7 @@ title="<?php _e('Cart View', 'woothemes'); ?>">
 <?php echo $woocommerce->cart->get_cart_total(); ?>
 </a>
 -->
-        </li>
-      </ul>
-     
-     
+
      
     </div>
   
