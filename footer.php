@@ -20,10 +20,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="mainpage-subscribe">
 	<?php echo do_shortcode('[contact-form-7 id="233" title="Contact form 1"]') ?>  
 	<div class="socs">
-		<a href="https://www.instagram.com/2020s.shop.official/"><img src="http://2020s.shop/wp-content/themes/understraps/pic/instagram-2.svg" alt="" width="20px"></a>
-		<a href=""><img src="http://2020s.shop/wp-content/themes/understraps/pic/face.svg" alt="" width="10px"></a>
-		<a href=""><img src="http://2020s.shop/wp-content/themes/understraps/pic/pin.svg" alt="" width="20px"></a>
-		<a href=""><img src="http://2020s.shop/wp-content/themes/understraps/pic/twitt.svg" alt="" width="20px"></a>
+		<a href="https://www.instagram.com/2020s.shop.official/"><img src="http://2020s.shop/wp-content/themes/understrap/pic/instagram-2.svg" alt="" width="20px"></a>
+		<a href=""><img src="http://2020s.shop/wp-content/themes/understrap/pic/face.svg" alt="" width="10px"></a>
+		<a href=""><img src="http://2020s.shop/wp-content/themes/understrap/pic/pin.svg" alt="" width="20px"></a>
+		<a href=""><img src="http://2020s.shop/wp-content/themes/understrap/pic/twitt.svg" alt="" width="20px"></a>
 	</div>
 </div>
 
