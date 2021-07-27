@@ -142,7 +142,7 @@ if ( post_password_required() ) {
 
 
 <div class="row">
-      <div class="col-12 string-grid-products px-0 pb-5">
+      <div class="col-12 string-grid-products px-0 pb-5 text-center">
         
       
 <?php 
@@ -202,7 +202,7 @@ if ( post_password_required() ) {
 <!--/////////-->
 <div class="row py-5">
   <div class="col-12 px-0">
-<div class="text-center"><p class="small-title">In this category:</p></div>
+<div class="text-center text-uppercase"><p class="small-title">OTHER IN  <?php echo wc_get_product_category_list($product->get_id()) ?></p></div>
 <div class="related-category">
 <?php
 

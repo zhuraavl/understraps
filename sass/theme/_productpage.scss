@@ -48,6 +48,10 @@ $main: 'Standard Book';
   padding: 10px 0;
   display: block;
 }
+.woocommerce div.product form.cart .variations label {
+  font-size: 12px;
+  font-weight: 400;
+}
 
 
 .wc-tabs-wrapper {
@@ -116,6 +120,11 @@ $main: 'Standard Book';
 
 
 
+.woocommerce div.product form.cart .variations td.label {
+  display: none !important;
+}
+
+
 .single-brand-info-box {
   margin: auto;
   margin-top: 100px;
@@ -132,6 +141,34 @@ $main: 'Standard Book';
   h2 {
     font-size: 14px;
   }
+}
+
+#tab-pwb_tab-content img {
+  width: 100px;
+  margin: 15px auto;
+}
+.button-variable-item span {
+  font-size: 14px !important;
+}
+.woo-selected-variation-item-name {
+  display: none !important;
+}
+
+.summary.entry-summary .price {
+  margin: 0;
+  margin: 10px 0 12.5px;
+}
+.summary.entry-summary .price .woocommerce-Price-amount.amount{
+  font-size: 14px;
+  color: #000;
+  
+}
+
+
+
+
+.single_variation_wrap {
+  margin-top: 25px; 
 }
 
 

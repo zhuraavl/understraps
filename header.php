@@ -116,7 +116,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     	cursor: pointer;
     }
     #main-menu > li > ul > li.menu-item-object-custom > a {
-    	font-family: Roboto;
+    	
         font-size: 12px !important;
         line-height: 14px !important;
         text-transform: capitalize;
