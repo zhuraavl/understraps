@@ -35,7 +35,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 			<tbody>
 				<?php foreach ( $attributes as $attribute_name => $options ) : ?>
 					<tr>
-						<td class="label d-none"><label for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?></label></td>
+						<td class="label"><label for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?></label></td>
 						<td class="value">
 							<?php
 								wc_dropdown_variation_attribute_options(
@@ -52,11 +52,6 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				<?php endforeach; ?>
 			</tbody>
 		</table>
-    <div class="size-link pb-2">
-      <a href="">Size guide</a>
-    </div>
-    
-
 
 		<div class="single_variation_wrap">
 			<?php
@@ -84,8 +79,6 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 	<?php do_action( 'woocommerce_after_variations_form' ); ?>
 </form>
-
-
 
 <?php
 do_action( 'woocommerce_after_add_to_cart_form' );
