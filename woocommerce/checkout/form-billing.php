@@ -19,6 +19,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 <div class="woocommerce-billing-fields">
+	<p class="h2">CHECKOUT</p>
 	<?php if ( wc_ship_to_billing_address_only() && WC()->cart->needs_shipping() ) : ?>
 
 		
@@ -34,17 +35,26 @@ defined( 'ABSPATH' ) || exit;
 	<div class="woocommerce-billing-fields__field-wrapper">
 		<?php
 		$fields = $checkout->get_checkout_fields( 'billing' );
-
+		$adress = $fields['billing_address_1'];
+		unset($fields['billing_address_1']);
+		
+		//print_r('<pre>'); print_r($fields); exit();
+		
+		
 		foreach ( $fields as $key => $field ) {
 			woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
 		}
+		
 		?>
 	</div>
 
-	<?php do_action( 'woocommerce_after_checkout_billing_form', $checkout ); ?>
+	<?php 
+	   do_action( 'woocommerce_after_checkout_billing_form', $checkout );  
+	   woocommerce_form_field( 'billing_address_1', $adress, $checkout->get_value( 'billing_address_1' ) );
+	?>
 </div>
 
-<?php if ( ! is_user_logged_in() && $checkout->is_registration_enabled() ) : ?>
+<?php if ( ! is_user_logged_in() && $checkout->is_registration_enabled() && 0 ) : ?>
 	<div class="woocommerce-account-fields">
 		<?php if ( ! $checkout->is_registration_required() ) : ?>
 

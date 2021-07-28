@@ -321,3 +321,17 @@ function vnm_wc_redirect_account_dashboard( $wp ) {
 add_action( 'parse_request', 'vnm_wc_redirect_account_dashboard', 10, 1 );
 
 
+add_filter( 'woocommerce_checkout_fields', 'misha_email_first' );
+
+function misha_email_first( $checkout_fields ) {
+    $checkout_fields['billing']['billing_email']['priority'] = 1;
+    $checkout_fields['billing']['billing_phone']['priority'] = 2;
+    $checkout_fields['billing']['billing_first_name']['priority'] = 3;
+    $checkout_fields['billing']['billing_last_name']['priority'] = 4;
+    $checkout_fields['billing']['billing_country']['priority'] = 5;
+    $checkout_fields['billing']['billing_city']['priority'] = 5;
+    $checkout_fields['billing']['billing_postcode']['priority'] = 5;
+    $checkout_fields['billing']['billing_address_1']['priority'] = 8;
+    
+    return $checkout_fields;
+}

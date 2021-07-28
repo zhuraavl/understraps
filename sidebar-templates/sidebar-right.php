@@ -14,6 +14,7 @@ if ( ! is_active_sidebar( 'right-sidebar' ) ) {
 
 // when both sidebars turned on reduce col size to 3 from 4.
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
+if(0) {
 ?>
 
 <?php if ( 'both' === $sidebar_pos ) : ?>
@@ -24,3 +25,6 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 <?php dynamic_sidebar( 'right-sidebar' ); ?>
 
 </div><!-- #right-sidebar -->
+<?php 
+}
+?>

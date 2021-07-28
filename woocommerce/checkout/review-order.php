@@ -16,6 +16,8 @@
  */
 
 defined( 'ABSPATH' ) || exit;
+
+if(0) {
 ?>
 <table class="shop_table woocommerce-checkout-review-order-table">
 	
@@ -78,3 +80,6 @@ defined( 'ABSPATH' ) || exit;
 
 	</tfoot>
 </table>
+<?php 
+}
+?>
