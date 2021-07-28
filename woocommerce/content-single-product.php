@@ -117,14 +117,6 @@ if ( post_password_required() ) {
 
 
 
-<!--
-
-
-<?php echo do_shortcode('[brands]') ?>
-
-
--->
-
 
 
 
@@ -140,9 +132,9 @@ if ( post_password_required() ) {
 
 
 
-
+<section class="white-bg">
 <div class="row">
-      <div class="col-12 string-grid-products px-0 pb-5 text-center">
+      <div class="col-12 string-grid-products px-0 pb-3 text-center">
         
       
 <?php 
@@ -294,7 +286,7 @@ if ( is_singular('product') ) {
     
   </div>
 </div>
-
+</section>
 
 
 

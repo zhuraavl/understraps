@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-
+<section class="white-bg">
 <div class="hero-box mainpage-subscribe-title">
     <h2 class="">Subscribe to our<br/>updates</h2>
 </div>
@@ -26,7 +26,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<a href=""><img src="http://2020s.shop/wp-content/themes/understrap/pic/twitt.svg" alt="" width="20px"></a>
 	</div>
 </div>
-
+</section>
 
 <?php //get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
@@ -95,7 +95,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	width: 100%;
 	display: inline-block;
 	text-align: center;
-	margin: 20px 0 70px 0;
+	margin: 0px 0 5px 0;
 }
 .socs a {
 	display: inline-block;

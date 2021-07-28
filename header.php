@@ -108,22 +108,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     #main-menu > li > ul > li  a {
     	font-family: Standard Book;
-        font-size: 14px !important;
-        line-height: 30px !important;
+        font-size: 12px !important;
+        line-height: 26px !important;
         text-align: center;
         color: #000000;
     	padding: 0 !important;
     	border: 0px solid #000 !important;
     	cursor: pointer;
     }
+    #main-menu > li > ul > li  a:hover {
+        opacity: .7;
+    }
     #main-menu > li > ul > li.menu-item-object-custom > a {
     	
-        font-size: 12px !important;
+        font-size: 10px !important;
         line-height: 14px !important;
-        text-transform: capitalize;
+        text-transform: uppercase;
         color: #000000;
         opacity: 0.7;
-    	padding-bottom: 20px !important;
+    	padding-bottom: 15px !important;
     }
     #main-menu > li > ul > li > ul {
     	position: relative !important;

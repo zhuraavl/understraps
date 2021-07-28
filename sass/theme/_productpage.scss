@@ -137,7 +137,7 @@ $main: 'Standard Book';
   padding: 100px 0 0;
 }
 .single-brand-info {
-  max-width: 500px;
+  max-width: 450px;
   margin: auto;
   text-align: center;
   font-size: 12px;
@@ -149,13 +149,16 @@ $main: 'Standard Book';
   position: relative;
   height: 70px;
   overflow: hidden;
+  margin-bottom: 30px;
   &:after {
     content: '';
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 20px;
+    height: 50px;
     left: 0;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
   }
 }
 
@@ -419,4 +422,18 @@ $main: 'Standard Book';
 //  
 //}
 
+
+
+.woocommerce table.shop_attributes tr:nth-child(even) td, .woocommerce table.shop_attributes tr:nth-child(even) th {
+  background: transparent;
+}
+.woocommerce table.shop_attributes td, .woocommerce table.shop_attributes th, .woocommerce table.shop_attributes {
+  border: 0;
+}
+
+.white-bg {
+  background: #fff;
+  position: relative;
+  z-index: 100;
+}
 

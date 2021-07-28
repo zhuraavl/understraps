@@ -75,8 +75,8 @@ body {
 
 
 h1.hero-title {
-  font-size: 9vw;
-  max-width: 1200px;
+  font-size: 60px;
+  max-width: 500px;
   text-align: center;
   line-height: 1.1;
   margin: 0 auto;
@@ -87,7 +87,7 @@ h1.hero-title {
   @include media-breakpoint-down(xs) {
    
 
-    font-size: 13vw;
+    font-size: 30px;
     margin-top: 35px;
   }
   
@@ -653,7 +653,7 @@ h1.hero-title.fake  {
      font-size: 12px;
    }
    @include media-breakpoint-up(md) {
-      max-width: 250px;
+      max-width: 150px;
       margin: 0px auto 0px;
    }
    
@@ -1334,7 +1334,7 @@ p#order_comments_field label {
   justify-content: center;
   align-items: flex-end;
 }
-.woocommerce ul.products li.product, .woocommerce-page ul.products li.product, ul.products li.product {
+.main-line .woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .main-line ul.products li.product {
   margin: 0 0 50px !important;
   float: none !important;
   width: 280px !important;
@@ -1366,7 +1366,7 @@ p#order_comments_field label {
 }
 
 .woocommerce.woocommerce-page .string-grid-products, .woocommerce.woocommerce-page .related-category {
-  padding-top: 50px;
+  padding-top: 0px;
   .products {
    display: block;
    white-space: nowrap;
@@ -1427,7 +1427,7 @@ p#order_comments_field label {
   text-align: center;
 }
 .single-product .related-category {
-  padding-top: 100px !important;
+  padding-top: 50px !important;
 }
 
 .woocommerce table.shop_table tbody th, .woocommerce table.shop_table tfoot td, .woocommerce table.shop_table tfoot th {
@@ -1496,13 +1496,13 @@ p#order_comments_field label {
   
   
   h1.hero-title {
-    font-size: 8vw;
-    max-width: 1000px;
+    font-size: 60px;
+    max-width: 500px;
     margin-bottom: 0px;
     
     
     @include media-breakpoint-down(xs) {
-      font-size: 13vw;
+      font-size: 30px;
       margin-top: 0px;
     }
   }
@@ -2651,17 +2651,19 @@ ul.products li.pif-has-gallery a.woocommerce-loop-product__link .wp-post-image--
 
 
 
+
+
 .hero-box {
   text-align: center;
   padding-top: 100px;
   h2 {
-    font-size: 15vh;
-    max-width: 1200px;
+    font-size: 60px;
+    max-width: 600px;
     margin: auto;
     line-height: 1;
     font-family: $bold;
     @include media-breakpoint-down(xs) {
-      font-size: 8vh;
+      font-size: 30px;
     }
   }
 }
@@ -3218,4 +3220,8 @@ padding-top: 5px;
   padding: 0px;
   height: auto;
   display: block;
+}
+ 
+.slick-slide, a, input {
+  outline: none !important; 
 }
