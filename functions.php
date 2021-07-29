@@ -335,3 +335,14 @@ function misha_email_first( $checkout_fields ) {
     
     return $checkout_fields;
 }
+
+add_filter( 'woocommerce_product_tabs', 'misha_rename_additional_info_tab' );
+
+function misha_rename_additional_info_tab( $tabs ) {
+    
+    $tabs['description']['title'] = 'INFO';
+    $tabs['additional_information']['title'] = 'DETAILS';
+    
+    return $tabs;
+    
+}
