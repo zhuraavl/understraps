@@ -133,8 +133,14 @@ if ( post_password_required() ) {
 
 
 <section class="white-bg">
+
+<div class="text-center product-brand-bottom-title">
+ <p>OTHER IN <?php echo do_shortcode( '[custom_pwb_brandtitle]' ); ?></p>
+  
+</div>
+
 <div class="row">
-      <div class="col-12 string-grid-products px-0 pb-3 text-center product-page-brands-bottom">
+      <div class="col-12 string-grid-products px-0 pb-3 pt-5 text-center product-page-brands-bottom">
         
       
 <?php 

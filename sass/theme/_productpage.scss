@@ -50,16 +50,17 @@ $main: 'Standard Book';
   height: 200px;
 }
 .summary.entry-summary .product_title.entry-title {
-  font-size: 14px;
+  font-size: 16px;
   font-family: $main;
   margin-bottom: 0;
   line-height: 1.4;
+  text-transform: uppercase;
 }
 
 .summary .pwb-single-product-brands a {
   font-family: $bold;
-  font-size: 14px;
-  padding: 10px 0;
+  font-size: 16px;
+  padding: 3px 0;
   display: block;
 }
 .woocommerce div.product form.cart .variations label {
@@ -191,7 +192,7 @@ $main: 'Standard Book';
   margin: 10px 0 12.5px;
 }
 .summary.entry-summary .price .woocommerce-Price-amount.amount{
-  font-size: 14px;
+  font-size: 16px;
   color: #000;
   
 }
@@ -461,4 +462,9 @@ $main: 'Standard Book';
    ul.products li.product .woocommerce-loop-product__title {
     display: none !important;
   }
+}
+
+.product-brand-bottom-title {
+  font-size: 12px;
+  text-transform: uppercase;
 }
