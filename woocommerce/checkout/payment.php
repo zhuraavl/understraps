@@ -24,7 +24,7 @@ if ( ! is_ajax() ) {
 
 <div id="payment" class="woocommerce-checkout-payment">
 
-
+<p class="h2">SHIPPING METHOD</p>
 <?php 
 /*********************************shipping**********************/
 $packages = WC()->shipping()->get_packages();
@@ -69,14 +69,8 @@ foreach ( $packages as $i => $package ) {
 }
 /****************************************end shipping*********************************/
 ?>
-<script>
-	jQuery(document).ready(function() {
-		jQuery('#shipping_method_new input').on('change', function() {
-			jQuery('input[name="radio"][value="'+jQuery('input[name="shipping_method[0]"]:checked').val()+'"]').prop('checked', true);
-		});
-		
-	});
-</script>
+
+	<p class="h2" style="margin: 25px 0 20px 0">PAYMENT METHOD</p>
 
 	<?php if ( WC()->cart->needs_payment() ) : ?>
 		<ul class="wc_payment_methods payment_methods methods">
@@ -90,13 +84,68 @@ foreach ( $packages as $i => $package ) {
 			}
 			?>
 		</ul>
+		
+		<p class="h2" style="margin: 25px 0 20px 0">CARD DETAILS</p>
+		
+		<?php
+			if ( ! empty( $available_gateways ) ) {
+				foreach ( $available_gateways as $gateway ) {
+                 if ( $gateway->has_fields() || $gateway->get_description() ) : ?>
+        		<div class="payment_box payment_method_<?php echo esc_attr( $gateway->id ); ?>" <?php if ( ! $gateway->chosen ) : /* phpcs:ignore Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace */ ?>style="display:none;"<?php endif; /* phpcs:ignore Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace */ ?>>
+        			<?php $gateway->payment_fields(); ?>
+        		</div>
+				<?php endif; 
+				}
+			}
+	   ?>
 	<?php endif; ?>
 	
-	
+	<p class="h2" style="margin: 25px 0 20px 0">ORDER SUMMARY</p>
 	
 <table class="shop_table woocommerce-checkout-review-order-table">
-	
-	
+	<tbody>
+		<?php
+		do_action( 'woocommerce_review_order_before_cart_contents' );
+
+		foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+			$_product = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
+
+			if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_checkout_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
+			    ?>
+				<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
+					<td class="product-name">
+						<a href="<?php echo get_permalink( $_product->get_id() )?>/">
+    						<?php echo '<img src="'.wp_get_attachment_url( $_product->image_id ).'" class="parallax" data-parallax="" data-scale="true">'; ?>
+    					</a>
+    					<a href="">
+    						<?php 
+    						$brands = wp_get_post_terms($_product->get_id(), 'pwb-brand');
+    						
+    						print_r($brands);
+    						
+    						foreach( $brands as $brand ) {
+    						    echo $brand->name;
+    						}
+    						?>
+    					</a>
+    					
+    					
+    						<?php echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) ) . '&nbsp;'; ?>
+    						<?php echo apply_filters( 'woocommerce_checkout_cart_item_quantity', ' <strong class="product-quantity">' . sprintf( '&times;&nbsp;%s', $cart_item['quantity'] ) . '</strong>', $cart_item, $cart_item_key ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+    						<?php echo wc_get_formatted_cart_item_data( $cart_item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+						</a>
+					</td>
+					<td class="product-total">
+						<?php echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+					</td>
+				</tr>
+				<?php
+			}
+		}
+
+		do_action( 'woocommerce_review_order_after_cart_contents' );
+		?>
+	</tbody>
 	<tfoot>
 
 		<tr class="cart-subtotal">

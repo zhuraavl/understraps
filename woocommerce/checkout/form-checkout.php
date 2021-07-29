@@ -46,7 +46,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
 
 	<?php endif; ?>
-	<div class="col-12 col-md-12">
+	<div class="col-12 col-md-12" style="padding: 0;">
 	<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
 	
 	
@@ -75,8 +75,13 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
     }
     .woocommerce-billing-fields__field-wrapper label,
     .address-field label,
-    .woocommerce-additional-fields h3 {
+    .woocommerce-additional-fields h3,
+    .payment_method_fondy img,
+    .payment_method_paypal img {
         display: none !important;
+    }
+    #add_payment_method #payment ul.payment_methods li input, .woocommerce-cart #payment ul.payment_methods li input, .woocommerce-checkout #payment ul.payment_methods li input {
+    	margin: 0 !important;
     }
     #page-wrapper .woocommerce form .form-row input, 
     #page-wrapper .woocommerce form .form-row textarea {
@@ -125,6 +130,69 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
     #billing_first_name_field,
     #billing_last_name_field {
     	margin-bottom: 27px !important;
+    }
+    #order_comments_field {
+    	margin-bottom: 0 !important;
+    }
+    #payment {
+    	padding-top: 0 !important;
+    }
+    input[type='radio']:after {
+        width: 20px;
+        height: 20px;
+        border-radius: 14px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: white;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 1px solid #000000;
+    }
+    input[type='radio']:checked:after {
+        width: 20px;
+        height: 20px;
+        border-radius: 14px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #000000;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 1px solid #000000;
+    	-webkit-box-shadow:inset 0px 0px 0px 3px white;
+        -moz-box-shadow:inset 0px 0px 0px 3px white;
+        box-shadow:inset 0px 0px 0px 3px white;
+    }
+    input[type='radio'] + label {
+    	font-family: Standard Book;
+        font-size: 12px;
+        line-height: 20px;
+        color: #000000;
+    	margin-left: 10px;
+    }
+    #shipping_method > li,
+    .wc_payment_methods > li {
+    	margin-bottom: 13px !important;
+    	text-align :center !important;
+    }
+    .payment_method_fondy label {
+    	background: url(/wp-content/themes/understraps/pic/visa.svg) 100% 50% no-repeat;
+    	padding-right: 60px;
+    }
+    .payment_method_paypal label {
+    	background: url(/wp-content/themes/understraps/pic/paypal.svg) 100% 50% no-repeat;
+    	padding-right: 50px;
+    }
+    .f-container .input-label {
+    	text-align: left;
+    	font-family: Standard Book;
+        font-size: 10px !important;
+        line-height: 12px;
+        color: #000000 !important;
+        opacity: 0.4;
     }
 </style>
 <script>
