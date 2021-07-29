@@ -52,7 +52,8 @@ defined( 'ABSPATH' ) || exit;
 <!--    <p class="hero-descr"></p>-->
 
 </div>
-
+<div class="row">
+<div class="col-12 px-0">
 <div class="minpage-brands">
 	<?php  
 	$brands = array();
@@ -71,7 +72,8 @@ defined( 'ABSPATH' ) || exit;
     }
 	?>
 </div>
-
+</div>
+</div>
 
 
 
@@ -111,6 +113,50 @@ defined( 'ABSPATH' ) || exit;
 		wc_reset_loop();
 		?>
 
+		<?php 
+		
+		$args = array(
+		    'orderby'    => 'name',
+		    'order'      => 'ASC',
+		    'hide_empty' => true,
+		    'include'    => '',
+		    'pad_counts' => true,
+		    'child_of'   => 141,
+		);
+		
+		$product_categories = apply_filters(
+		    'woocommerce_product_categories',
+		    get_terms( 'product_cat', $args )
+		    );
+		
+	    $product_categories = wp_list_filter(
+	        $product_categories,
+	        array(
+	            'parent' => 141,
+	        )
+	        );
+		
+	    foreach ( $product_categories as $key => $category ) {
+	        if ( 0 === $category->count ) {
+	            unset( $product_categories[ $key ] );
+	        }
+	    }
+		
+		if ( $product_categories ) {
+		    woocommerce_product_loop_start();
+		    
+		    foreach ( $product_categories as $category ) {
+		        
+		        ?>
+		        <a href="/product-category/<?php echo $category->slug ?>/"><?php echo $category->name ?></a>
+		        <?php
+		    }
+		    
+		    woocommerce_product_loop_end();
+		}
+		
+		wc_reset_loop();
+		?>
 	</div>
 	<div class="mainpage-categories-inner">
 		
@@ -146,24 +192,65 @@ defined( 'ABSPATH' ) || exit;
 		wc_reset_loop();
 		?>
 
+		<?php 
 		
+		$args = array(
+		    'orderby'    => 'name',
+		    'order'      => 'ASC',
+		    'hide_empty' => true,
+		    'include'    => '',
+		    'pad_counts' => true,
+		    'child_of'   => 142,
+		);
+		
+		$product_categories = apply_filters(
+		    'woocommerce_product_categories',
+		    get_terms( 'product_cat', $args )
+		    );
+		
+	    $product_categories = wp_list_filter(
+	        $product_categories,
+	        array(
+	            'parent' => 142,
+	        )
+	        );
+		
+	    foreach ( $product_categories as $key => $category ) {
+	        if ( 0 === $category->count ) {
+	            unset( $product_categories[ $key ] );
+	        }
+	    }
+		
+		if ( $product_categories ) {
+		    woocommerce_product_loop_start();
+		    
+		    foreach ( $product_categories as $category ) {
+		        
+		        ?>
+		        <a href="/product-category/<?php echo $category->slug ?>/"><?php echo $category->name ?></a>
+		        <?php
+		    }
+		    
+		    woocommerce_product_loop_end();
+		}
+		
+		wc_reset_loop();
+		?>
 	</div>
 </div>
 
 
-
 <div class="hero-box">
-    <h2 class="">popular<br>products</h2>
+    <h2 class="">Be aware of<br/>what's new</h2>
 </div>
 <div class="featires my-3 main-line">
-  <?php echo do_shortcode( "[featured_products per_page='15' columns='1' orderby='rand' order='ASC']" ); ?>
+  <?php echo do_shortcode( "[products per_page='25' columns='1' orderby='id' order='DESC']" ); ?>
   <!--
   <a href="/shop?orderby=rand" class="button-shop">SHOW ALL</a>
   -->
-</div>	
-
+</div>
 	
-<div class="hero-box mb-3">
+<div class="hero-box">
     <h2 class="">recent brands added</h2>
 </div>	
 
@@ -214,7 +301,6 @@ foreach ( $cats as $category ) {
 	
 	?>
 			</div>
-            <br>
 	        <a href="/brand/<?php echo $category->slug ?>/"><?php echo $category->name ?></a>
 		</div>
 	<?php
@@ -223,17 +309,15 @@ foreach ( $cats as $category ) {
 </div>
 	
 	
-
-
 <div class="hero-box">
-    <h2 class="">Be aware of<br/>what's new</h2>
+    <h2 class="">SALE</h2>
 </div>
 <div class="featires my-3 main-line">
-  <?php echo do_shortcode( "[products per_page='25' columns='1' orderby='id' order='DESC']" ); ?>
+  <?php echo do_shortcode( "[featured_products per_page='25' columns='1' orderby='rand' order='ASC']" ); ?>
   <!--
   <a href="/shop?orderby=rand" class="button-shop">SHOW ALL</a>
   -->
-</div>
+</div>	
 	
 	
 	
@@ -251,6 +335,35 @@ foreach ( $cats as $category ) {
 	
 	
 	
+	
+	
+	
+	
+	<!-- 
+	
+	<div class="container py-5">
+	<div class="row justify-content-center subsctibe pt-5 pb-5">
+          <div class="col-12 col-md-12 col-sm-12 text-center">
+           
+           <ul class="flag-s">
+             <li>🇪🇺</li>
+             <li>🇺🇸</li>
+             <li>🇨🇳</li>
+             <li>🇯🇵</li>
+             <li>🇨🇦</li>
+             <li>🇷🇺</li>
+             <li>🇦🇺</li>
+           </ul>
+            <h2 class="bold mb-0 mb-3">Brands from other countries soon</h2>
+                      </div>
+        </div>
+	
+	</div>
+    -->
+    
+
+             
+
 	
 	
 	
@@ -269,7 +382,7 @@ foreach ( $cats as $category ) {
 	
 	<style>
         .minpage-brands {
-        	margin: 40px 0px 20px 0px;
+        	margin: 60px 20px 60px 20px;
         }
         .minpage-brands a img {
         	max-height: 70px;
@@ -291,7 +404,7 @@ foreach ( $cats as $category ) {
         	display: inline-block;
         	text-align: center;
         	width: 100%;
-        	
+        	margin-bottom: 125px;
         }
         .mainpage-categories-inner {
         	display: inline-block;
@@ -314,7 +427,7 @@ foreach ( $cats as $category ) {
         .mainpage-categories-inner a.mainpage-categories-inner-big {
             max-width: 180px;
         	margin: 0 auto 15px auto;
-            padding: 13px 0 10px;
+            padding: 10px 0;
             line-height: 24px;
         }
         .mainpage-categories-inner .products.columns-4 {
@@ -326,7 +439,7 @@ foreach ( $cats as $category ) {
         	margin-top: 60px !important;
         }
         .featires.my-3.main-line img {
-        	height: 280px !important;
+        	height: 210px !important;
         	width: auto;
         }
         .woocommerce ul.products.columns-1 li.product {
@@ -334,17 +447,13 @@ foreach ( $cats as $category ) {
            
         	vertical-align: top;
         }
-        .mainpage-recent-brands {
-            position: relative;
-            overflow: hidden;
-        }
         .mainpage-recent-brands-wrapper {
         	width: 50%;
         	display: inline-block;
         	vertical-align: top;
         	padding: 0 3% 0 3%;
         	float: left;
-        	margin-bottom: 30px;
+        	margin-bottom: 90px;
         }
         
         .mainpage-recent-brands-wrapper a {
@@ -376,7 +485,7 @@ foreach ( $cats as $category ) {
         }
         @media (max-width: 600px) {
             .minpage-brands {
-            	margin: 30px 0 30px 0;
+            	margin: 40px 0 50px 0;
             }
             .minpage-brands a span {
                 font-family: Roboto;
@@ -415,7 +524,7 @@ foreach ( $cats as $category ) {
           slidesToScroll: 1,
           autoplay: true,
           speed: 300,
-          autoplaySpeed: 2000,
+          autoplaySpeed: 1000,
           pauseOnHover: true,
           responsive: [
       	    {
@@ -454,48 +563,48 @@ foreach ( $cats as $category ) {
     	    }
     	}));
 
-//		jQuery('.products.columns-1').slick({
-//    	  arrows: false,
-//          infinite: true,
-//          slidesToShow: 6,
-//          slidesToScroll: 1,
-//          autoplay: true,
-//          loop: true,
-//          speed: 300,
-//          autoplaySpeed: 2000,
-//          pauseOnHover: true,
-//          responsive: [
-//      	    {
-//      	      breakpoint: 600,
-//      	      settings: {
-//      	        slidesToShow: 2
-//      	      }
-//      	    }
-//    	  ]
-//        });
-//    
-//    	jQuery(".products.columns-1").on('mousewheel DOMMouseScroll wheel', (function(e) {
-//    	    let deltaY = e.originalEvent.deltaY;
-//    	    e.preventDefault();
-//    	    e.stopPropagation();
-//    
-//    	    clearTimeout(blockTimeout);
-//    	    blockTimeout = setTimeout(function(){
-//    	        blocked = false;
-//    	    }, 50);
-//    
-//    	    
-//    	    if (deltaY > 0 && deltaY > prevDeltaY || deltaY < 0 && deltaY < prevDeltaY || !blocked) {
-//    	        blocked = true;
-//    	        prevDeltaY = deltaY;
-//    
-//    	        if (deltaY > 0) {
-//    	        	jQuery(this).slick('slickNext');
-//    	        } else {
-//    	        	jQuery(this).slick('slickPrev');
-//    	        }
-//    	    }
-//    	}));
+		jQuery('.products.columns-1').slick({
+    	  arrows: false,
+          infinite: true,
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          autoplay: true,
+          loop: true,
+          speed: 300,
+          autoplaySpeed: 1000,
+          pauseOnHover: true,
+          responsive: [
+      	    {
+      	      breakpoint: 600,
+      	      settings: {
+      	        slidesToShow: 2
+      	      }
+      	    }
+    	  ]
+        });
+    
+    	jQuery(".products.columns-1").on('mousewheel DOMMouseScroll wheel', (function(e) {
+    	    let deltaY = e.originalEvent.deltaY;
+    	    e.preventDefault();
+    	    e.stopPropagation();
+    
+    	    clearTimeout(blockTimeout);
+    	    blockTimeout = setTimeout(function(){
+    	        blocked = false;
+    	    }, 50);
+    
+    	    
+    	    if (deltaY > 0 && deltaY > prevDeltaY || deltaY < 0 && deltaY < prevDeltaY || !blocked) {
+    	        blocked = true;
+    	        prevDeltaY = deltaY;
+    
+    	        if (deltaY > 0) {
+    	        	jQuery(this).slick('slickNext');
+    	        } else {
+    	        	jQuery(this).slick('slickPrev');
+    	        }
+    	    }
+    	}));
     	jQuery('.mainpage-recent-brands-imgs').slick({
     	  arrows: false,
           infinite: true,

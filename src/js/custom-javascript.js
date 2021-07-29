@@ -19,51 +19,54 @@ jQuery(document).ready(function ($) {
 
   
   
-  $(window).on('resize load', function () {
-    var $el = $('.summary.entry-summary');
-    $el.each(function () {
-        $(this).css('position', 'fixed').css({
-            
-        top: ($(window).height() - $el.height()) / 2
-        });
-    });
-});
-   $(window).on('resize load', function () {
-    var $el = $('.left-product');
-    $el.each(function () {
-        $(this).css('position', 'fixed').css({
-            
-        top: ($(window).height() - $el.height()) / 2
-        });
-    });
-});
+//  $(window).on('resize load', function () {
+//    var $el = $('.summary.entry-summary');
+//    $el.each(function () {
+//        $(this).css('position', 'fixed').css({
+//            
+//        top: ($(window).height() - $el.height()) / 2
+//        });
+//    });
+//});
+//   $(window).on('resize load', function () {
+//    var $el = $('.left-product');
+//    $el.each(function () {
+//        $(this).css('position', 'fixed').css({
+//            
+//        top: ($(window).height() - $el.height()) / 2
+//        });
+//    });
+//});
+//  
   
   
   
   
   
+//$( "#tab-pwb_tab-content" ).clone().appendTo( ".brand-description-product" ); 
   
-$( "#tab-pwb_tab-content" ).clone().appendTo( ".brand-description-product" );
+  
+$( "#tab-pwb_tab-content" ).clone().appendTo( ".single-brand-info" );
 
 
 
 $(".tax-pwb-brand").addClass("hero");
 
 
-$(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-
-    if (scroll >=50) {
-        $(".brand-description-product").addClass("hide");
-        
-      
-      
-    } else {
-        $(".brand-description-product").removeClass("hide");
-        
-    }
-});
-  
+//$(window).scroll(function() {    
+//    var scroll = $(window).scrollTop();
+//
+//    if (scroll >=50) {
+//        $(".brand-description-product").addClass("hide");
+//        
+//      
+//      
+//    } else {
+//        $(".brand-description-product").removeClass("hide");
+//        
+//    }
+//});
+//  
   
   
   
@@ -138,21 +141,21 @@ $(function() {
 
 
 
-function scrollanim(){
-  
-  $('.summary.entry-summary, .left-product').addClass('op');
-  
-}
+//function scrollanim(){
+//  
+//  $('.summary.entry-summary, .left-product').addClass('op');
+//  
+//}
+//
+//setTimeout(
+//    function() {
+//        scrollanim();
+//      
+//    },
+//    1000);
+//
+//
 
-setTimeout(
-    function() {
-        scrollanim();
-      
-    },
-    1000);
-
-
-
   
   
   
@@ -160,81 +163,81 @@ setTimeout(
   
   
   
-  
-  
-  $('.widget-category-title').click(function() {
-  	$(this).next().fadeIn();
-  });
-  
-  $('.sorty-by-title').click(function() {
-  	$(this).next().fadeIn();
-  });
-  
+//  
+//  
+//  $('.widget-category-title').click(function() {
+//  	$(this).next().fadeIn();
+//  });
+//  
+//  $('.sorty-by-title').click(function() {
+//  	$(this).next().fadeIn();
+//  });
+//  
  
-	$(document).mouseup(function (e){
-		var div = $(".product-categories, .dropdown-sort");
-		if (!div.is(e.target)
-		    && div.has(e.target).length === 0) {
-			div.hide();
-		}
-	});
+//	$(document).mouseup(function (e){
+//		var div = $(".product-categories, .dropdown-sort");
+//		if (!div.is(e.target)
+//		    && div.has(e.target).length === 0) {
+//			div.hide();
+//		}
+//	});
 
 
-  
-if(document.URL.indexOf("?orderby=date") >= 0) {
-  $(".sorty-by-title").text( "Newest" )
-  };
-  if(document.URL.indexOf("?orderby=popularity") >= 0) {
-  $(".sorty-by-title").text( "Popular" )
-  };
- if(document.URL.indexOf("?orderby=price") >= 0) {
-  $(".sorty-by-title").text( "Price ↑" )
-  };
-  if(document.URL.indexOf("?orderby=price-desc") >= 0) {
-  $(".sorty-by-title").text( "Price ↓" )
-  };
-  
-  
-  
-  
-  
-  
- 
-  
-$(function(){
-    var current = location.pathname;
-    $('.pwb-row li a').each(function(){
-        var $this = $(this);
-        // if the current path is like this link, make it active
-        if($this.attr('href').indexOf(current) !== -1){
-            $this.addClass('active');
-        }
-    })
-})
-
-
-
-$(function(){
-    var currentBrand = $(".brand-name a").attr('href');
-    $('.pwb-row li a').each(function(){
-        var $this = $(this);
-        // if the current path is like this link, make it active
-        if($this.attr('href').indexOf(currentBrand) !== -1){
-            $this.addClass('active');
-        }
-    })
-})
+//  
+//if(document.URL.indexOf("?orderby=date") >= 0) {
+//  $(".sorty-by-title").text( "Newest" )
+//  };
+//  if(document.URL.indexOf("?orderby=popularity") >= 0) {
+//  $(".sorty-by-title").text( "Popular" )
+//  };
+// if(document.URL.indexOf("?orderby=price") >= 0) {
+//  $(".sorty-by-title").text( "Price ↑" )
+//  };
+//  if(document.URL.indexOf("?orderby=price-desc") >= 0) {
+//  $(".sorty-by-title").text( "Price ↓" )
+//  };
+//  
+//  
   
   
   
   
- $(function() {
+// 
+//  
+//$(function(){
+//    var current = location.pathname;
+//    $('.pwb-row li a').each(function(){
+//        var $this = $(this);
+//        // if the current path is like this link, make it active
+//        if($this.attr('href').indexOf(current) !== -1){
+//            $this.addClass('active');
+//        }
+//    })
+//})
+//
+//
+//
+//$(function(){
+//    var currentBrand = $(".brand-name a").attr('href');
+//    $('.pwb-row li a').each(function(){
+//        var $this = $(this);
+//        // if the current path is like this link, make it active
+//        if($this.attr('href').indexOf(currentBrand) !== -1){
+//            $this.addClass('active');
+//        }
+//    })
+//})
+//  
+//  
   
-  $('.value input').click();
   
-  
-}); 
-  
+// $(function() {
+//  
+//  $('.value input').click();
+//  
+//  
+//}); 
+//  
   
   
   
@@ -311,19 +314,6 @@ $(function(){
       $('#order_comments').attr("placeholder", "Add shipping details (optional)");
        $('#billing_country option:first-child').text('Country');
     } else {
-      $('#billing_first_name').attr("placeholder", "ІМ'Я КОРИСТУВАЧА");
-      $('#billing_state').attr("placeholder", "ОБЛАСТЬ / РЕГІОН");
-      $('#billing_address_1').attr("placeholder", "АДРЕСА");
-      $('#billing_address_2').attr("placeholder", "КВ / БУД");
-      $('#billing_city').attr("placeholder", "МІСТО");
-      $('#billing_postcode').attr("placeholder", "ПОШТОВИЙ ІНДЕКС");
-      $('#billing_email').attr("placeholder", "E-MAIL");
-      $('#billing_phone').attr("placeholder", "НОМЕР ТЕЛЕФОНУ");
-      $('#order_comments').attr("placeholder", "ДОДАТКОВА ІНФОРМАЦИЯ");
-      $('#billing_country option:first-child').text('КРАЇНА');
-      $('.open-side-chechout').text('КУПИТИ ЗА ');
-      $('#order_review h3').text('Інформація про замовлення');
-      
     };
      
     

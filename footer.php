@@ -13,20 +13,20 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-
+<section class="white-bg">
 <div class="hero-box mainpage-subscribe-title">
     <h2 class="">Subscribe to our<br/>updates</h2>
 </div>
 <div class="mainpage-subscribe">
 	<?php echo do_shortcode('[contact-form-7 id="233" title="Contact form 1"]') ?>  
 	<div class="socs">
-		<a href="https://www.instagram.com/2020s.shop.official/"><img src="http://2020s.shop/wp-content/themes/understraps/pic/instagram-2.svg" alt="" width="20px"></a>
-		<a href=""><img src="http://2020s.shop/wp-content/themes/understraps/pic/face.svg" alt="" width="10px"></a>
-		<a href=""><img src="http://2020s.shop/wp-content/themes/understraps/pic/pin.svg" alt="" width="20px"></a>
-		<a href=""><img src="http://2020s.shop/wp-content/themes/understraps/pic/twitt.svg" alt="" width="20px"></a>
+		<a href="https://www.instagram.com/2020s.shop.official/"><img src="http://2020s.shop/wp-content/themes/understrap/pic/instagram-2.svg" alt="" width="20px"></a>
+		<a href=""><img src="http://2020s.shop/wp-content/themes/understrap/pic/face.svg" alt="" width="10px"></a>
+		<a href=""><img src="http://2020s.shop/wp-content/themes/understrap/pic/pin.svg" alt="" width="20px"></a>
+		<a href=""><img src="http://2020s.shop/wp-content/themes/understrap/pic/twitt.svg" alt="" width="20px"></a>
 	</div>
 </div>
-
+</section>
 
 <?php //get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
@@ -95,7 +95,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	width: 100%;
 	display: inline-block;
 	text-align: center;
-	margin: 20px 0 70px 0;
+	margin: 0px 0 5px 0;
 }
 .socs a {
 	display: inline-block;
