@@ -43,7 +43,7 @@ defined( 'ABSPATH' ) || exit;
        
        
         
-	<div class="hero-box">
+	<div class="hero-box mt-5">
  
     <h2 class="">NEWEST FASHION BRANDS</h2>
     

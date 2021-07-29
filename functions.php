@@ -217,11 +217,11 @@ add_action( 'widgets_init', 'custom_sidebar' );
 
 /* WooCommerce Add To Cart Text */
 
-//add_filter('woocommerce_product_single_add_to_cart_text', 'woocommerce_custom_add_to_cart_text');
-// 
-//function woocommerce_custom_add_to_cart_text() {
-//return __('Buy', 'woocommerce');
-//}
+add_filter('woocommerce_product_single_add_to_cart_text', 'woocommerce_custom_add_to_cart_text');
+ 
+function woocommerce_custom_add_to_cart_text() {
+return __('Buy', 'woocommerce');
+}
 
 
 

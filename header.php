@@ -295,7 +295,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 hasScrolled();
                 didScroll = false;
             }
-        }, 250);
+        }, 1);
 
         function hasScrolled() {
             var st = jQuery(this).scrollTop();

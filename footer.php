@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<section class="white-bg">
+<section class="white-bg subscribe-and-socials-footer">
 <div class="hero-box mainpage-subscribe-title">
     <h2 class="">Subscribe to our<br/>updates</h2>
 </div>

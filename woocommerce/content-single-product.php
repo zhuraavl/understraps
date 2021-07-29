@@ -134,7 +134,7 @@ if ( post_password_required() ) {
 
 <section class="white-bg">
 <div class="row">
-      <div class="col-12 string-grid-products px-0 pb-3 text-center">
+      <div class="col-12 string-grid-products px-0 pb-3 text-center product-page-brands-bottom">
         
       
 <?php 
