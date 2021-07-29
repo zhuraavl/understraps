@@ -321,7 +321,6 @@ function vnm_wc_redirect_account_dashboard( $wp ) {
 add_action( 'parse_request', 'vnm_wc_redirect_account_dashboard', 10, 1 );
 
 
-
 add_filter( 'woocommerce_checkout_fields', 'misha_email_first' );
 
 function misha_email_first( $checkout_fields ) {
@@ -337,8 +336,6 @@ function misha_email_first( $checkout_fields ) {
     return $checkout_fields;
 }
 
-
-
 add_filter( 'woocommerce_product_tabs', 'misha_rename_additional_info_tab' );
 
 function misha_rename_additional_info_tab( $tabs ) {
@@ -349,6 +346,3 @@ function misha_rename_additional_info_tab( $tabs ) {
 	return $tabs;
 
 }
-
-
-
