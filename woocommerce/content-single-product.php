@@ -34,6 +34,7 @@ if ( post_password_required() ) {
 
 
 
+<!--
 <div class="left-product">
   
   
@@ -49,6 +50,7 @@ if ( post_password_required() ) {
 <div class="brand-description-product">
   
 </div>
+-->
 
 
 
@@ -115,13 +117,6 @@ if ( post_password_required() ) {
 
 
 
-<!--
-
-
-<?php echo do_shortcode('[brands]') ?>
-
-
--->
 
 
 
@@ -130,16 +125,66 @@ if ( post_password_required() ) {
 
 
 
+<section class="single-brand-info-box">
+<div class="single-brand-info"></div>
+
+</section>
 
 
 
-
-
-
-
-
-
-
+<section class="white-bg">
+<div class="row">
+      <div class="col-12 string-grid-products px-0 pb-3 text-center">
+        
+      
+<?php 
+		
+		$brands = wp_get_post_terms(get_the_ID(), 'pwb-brand');
+		
+		if (!is_wp_error($brands)) {
+		    
+		    if (sizeof($brands) > 0) {
+		        
+		        foreach ($brands as $brand) {
+		            
+		            $args = array(
+		                'orderby' => 'rand',
+		                'post_type' => 'product', 
+		                'posts_per_page' => 15, 
+		                'paged' => 1,
+		                'post__not_in' => array(get_the_ID()),
+		                'tax_query' => array(
+		                    array(
+		                        'taxonomy' => 'pwb-brand',
+		                        'terms' => $brand->term_id,
+		                        'field' => 'id'
+		                    ),
+		                )
+		            );
+		            // The Query
+		            $products = new WP_Query( $args );
+		            
+		            if ( $products->have_posts() ) {
+		                echo '<ul class="products columns-5">';
+		                while ( $products->have_posts() ) {
+		                    
+		                    $products->the_post();
+		                    
+		                    wc_get_template_part( 'content', 'product' );
+		                }
+		                echo '</ul>';
+		            }
+		            
+		            wp_reset_postdata();
+		        }
+		        
+		    }
+		}
+		
+		?>
+     
+      </div>
+    </div>
 
 
 
@@ -147,9 +192,9 @@ if ( post_password_required() ) {
 
 
 <!--/////////-->
-<div class="row mt-5 pt-5">
+<div class="row py-5">
   <div class="col-12 px-0">
-<div class="text-center"><p class="small-title d-none">In this category:</p></div>
+<div class="text-center text-uppercase"><p class="small-title">OTHER IN  <?php echo wc_get_product_category_list($product->get_id()) ?></p></div>
 <div class="related-category">
 <?php
 
@@ -241,6 +286,7 @@ if ( is_singular('product') ) {
     
   </div>
 </div>
+</section>
 
 
 
@@ -257,13 +303,24 @@ if ( is_singular('product') ) {
 
 
 
- <div class="row">
-      <div class="col-12 string-grid-products px-0">
-        <div class="text-center d-none"><p>Random products:</p></div>
-      
-<?php echo do_shortcode('[recent_products per_page="12" columns="7" orderby="rand" order="rand"]') ?>
-     
-      </div>
-    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

@@ -11,7 +11,7 @@
  * the readme will list any important changes.
  *
  * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
+ * @package WooCommerce\Templates
  * @version 2.0.0
  */
 
@@ -23,8 +23,6 @@ $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Descri
 
 ?>
 
-<?php if ( $heading ) : ?>
-	<h2><?php echo esc_html( $heading ); ?></h2>
-<?php endif; ?>
+
 
 <?php the_content(); ?>
