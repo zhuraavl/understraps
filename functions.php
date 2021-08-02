@@ -346,3 +346,8 @@ function misha_rename_additional_info_tab( $tabs ) {
     return $tabs;
     
 }
+function add_to_cart_redirect_to_cart() {
+    wp_safe_redirect(  $_SERVER['REQUEST_URI'] .'?opencart=1' );
+    die();
+}
+add_action('woocommerce_add_to_cart','add_to_cart_redirect_to_cart', 100 );

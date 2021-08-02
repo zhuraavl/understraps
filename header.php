@@ -208,6 +208,155 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .nav-up {
         top: -70px !important;
     }
+#hedaer #new-woocommerce-cart-form table.cart .product-thumbnail img {
+    	max-width: 156px !important;
+    	max-height: 152px !important;
+    	border-radius: 15px !important;
+    }
+    #hedaer #new-woocommerce-cart-form table.cart .product-thumbnail a {
+    	display: inline-block !important;
+    	border: 1px solid rgba(0, 0, 0, 0.2) !important;
+        box-sizing: border-box !important;
+        border-radius: 15px !important;
+    	width: 158px !important;
+    	height: 154px !important;
+    	text-align: center !important;
+    	margin-right: 15px !important;
+    }
+    #hedaer #new-woocommerce-cart-form table.cart .product-thumbnail {
+    	padding-left: 0 !important;
+    	padding-right: 0 !important;
+    }
+    #hedaer #new-woocommerce-cart-form table.cart .product-name {
+    	text-align: center !important;
+    	position: relative !important;
+    	vertical-align: top !important;
+    	adding-left: 0 !important;
+    	padding-right: 0 !important;
+    }
+    #hedaer #new-woocommerce-cart-form table.cart .product-name .brand-name {
+    	font-family: Standard Book !important;
+        font-size: 12px !important;
+        line-height: 14px !important;
+        color: #000000 !important;
+    }
+    #hedaer #new-woocommerce-cart-form table.cart .product-name .product-name-inner {
+    	font-family: Standard Book !important;
+        font-size: 12px !important;
+        line-height: 14px !important;
+        color: #000000 !important;
+    }
+    #hedaer #new-woocommerce-cart-form table.cart .product-name .q-price {
+    	position: absolute !important;
+    	top: 115px !important;
+    	width: 94% !important;
+        text-align: center !important;
+    }
+    #hedaer #new-woocommerce-cart-form table.cart .product-name .q-price .quantity {
+    	width: auto !important;
+    	display: inline-block !important;
+    }
+    #hedaer #new-woocommerce-cart-form table.cart .product-name .q-price,
+    #hedaer #new-woocommerce-cart-form table.cart .product-name .q-price span,
+    #hedaer #new-woocommerce-cart-form table.cart .product-name .q-price .woocommerce-Price-amount bdi {
+    	font-family: Standard Book !important;
+        font-size: 12px !important;
+        line-height: 14px !important;
+        color: #000000 !important;
+    }
+    #hedaer #new-woocommerce-cart-form table.cart .product-name .q-price a.remove {
+    	font-family: Standard Book !important;
+        font-size: 10px !important;
+        line-height: 12px !important;
+        text-transform: uppercase !important;
+        color: #000000 !important;
+        opacity: 0.5 !important;
+    	height: auto !important;
+    	width: 100% !important;
+    	margin-top: 5px !important;
+    }
+    #hedaer #new-woocommerce-cart-form table.cart .product-name .q-price  a.remove:hover {
+    	background: transparent !important;
+    }
+    #hedaer #new-woocommerce-cart-form .woocommerce-cart-form {
+    	width: 320px !important;
+    	margin: auto !important;
+    	text-align: center !important;
+    }
+    #hedaer #new-woocommerce-cart-form .woocommerce-cart-form__cart-item {
+    	border-bottom: 0px solid transparent !important;
+    }
+    .woocommerce-checkout-review-order-table .product-total {
+	    font-family: Standard Book !important;
+        font-size: 12px !important;
+        line-height: 14px !important;
+        color: #000000 !important;
+    	width: 50px !important;
+        padding-right: 0px !important;
+        text-align: right !important;
+    	border-top: 0px solid #000 !important;
+    }
+    .woocommerce-checkout-subtotal-order-table td,
+    .woocommerce-checkout-subtotal-order-table th {
+    	font-family: Standard Book !important;
+        font-size: 12px !important;
+        line-height: 14px !important;
+        color: #000000 !important;
+    	padding: 0 0 7px 0 !important;
+    	border: 0px solid transparent !important;
+    	
+    }
+    #hedaer #new-woocommerce-cart-form .checkout-button {
+    	width: 215px !important;
+        height: 40px !important;
+        background: #000000 !important;
+        border: 1px solid #000000 !important;
+        box-sizing: border-box !important;
+        border-radius: 50px !important;
+    	font-family: Standard Book !important;
+        font-size: 12px !important;
+        text-align: center !important;
+        color: #FFFFFF !important;
+    	margin : auto !important;
+    	float: none !important;
+    	text-transform: uppercase !important;
+    	display: inline-block;
+        line-height: 40px !important;
+    }
+    #hedaer #new-woocommerce-cart-form .woocommerce-cart-form__contents {
+    	width: 100% !important;
+    }
+    #hedaer #new-woocommerce-cart-form .woocommerce-cart-form__contents td {
+    	padding: 10px 0 10px 0 !important;
+    }
+    #hedaer #new-woocommerce-cart-form .cart-enter-email {
+    	font-family: Standard Book !important;
+        font-style: normal !important;
+        font-weight: normal !important;
+        font-size: 12px !important;
+        line-height: 14px !important;
+        text-align: center !important;
+        color: #000000 !important;
+    }
+    #hedaer #new-woocommerce-cart-form .cart-input-email {
+        opacity: 0.5 !important;
+        border: 1px solid #000000 !important;
+        box-sizing: border-box !important;
+        border-radius: 5px !important;
+    	margin-bottom: 20px !important;
+    	text-align: center !important;
+    	width: 100% !important;
+    	height: 35px !important;
+    	line-height: 35px !important;
+    	font-family: Standard Book !important;
+        font-size: 14px !important;
+        line-height: 17px !important;
+        color: #000000 !important;
+    }
+    #hedaer #new-woocommerce-cart-form .cart-have-account {
+        display: block !important;
+    	margin: 15px 0 0 0 !important;
+    }
     @media (max-width: 600px) {
         #main-menu > li > ul > li {
         	width: 48%;
@@ -251,11 +400,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         body header#hedaer .menu-new-menu-container .left-side-menu > li {
         	padding: 0 10px !important;
         }
+        .woocommerce table.shop_table_responsive tr td::before, .woocommerce-page table.shop_table_responsive tr td::before {
+        	content: "" !important; 
+        }
     }
 </style>
 	
 <script>
 	jQuery(document).ready(function() {
+		
         jQuery('#main-menu > li > ul > li.menu-item-object-custom > a').attr('href', '#');
         jQuery( "#main-menu > li > ul > li.menu-item-object-custom > a" ).click(function( event ) {
       	  event.preventDefault();
@@ -315,10 +468,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             lastScrollTop = st;
         }
-        
 	});
 </script>
-	
+<script type="text/javascript" src="/wp-content/themes/understraps/js/jquery.cookie.js"></script>	
 </head>
 
 <body <?php body_class(); ?>>
@@ -545,7 +697,189 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<?php }?>
 					</ul>
 				</li>
-				<li><a href="/cart" class="nav-link xoo-wsc-cart-trigger"><span class="bag-title">Bag</span>  <span class="cart-customlocation"><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a></li>
+				<li id="bag-link">
+					<a title="Bag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-bag"><span class="bag-title">Bag</span>  <span class="cart-customlocation"><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a>
+					<ul class="dropdown-menu currency-dropdown" aria-labelledby="menu-item-dropdown-6917" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(372px, 38px, 0px);">
+						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-10963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10965 nav-item serch-menu-item">
+        							<div id="new-woocommerce-cart-form">
+<form class="woocommerce-cart-form"  action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+	<?php do_action( 'woocommerce_before_cart_table' ); ?>
+	
+	<table class="shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
+		<tbody>
+			<?php do_action( 'woocommerce_before_cart_contents' ); ?>
+
+			<?php
+			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+				$_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
+				$product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
+
+				if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
+					$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
+					?>
+					<tr class="woocommerce-cart-form__cart-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>" style="display: table-row !important">
+						<td class="product-thumbnail"  style="display: table-cell !important">
+						<?php
+						$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
+
+						if ( ! $product_permalink ) {
+							echo $thumbnail; // PHPCS: XSS ok.
+						} else {
+							printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail ); // PHPCS: XSS ok.
+						}
+						?>
+						</td>
+						<td class="product-name" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>"  style="display: table-cell !important">
+						
+						<?php 
+    						$brands = wp_get_post_terms($_product->get_parent_id(), 'pwb-brand');
+    					?>
+    					<a href="/brand/<?php echo $brands[0]->slug ?>/" class="brand-name">
+    						<?php 
+    						    echo $brands[0]->name;
+    						?>
+    					</a>
+						<br/>
+						<?php
+						if ( ! $product_permalink ) {
+							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;' );
+						} else {
+							echo str_replace(' - ', '<br/>', wp_kses_post( apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s" class="product-name-inner">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key ) ));
+						}
+
+						do_action( 'woocommerce_after_cart_item_name', $cart_item, $cart_item_key );
+
+						// Meta data.
+						echo wc_get_formatted_cart_item_data( $cart_item ); // PHPCS: XSS ok.
+
+						// Backorder notification.
+						if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
+							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'woocommerce' ) . '</p>', $product_id ) );
+						}
+						?>
+						
+						
+						<div class="q-price">
+						<?php
+						if ( $_product->is_sold_individually() ) {
+							$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
+						} else {
+							$product_quantity = woocommerce_quantity_input(
+								array(
+									'input_name'   => "cart[{$cart_item_key}][qty]",
+									'input_value'  => $cart_item['quantity'],
+									'max_value'    => $_product->get_max_purchase_quantity(),
+									'min_value'    => '0',
+									'product_name' => $_product->get_name(),
+								),
+								$_product,
+								false
+							);
+						}
+
+						echo $cart_item['quantity'] ; //apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item ); // PHPCS: XSS ok.
+						?>
+						<span>X</span>
+						<?php
+							echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
+						?>
+						<br/>
+						<?php
+							echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+								'woocommerce_cart_item_remove_link',
+								sprintf(
+									'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">remove</a>',
+									esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
+									esc_html__( 'Remove this item', 'woocommerce' ),
+									esc_attr( $product_id ),
+									esc_attr( $_product->get_sku() )
+								),
+								$cart_item_key
+							);
+						?>
+						</div>
+						
+						</td>
+
+
+					</tr>
+					<?php
+				}
+			}
+			?>
+
+			<?php do_action( 'woocommerce_cart_contents' ); ?>
+
+			<tr>
+				<td colspan="6" class="actions">
+
+					<?php if ( wc_coupons_enabled() ) { ?>
+						<div class="coupon">
+							<label for="coupon_code"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
+							<?php do_action( 'woocommerce_cart_coupon' ); ?>
+						</div>
+					<?php } ?>
+
+					<button type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
+
+					<?php do_action( 'woocommerce_cart_actions' ); ?>
+
+					<?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
+				</td>
+			</tr>
+
+			<?php do_action( 'woocommerce_after_cart_contents' ); ?>
+		</tbody>
+	</table>
+	<?php do_action( 'woocommerce_after_cart_table' ); ?>
+	
+<table class="shop_table woocommerce-checkout-subtotal-order-table" style="width: 100%">
+	<tfoot>
+
+		<tr class="cart-subtotal">
+			<th  style="text-align: left; font-weight: normal;"><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></th>
+			<td style="text-align: right;"><?php wc_cart_totals_subtotal_html(); ?></td>
+		</tr>
+
+		<tr class="woocommerce-shipping-totals shipping">
+    		<th  style="text-align: left; font-weight: normal;">Shipping</th>
+    		<td data-title="Shipping" style="text-align: right;">
+    			Calculated at Checkout
+    		</td>
+    	</tr>
+
+
+		<?php do_action( 'woocommerce_review_order_before_order_total' ); ?>
+
+		<tr class="order-total">
+			<th  style="text-align: left; font-weight: normal;"><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>
+			<td style="text-align: right;"><?php wc_cart_totals_order_total_html(); ?></td>
+		</tr>
+
+		<?php do_action( 'woocommerce_review_order_after_order_total' ); ?>
+
+	</tfoot>
+</table>
+
+	<p class="cart-enter-email">Enter your email to login or continue to<br/>checkout as a guest.</p>
+	<?php 
+	   $mail = '';
+	   if(isset($_COOKIE['cartemail'])) {
+	       $mail = $_COOKIE['cartemail'];
+	   }
+	?>
+	
+	<input class="cart-input-email" form="test"  type="email" placeholder="Your email..." value="<?php echo $mail ?>" onchange="jQuery.cookie('cartemail', jQuery(this).val(), { expires: 7, path: '/' });" />
+	
+<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="checkout-button button alt wc-forward">
+	<?php esc_html_e( 'Proceed to checkout', 'woocommerce' ); ?>
+</a>
+<a href="/my-account/orders/" class="cart-have-account">I HAVE ACCOUNT</a>
+</form>	
+</div>
+        				</li>
+					</ul>
+				</li>
 			</ul>
 		</div>
           

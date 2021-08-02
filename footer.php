@@ -88,6 +88,18 @@ $container = get_theme_mod( 'understrap_container_type' );
         jQuery('.mainpage-subscribe .wpcf7-email').on('change', function(){
         	jQuery('.mainpage-subscribe .wpcf7-submit').show();
         });
+        <?php 
+  		  if(isset($_GET['opencart'])) {
+  		?>
+  			console.log('111');
+
+  			jQuery('#menu-item-dropdown-bag').trigger("click");
+  			//jQuery('#bag-link').addClass("show");
+  			//jQuery('#bag-link ul').addClass("show");
+  			//jQuery('#menu-item-dropdown-bag').attr("aria-expanded", "true");
+  		<?php 
+  	        }
+  		?>
 	});
 </script>
 <style>
