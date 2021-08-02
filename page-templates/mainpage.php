@@ -63,8 +63,10 @@ defined( 'ABSPATH' ) || exit;
 	?>
 	
 	<a href="/brand/<?php echo $brand->slug ?>/">
-		<img src="<?php echo (isset($brand->brand_image[0]))? $brand->brand_image[0] : '/wp-content/uploads/woocommerce-placeholder-100x100.png' ?>" height="70" />
+<!--
+		<img src="< ?php echo (isset($brand->brand_image[0]))? $brand->brand_image[0] : '/wp-content/uploads/woocommerce-placeholder-100x100.png' ?>" height="70" />
 		<br/>
+-->
 		<span><?php echo $brand->name ?></span>
 	</a>
     <?php
@@ -110,6 +112,17 @@ defined( 'ABSPATH' ) || exit;
 		
 		wc_reset_loop();
 		?>
+    
+        <a href="">New Arrivals</a>
+        <a href="">T-Shirts</a>
+        <a href="">Hoodies</a>
+        <a href="">Jackets</a>
+        <a href="">Accessories</a>
+    
+
+
+
+
 
 	</div>
 	<div class="mainpage-categories-inner">
@@ -145,7 +158,11 @@ defined( 'ABSPATH' ) || exit;
 		
 		wc_reset_loop();
 		?>
-
+        <a href="">New Arrivals</a>
+        <a href="">Dresses</a>
+        <a href="">T-Shirts</a>
+        <a href="">Jackets</a>
+        <a href="">Accessories</a>
 		
 	</div>
 </div>

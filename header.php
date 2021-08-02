@@ -283,7 +283,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         // Hide Header on on scroll down
         var didScroll;
         var lastScrollTop = 0;
-        var delta = 5;
+        var delta = 1;
         var navbarHeight = jQuery('header').outerHeight();
 
         jQuery(window).scroll(function(event){

@@ -197,13 +197,34 @@ $main: 'Standard Book';
   
 }
 
-
+.product-images img {
+  pointer-events: auto !important;
+}
 
 
 .single_variation_wrap {
   margin-top: 25px; 
 }
 
+
+.subcategories-list {
+  padding: 0;
+  margin: 0;
+  overflow-x: scroll;
+  white-space: nowrap;
+  text-align: center;
+  &::-webkit-scrollbar {
+    width: 1px !important;
+  }
+  li {
+    padding: 0 1em;
+    display: inline-block;
+    a {
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+  }
+}
 
 
 .woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item) {
@@ -457,6 +478,10 @@ $main: 'Standard Book';
   .woocommerce-loop-product__link p {
     display: none;
   } 
+  
+  .woocommerce ul.products li.product .woocommerce-loop-product__title {
+   
+  }
 }
 .related-category {
    ul.products li.product .woocommerce-loop-product__title {

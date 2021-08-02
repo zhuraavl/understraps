@@ -32,7 +32,7 @@ do_action( 'woocommerce_before_main_content' );
 
 
 
-  <header class="woocommerce-products-header text-center">
+  <header class="woocommerce-products-header text-center pt-5 pb-4">
     <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
       <h1 class="hero-title"><?php woocommerce_page_title(); ?></h1>
       <?php endif; ?>
@@ -48,19 +48,32 @@ do_action( 'woocommerce_before_main_content' );
 	?>
   </header>
 
+<?php
+if ( is_product_category() ) {
 
-  <div class="position-relative overflow-md-hidden bottom-menu-box">
-    <div class="row category-menu-top">
-      <div class="col-12 position-static">
-        <ul class="top-page-menu">
-       <li>
-         <?php do_action( 'woocommerce_before_shop_loop' );?>
-       </li>
-     </ul>
-      </div>
-    </div>
-  </div>
+    $term_id  = get_queried_object_id();
+    $taxonomy = 'product_cat';
 
+    // Get subcategories of the current category
+    $terms    = get_terms([
+        'taxonomy'    => $taxonomy,
+        'hide_empty'  => true,
+        'parent'      => get_queried_object_id()
+    ]);
+
+    $output = '<ul class="subcategories-list">';
+
+    // Loop through product subcategories WP_Term Objects
+    foreach ( $terms as $term ) {
+        $term_link = get_term_link( $term, $taxonomy );
+
+        $output .= '<li class="'. $term->slug .'"><a href="'. $term_link .'">'. $term->name .'</a></li>';
+    }
+
+    echo $output . '</ul>';
+}
+  
+?>
 
   <?php
 if ( woocommerce_product_loop() ) {
@@ -112,9 +125,22 @@ if ( woocommerce_product_loop() ) {
  * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
  */
 do_action( 'woocommerce_after_main_content' );
+?>
 
 
+<div class="position-relative overflow-md-hidden bottom-menu-box">
+    <div class="row category-menu-top">
+      <div class="col-12 position-static">
+        <ul class="top-page-menu">
+       <li>
+         <?php do_action( 'woocommerce_before_shop_loop' );?>
+       </li>
+     </ul>
+      </div>
+    </div>
+  </div>
 
+<?php
 
 /**
  * Hook: woocommerce_sidebar.

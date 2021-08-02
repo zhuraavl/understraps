@@ -62,7 +62,7 @@ $container = get_theme_mod( 'understrap_container_type' );
         <a href="/contact/">Contact</a>
       </div>
      <div class="pay-icos text-center">
-        <img src="<?php echo get_template_directory_uri(); ?>/pic/image7.svg" alt="" class="mx-1" width="35px">
+<!--        <img src="< ?php echo get_template_directory_uri(); ?>/pic/image7.svg" alt="" class="mx-1" width="35px">-->
         <img src="<?php echo get_template_directory_uri(); ?>/pic/image8.svg" alt="" class="mx-1" width="35px">
         <img src="<?php echo get_template_directory_uri(); ?>/pic/image10.svg" alt="" class="mx-1" width="35px">
         <img src="<?php echo get_template_directory_uri(); ?>/pic/image9.svg" alt="" class="mx-1" width="35px">

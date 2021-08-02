@@ -117,7 +117,9 @@ header#hedaer {
       padding: 0;
     }
   }
-  
+  > a {
+    text-transform: uppercase;
+  }
   a {
     color: #000;
     font-size: 12px;
