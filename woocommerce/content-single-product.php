@@ -133,7 +133,7 @@ if ( post_password_required() ) {
 
 
 <section class="white-bg">
-
+<div class="container-fluid">
 <div class="text-center product-brand-bottom-title">
  <p>OTHER IN <?php echo do_shortcode( '[custom_pwb_brandtitle]' ); ?></p>
   
@@ -291,6 +291,7 @@ if ( is_singular('product') ) {
 </div>
     
   </div>
+</div>
 </div>
 </section>
 

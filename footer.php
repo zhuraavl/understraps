@@ -13,7 +13,10 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<section class="white-bg subscribe-and-socials-footer">
+<?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
+
+
+<section class="white-bg subscribe-and-socials-footer mb-5">
 <div class="hero-box mainpage-subscribe-title">
     <h2 class="">Subscribe to our<br/>updates</h2>
 </div>
@@ -28,7 +31,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 </div>
 </section>
 
-<?php //get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
+
 
 
 <!--
@@ -37,7 +40,7 @@ $container = get_theme_mod( 'understrap_container_type' );
     <div class="row">
       <div class="col-12 text-center">
         <h4 class="mb-3">Join Our Newsletter</h4>
-        <?php echo do_shortcode('[contact-form-7 id="233" title="Contact form 1"]') ?>  
+        < ?php echo do_shortcode('[contact-form-7 id="233" title="Contact form 1"]') ?>  
       </div>
     </div>
   </div>

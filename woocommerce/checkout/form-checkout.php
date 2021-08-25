@@ -86,20 +86,25 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
     #page-wrapper .woocommerce form .form-row input, 
     #page-wrapper .woocommerce form .form-row textarea {
         width: 100% !important;
-    	height: 29px;
+    	height: 35px;
         border: 1px solid #000000 !important;
         box-sizing: border-box !important;
         border-radius: 5px !important;
     	text-align: center !important;
     	padding-top: 0 !important;
     	padding-bottom: 0 !important;
-    	line-height: 29px;
+    	line-height: 37px !important;
     	font-size: 12px;
     	color: #000000;
     }
+    #page-wrapper .woocommerce form .form-row textarea {
+      height: 55px;
+      padding: 15px 0 !important;
+      line-height: 15px !important;
+    }
     #page-wrapper .woocommerce-checkout span.select2-selection.select2-selection--single {
     	border: 1px solid #000000 !important;
-    	height: 29px;
+    	height: 35px;
     }
     #page-wrapper .woocommerce-checkout .h2 {
         font-family: Standard Book;
@@ -111,25 +116,27 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
     }
     #billing_first_name_field,
     #billing_city_field {
-    	width: 147px !important;
+    	width: 155px !important;
     	float: left;
     }
     #billing_last_name_field,
     #billing_postcode_field {
-    	width: 147px !important;
+    	width: 155px !important;
     	float: right;
     }
     #billing_email_field,
-    #billing_country_field,
     #billing_city_field,
     #billing_postcode_field,
     #billing_address_1_field {
-    	margin-bottom: 14px !important;
+    	margin-bottom: 5px !important;
+    }
+    #billing_country_field {
+      margin-bottom: 10px;
     }
     #billing_phone_field,
     #billing_first_name_field,
     #billing_last_name_field {
-    	margin-bottom: 27px !important;
+    	margin-bottom: 10px !important;
     }
     #order_comments_field {
     	margin-bottom: 0 !important;
@@ -172,6 +179,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
         line-height: 20px;
         color: #000000;
     	margin-left: 10px;
+        margin-bottom: 0;
     }
     #shipping_method > li,
     .wc_payment_methods > li {
@@ -194,16 +202,21 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
         color: #000000 !important;
         opacity: 0.4;
     }
-    .woocommerce-checkout-review-order-table img {
+    .woocommerce-checkout-review-order-table {
     	width: 51px;
         height: 51px;
-        opacity: 0.3;
+        
         border: 1px solid #000000;
         box-sizing: border-box;
         border-radius: 7px;
     	float: left;
     	margin-right: 12px;
-    	opacity: 1 !important;
+        opacity: 1 !important;
+    	
+    }
+    .woocommerce-checkout-review-order-table img {
+      opacity: 1 !important;
+      width: 51px !important;
     }
     .woocommerce-checkout-review-order-table td {
     	border-top: 0px solid #000 !important;
@@ -223,6 +236,12 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
     	text-decoration: none !important;
     	padding-left: 0 !important;
     }
+    .select2-container--default .select2-results__option[aria-selected=true], .select2-container--default .select2-results__option[data-selected=true] {
+      padding-left: 0;
+  }
+  .select2-search select2-search--dropdown {
+    display: none
+  }
     .woocommerce-checkout-review-order-table .woocommerce-Price-amount {
 	    font-family: Standard Book;
         font-size: 12px;
@@ -230,6 +249,15 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
         color: #000000;
         opacity: 0.5;
     }
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 32px;
+    padding: 0;
+    padding-top: 3px;
+  }
+  .woocommerce ul#shipping_method li label {
+    font-size: 12px;
+  }
+  
     .woocommerce-checkout-review-order-table .product-total {
 	    font-family: Standard Book;
         font-size: 12px !important;

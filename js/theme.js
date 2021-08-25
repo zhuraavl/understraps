@@ -7260,10 +7260,22 @@ jQuery(document).ready(function ($) {
   //  }
 
   $('.volume-icon').each(function () {
-    var num = Math.floor(Math.random() * 2 + 1),
+    var num = Math.floor(Math.random() * 38 + 1),
         img = $(this);
     img.attr('src', '/log/' + num + '.svg');
     img.attr('alt', 'Src: ' + img.attr('src'));
+  });
+  $(".subcategories-list li a").each(function () {
+    var text = $(this).text();
+    $(this).text(text.replace("Women", ""));
+  });
+  $(".subcategories-list li a").each(function () {
+    var text = $(this).text();
+    $(this).text(text.replace("Women's", ""));
+  });
+  $(".subcategories-list li a").each(function () {
+    var text = $(this).text();
+    $(this).text(text.replace("Men", ""));
   });
 }); //
 //const slider = document.querySelector('.main-line .products');
