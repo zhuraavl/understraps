@@ -58,11 +58,39 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row py-3">
       
       <div class="col-12 col-sm-12 text-center footer-menu">
-        <a href="/about/">About</a>
-        <a href="/shipping/">Shipping</a>
-        <a href="/returns/">Returns</a>
-        <a href="/terms/">Terms</a>
-        <a href="/contact/">Contact</a>
+       <ul>
+       <li><a href="/about/">About</a></li>
+       <li><a href="/shipping/">Shipping & Returns</a></li>
+       <li><a href="/terms/">Terms</a></li>
+       <li><a href="/contact/">Contact</a></li>
+        
+        
+        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6917">
+				
+					<div style="display: none !important"><?php echo do_shortcode('[woo-currency-switcher]')?></div>
+				
+					<?php 
+					   $modsss = frameWcu::_()->getModule('currency');
+					  
+					   $currencyModel = frameWcu::_()->getModule('currency')->getModel();
+					   $currencies = $currencyModel->getCurrencies();
+					   
+					   
+					?>
+
+          			<a title="currency" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-6917"><?php echo $modsss->currentCurrency ?></a>
+					<ul class="dropdown-menu currency-dropdown" aria-labelledby="menu-item-dropdown-6917" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(372px, 38px, 0px);">
+						<?php foreach ($currencies as $key => $currency) {?>
+							<?php if($modsss->currentCurrency != $currency['name']) { ?>
+    							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-10963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10965 nav-item serch-menu-item">
+        							<a title="<?php echo $currency['name']?>" class="nav-link" onclick="wcuUpdateUrlParam('currency', '<?php echo $currency['name']?>');"><?php echo $currency['name']?></a>
+        						</li>
+							<?php }?>
+						<?php }?>
+					</ul>
+				</li>
+        
+        </ul>
       </div>
      <div class="pay-icos text-center">
 <!--        <img src="< ?php echo get_template_directory_uri(); ?>/pic/image7.svg" alt="" class="mx-1" width="35px">-->

@@ -19,25 +19,23 @@ jQuery(document).ready(function ($) {
 
   
   
-//  $(window).on('resize load', function () {
-//    var $el = $('.summary.entry-summary');
-//    $el.each(function () {
-//        $(this).css('position', 'fixed').css({
-//            
-//        top: ($(window).height() - $el.height()) / 2
-//        });
-//    });
-//});
-//   $(window).on('resize load', function () {
-//    var $el = $('.left-product');
-//    $el.each(function () {
-//        $(this).css('position', 'fixed').css({
-//            
-//        top: ($(window).height() - $el.height()) / 2
-//        });
-//    });
-//});
-//  
+  $(window).on('resize load click', function () {
+    var $el = $('.wc-tabs-wrapper'),
+        $setheight = $el.height();
+    $el.each(function () {
+      $('.outer-height-tabs').css('height', $setheight + "px");
+        
+});
+});
+   $(window).on('resize load', function () {
+    var $el = $('.outer-height-buy'),
+    $setheight = $el.height();
+    $el.each(function () {
+      $('.product .summary').css('height', $setheight + "px");
+        
+});
+});
+  
   
   
   

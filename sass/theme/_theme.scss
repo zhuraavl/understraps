@@ -134,7 +134,9 @@ header#hedaer {
     font-size: 12px;
     padding: 0px;
     outline: none;
-    
+    @include media-breakpoint-down(xs) {
+      font-size: 10px;
+    }
   }
   ul {
     padding: 0;
@@ -1450,9 +1452,7 @@ p#order_comments_field label {
   
   text-align: center;
 }
-.single-product .related-category {
-  padding-top: 50px !important;
-}
+
 
 .woocommerce table.shop_table tbody th, .woocommerce table.shop_table tfoot td, .woocommerce table.shop_table tfoot th {
   font-weight: 400;
@@ -1533,7 +1533,10 @@ p#order_comments_field label {
 }
 .tax-pwb-brand {
   h1.hero-title {
-    padding-top: 75px;
+    padding-top: 100px;
+    @include media-breakpoint-down(xs) {
+      padding-top: 135px;
+    }
   }
 }
 
@@ -3257,4 +3260,30 @@ padding-top: 5px;
 
 .woocommerce-checkout .subscribe-and-socials-footer{ 
   display: none;
+}
+
+.cart-enter-email, .cart-input-email {
+  display: none;
+}
+.woocommerce table.shop_attributes td p {
+  padding: 5px 0 15px !important; 
+}
+.woocommerce table.shop_attributes td {
+  font-style: normal;
+}
+
+.footer-menu {
+  ul {
+    padding: 0;
+  margin: 0;
+  list-style: none;
+  }
+  
+  li {
+    display: inline-block;
+    a {
+      text-transform: uppercase;
+      padding: 0 10px !important;
+    }
+  }
 }

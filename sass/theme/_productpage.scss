@@ -41,17 +41,24 @@ $main: 'Standard Book';
 }
 
 
-.product .summary {
+.inner-height-buy {
   position: fixed;
+  right: 2.5%;
+  width: 200px;
+  height: 100%;
+  top: 0;
+}
+.product .summary {
+  position: absolute;
   top: 0;
   bottom: 0;
-  right: 2%;
+  right: 0%;
   float: none !important;
   width: 200px !important;
   left: auto;
   z-index: 100;
   margin: auto !important;
-  height: 200px;
+  
   @include media-breakpoint-down(sm) {
     position: relative;
     right: auto;
@@ -59,12 +66,16 @@ $main: 'Standard Book';
     height: auto;
   }
 }
+.pwb-single-product-brands {
+  display: none;
+}
 .summary.entry-summary .product_title.entry-title {
   font-size: 14px;
   font-family: $main;
   margin-bottom: 0;
   line-height: 1.4;
   text-transform: uppercase;
+  display: none;
 }
 
 .summary .pwb-single-product-brands a {
@@ -81,14 +92,29 @@ $main: 'Standard Book';
 .woocommerce div.product form.cart .button {
   text-transform: uppercase;
 }
-.wc-tabs-wrapper {
+
+
+
+
+
+.inner-height-tabs {
   position: fixed;
-  left: 2%;
+  left: 2.5%;
+  width: 200px;
+  height: 100%;
+  top: 0;
+}
+.outer-height-tabs {
+  position: absolute;
+  left: 0;
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 200px;
-  height: 200px;
+  
+}
+.wc-tabs-wrapper {
+  
+  
   @include media-breakpoint-down(sm) {
     position: relative;
     left: auto;
@@ -102,7 +128,7 @@ $main: 'Standard Book';
   padding: 0;
   margin: 0;
   border: 0 !important;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   &:before, &:after {
     display: none !important;
   }
@@ -209,7 +235,7 @@ $main: 'Standard Book';
 
 .summary.entry-summary .price {
   margin: 0;
-  margin: 10px 0 12.5px;
+  margin: 0px 0 15px;
 }
 .summary.entry-summary .price .woocommerce-Price-amount.amount{
   font-size: 16px;
@@ -512,4 +538,30 @@ $main: 'Standard Book';
 .product-brand-bottom-title {
   font-size: 12px;
   text-transform: uppercase;
+}
+
+
+.prod-titles {
+  position: fixed;
+  top: 91vh;
+  width: 300px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  mix-blend-mode: difference;
+  display: block;
+  .brand-name {
+    font-family: $bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+    a {
+      color: #fff;
+    }
+  }
+  h4 {
+    font-size: 16px;
+    color: #fff;
+
+  }
 }

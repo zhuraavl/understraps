@@ -677,30 +677,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</li>
 					</ul>
 				</li>
-				<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6917" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-6917 nav-item">
 				
-					<div style="display: none !important"><?php echo do_shortcode('[woo-currency-switcher]')?></div>
-				
-					<?php 
-					   $modsss = frameWcu::_()->getModule('currency');
-					  
-					   $currencyModel = frameWcu::_()->getModule('currency')->getModel();
-					   $currencies = $currencyModel->getCurrencies();
-					   
-					   
-					?>
-
-          			<a title="currency" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-6917"><?php echo $modsss->currentCurrency ?></a>
-					<ul class="dropdown-menu currency-dropdown" aria-labelledby="menu-item-dropdown-6917" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(372px, 38px, 0px);">
-						<?php foreach ($currencies as $key => $currency) {?>
-							<?php if($modsss->currentCurrency != $currency['name']) { ?>
-    							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-10963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10965 nav-item serch-menu-item">
-        							<a title="<?php echo $currency['name']?>" class="nav-link" onclick="wcuUpdateUrlParam('currency', '<?php echo $currency['name']?>');"><?php echo $currency['name']?></a>
-        						</li>
-							<?php }?>
-						<?php }?>
-					</ul>
-				</li>
 				<li id="bag-link">
 					<a title="Bag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-bag"><span class="bag-title">Bag</span>  <span class="cart-customlocation"><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a>
 					<ul class="dropdown-menu currency-dropdown" aria-labelledby="menu-item-dropdown-6917" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(372px, 38px, 0px);">

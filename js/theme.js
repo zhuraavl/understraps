@@ -7019,26 +7019,21 @@ jQuery(document).ready(function ($) {
   //    $('.product-images img').attr('data-scale','true');
   //    
   //  });
-  //  $(window).on('resize load', function () {
-  //    var $el = $('.summary.entry-summary');
-  //    $el.each(function () {
-  //        $(this).css('position', 'fixed').css({
-  //            
-  //        top: ($(window).height() - $el.height()) / 2
-  //        });
-  //    });
-  //});
-  //   $(window).on('resize load', function () {
-  //    var $el = $('.left-product');
-  //    $el.each(function () {
-  //        $(this).css('position', 'fixed').css({
-  //            
-  //        top: ($(window).height() - $el.height()) / 2
-  //        });
-  //    });
-  //});
-  //  
-  //$( "#tab-pwb_tab-content" ).clone().appendTo( ".brand-description-product" ); 
+
+  $(window).on('resize load click', function () {
+    var $el = $('.wc-tabs-wrapper'),
+        $setheight = $el.height();
+    $el.each(function () {
+      $('.outer-height-tabs').css('height', $setheight + "px");
+    });
+  });
+  $(window).on('resize load', function () {
+    var $el = $('.outer-height-buy'),
+        $setheight = $el.height();
+    $el.each(function () {
+      $('.product .summary').css('height', $setheight + "px");
+    });
+  }); //$( "#tab-pwb_tab-content" ).clone().appendTo( ".brand-description-product" ); 
 
   $("#tab-pwb_tab-content").clone().appendTo(".single-brand-info");
   $(".tax-pwb-brand").addClass("hero"); //$(window).scroll(function() {    
