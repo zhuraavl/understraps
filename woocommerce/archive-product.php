@@ -47,8 +47,34 @@ do_action( 'woocommerce_before_main_content' );
 	do_action( 'woocommerce_archive_description' );
 	?>
   </header>
+<div class="woocommerceCategories">
+<?php 
+if( is_product_category() ) {
+    $main_term = get_queried_object();
+    
+    //print_r($main_term);
+    
+    $args_query = array(
+        'taxonomy' => 'product_cat',
+        'hide_empty' => false,
+        'child_of' => $main_term->term_id
+    );
+    
+        // Loop through WP_Term Objects
+        foreach ( get_terms( $args_query ) as $term ) {
+            if( $term->term_id != $main_term->term_id ) {
+                // $term->slug; // Slug
+                
+                // Output each (linked) term name…
+                echo sprintf( '<a href="%s">%s</a>', get_term_link( $term->term_id, 'product_cat' ), $term->name );
+            }
+        }
+}
+?>
+</div>
 
-
+<?php echo do_shortcode('[wpf-filters id=1]') ?>
+<!-- 
   <div class="position-relative overflow-md-hidden bottom-menu-box">
     <div class="row category-menu-top">
       <div class="col-12 position-static">
@@ -60,7 +86,7 @@ do_action( 'woocommerce_before_main_content' );
       </div>
     </div>
   </div>
-
+ -->
 
   <?php
 if ( woocommerce_product_loop() ) {
@@ -124,3 +150,118 @@ do_action( 'woocommerce_after_main_content' );
 do_action( 'woocommerce_sidebar' );
 
 get_footer( 'shop' );
+?>
+<style>
+.wpfMainWrapper {
+	text-align: center;
+}
+.wpfMainWrapper .wpfFilterWrapper {
+	width: 70px !important;
+	display: inline-block !important;
+}
+.wpfMainWrapper .wpfFilterWrapper .wfpTitle {
+	font-family: Roboto;
+    font-size: 12px;
+    line-height: 28px;
+    color: #000000;
+	text-transform: uppercase;
+	font-weight: normal !important;
+}
+.wpfMainWrapper .wpfFilterWrapper .wpfFilterTitle .fa-plus:before {
+    content: "\f078" !important;
+}
+.wpfMainWrapper .wpfFilterWrapper .wpfFilterTitle .fa-minus:before {
+	content: "\f077" !important;
+}
+.wpfMainWrapper .wpfFilterWrapper .wpfFilterTitle .wpfTitleToggle {
+    font-size: 12px;
+    line-height: 28px;
+    color: #000000;
+	text-transform: uppercase;
+	font-weight: normal !important;
+}
+.wpfFilterContent {
+	position: absolute;
+    background: white;
+    width: 100%;
+    left: 0;
+    height: auto !important;
+    z-index: 888;
+}
+.wpfFilterContent .wpfFilterVerScroll { 
+	max-height: 20000px !important;
+	padding: 25px 15% 40px 15%;	
+}
+#wpfBlock_1 .wpfFilterContent .wpfFilterVerScroll {
+	column-width: 15%;
+	column-count: 4;
+	column-gap: 3%;
+}
+.wpfFilterVerScroll li {
+	text-align: center;
+}
+.wpfFilterVerScroll li .wpfCheckbox,
+.wpfFilterButtons,
+.bottom-menu-box {
+	display: none !important;
+}
+.wpfFilterVerScroll li .wpfFilterTaxNameWrapper {
+	font-family: Standard Book;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+}
+.wpfCheckboxChecked .wpfFilterTaxNameWrapper {
+    font-weight: bold !important;
+}
+.wpfFilterWrapper i, .wpfFilterWrapper svg {
+	float: initial !important;
+	margin-left: 10px !important;
+}
+#wpfBlock_Category {
+	width: 100% !important;
+}
+.woocommerceCategories {
+	text-align: center;
+	margin: 25px 0 32px 0;
+}
+.woocommerceCategories a {
+	font-family: Standard Book;
+    font-size: 14px;
+    line-height: 28px;
+    color: #000000;
+	margin: 0 10px 0 10px;
+}
+.wpfActiveReal .wfpTitle,
+.wpfActiveReal .fa-minus {
+	opacity: 0.5;
+}
+</style>
+<script>
+jQuery( document ).ready(function() {
+	jQuery('.wpfFilterWrapper').each(function(){
+		if(!jQuery(this).hasClass('wpfNotActive')) {
+			console.log(jQuery(this));
+			jQuery(this).children('.wpfFilterTitle').trigger("click");
+		}
+	});
+	jQuery('.wpfCheckbox').each(function(){
+		if(jQuery(this).children('input').prop("checked")) {
+			jQuery(this).parent().addClass('wpfCheckboxChecked');
+		}
+	});
+	jQuery('.wpfCheckbox').on('click', function(){
+    	jQuery('.wpfCheckbox').each(function(){
+    		if(jQuery(this).children('input').prop("checked")) {
+    			jQuery(this).parent().addClass('wpfCheckboxChecked');
+    		} else {
+    			jQuery(this).parent().removeClass('wpfCheckboxChecked');
+    		}
+    	});
+	});	
+	jQuery('.wpfFilterWrapper').on('click', function(){
+		jQuery(this).toggleClass('wpfActiveReal');
+	});	
+});
+</script>
