@@ -47,6 +47,7 @@ do_action( 'woocommerce_before_main_content' );
 	do_action( 'woocommerce_archive_description' );
 	?>
   </header>
+  <!-- 
 <div class="woocommerceCategories">
 <?php 
 if( is_product_category() ) {
@@ -72,7 +73,33 @@ if( is_product_category() ) {
 }
 ?>
 </div>
+ -->
+<?php
+if ( is_product_category() ) {
 
+    $term_id  = get_queried_object_id();
+    $taxonomy = 'product_cat';
+
+    // Get subcategories of the current category
+    $terms    = get_terms([
+        'taxonomy'    => $taxonomy,
+        'hide_empty'  => true,
+        'parent'      => get_queried_object_id()
+    ]);
+
+    $output = '<ul class="subcategories-list">';
+
+    // Loop through product subcategories WP_Term Objects
+    foreach ( $terms as $term ) {
+        $term_link = get_term_link( $term, $taxonomy );
+
+        $output .= '<li class="'. $term->slug .'"><a href="'. $term_link .'">'. $term->name .'</a></li>';
+    }
+
+    echo $output . '</ul>';
+}
+  
+?>
 <?php echo do_shortcode('[wpf-filters id=1]') ?>
 <!-- 
   <div class="position-relative overflow-md-hidden bottom-menu-box">
