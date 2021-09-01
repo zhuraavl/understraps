@@ -74,10 +74,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     	background: white;
     	transition: top 0.2s ease-in-out !important;
     }
-    .volume-icon,
-    .volume-icon-box {
-    	margin-top: 50px;
-    }
+    
     #hedaer .py-2 {
     	padding: 0 !important;
     }
@@ -425,7 +422,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         jQuery("#main-menu > li > a").on('click', function() {
         	jQuery('.volume-icon').each(function () {
-                var num = Math.floor(Math.random() * 2 + 1),
+                var num = Math.floor(Math.random() * 38 + 1),
                     img = jQuery(this);
                 img.attr('src', '/log/' + num + '.svg');
                 img.attr('alt', 'Src: ' + img.attr('src'));
@@ -436,7 +433,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         // Hide Header on on scroll down
         var didScroll;
         var lastScrollTop = 0;
-        var delta = 5;
+        var delta = 0;
         var navbarHeight = jQuery('header').outerHeight();
 
         jQuery(window).scroll(function(event){
@@ -448,7 +445,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 hasScrolled();
                 didScroll = false;
             }
-        }, 250);
+        }, 1);
 
         function hasScrolled() {
             var st = jQuery(this).scrollTop();
@@ -459,13 +456,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             // If they scrolled down and are past the navbar, add class .nav-up.
             // This is necessary so you never see what is "behind" the navbar.
-            if (st > lastScrollTop && st > navbarHeight){
+            if (st > lastScrollTop && st > 0){
                 // Scroll Down
                 jQuery('header').removeClass('nav-down').addClass('nav-up');
+                jQuery('.volume-icon-box').removeClass('logo-down').addClass('logo-up');
+                jQuery('.volume-icon').removeClass('logo-down').addClass('logo-up');
             } else {
                 // Scroll Up
                 if(st + jQuery(window).height() < jQuery(document).height()) {
                     jQuery('header').removeClass('nav-up').addClass('nav-down');
+                    jQuery('.volume-icon-box').removeClass('logo-up').addClass('logo-down');
+                    jQuery('.volume-icon').removeClass('logo-up').addClass('logo-down');
                 }
             }
             
@@ -676,30 +677,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</li>
 					</ul>
 				</li>
-				<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6917" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-6917 nav-item">
 				
-					<div style="display: none !important"><?php echo do_shortcode('[woo-currency-switcher]')?></div>
-				
-					<?php 
-					   $modsss = frameWcu::_()->getModule('currency');
-					  
-					   $currencyModel = frameWcu::_()->getModule('currency')->getModel();
-					   $currencies = $currencyModel->getCurrencies();
-					   
-					   
-					?>
-
-          			<a title="currency" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-6917"><?php echo $modsss->currentCurrency ?></a>
-					<ul class="dropdown-menu currency-dropdown" aria-labelledby="menu-item-dropdown-6917" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(372px, 38px, 0px);">
-						<?php foreach ($currencies as $key => $currency) {?>
-							<?php if($modsss->currentCurrency != $currency['name']) { ?>
-    							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-10963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10965 nav-item serch-menu-item">
-        							<a title="<?php echo $currency['name']?>" class="nav-link" onclick="wcuUpdateUrlParam('currency', '<?php echo $currency['name']?>');"><?php echo $currency['name']?></a>
-        						</li>
-							<?php }?>
-						<?php }?>
-					</ul>
-				</li>
 				<li id="bag-link">
 					<a title="Bag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-bag"><span class="bag-title">Bag</span>  <span class="cart-customlocation"><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a>
 					<ul class="dropdown-menu currency-dropdown" aria-labelledby="menu-item-dropdown-6917" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(372px, 38px, 0px);">

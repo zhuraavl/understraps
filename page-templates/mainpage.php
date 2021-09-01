@@ -43,41 +43,30 @@ defined( 'ABSPATH' ) || exit;
        
        
         
-	<div class="hero-box">
+	<div class="hero-box mt-5">
  
     <h2 class="">NEWEST FASHION BRANDS</h2>
-    
-    
-    
 <!--    <p class="hero-descr"></p>-->
 
 </div>
 
-<div class="minpage-brands">
-	<?php  
-	$brands = array();
-	$brands = \Perfect_Woocommerce_Brands\Perfect_Woocommerce_Brands::get_brands(true);
-    shuffle($brands);
-	
-	foreach ($brands as $key => $brand) {
-	?>
-	
-	<a href="/brand/<?php echo $brand->slug ?>/">
-		<img src="<?php echo (isset($brand->brand_image[0]))? $brand->brand_image[0] : '/wp-content/uploads/woocommerce-placeholder-100x100.png' ?>" height="70" />
-		<br/>
-		<span><?php echo $brand->name ?></span>
-	</a>
-    <?php
-    }
-	?>
-</div>
+<div class="featires main-line">
+  <?php echo do_shortcode( "[featured_products per_page='15' columns='1' orderby='rand' order='ASC']" ); ?>
+  <!--
+  <a href="/shop?orderby=rand" class="button-shop">SHOW ALL</a>
+  -->
+</div>	
 
 
 
 
 
 
-<div class="mainpage-categories">
+
+
+
+
+<div class="mainpage-categories mt-5">
 	<div class="mainpage-categories-inner">
 	<?php 
 		
@@ -110,6 +99,13 @@ defined( 'ABSPATH' ) || exit;
 		
 		wc_reset_loop();
 		?>
+    
+        <a href="/product-category/men/?orderby=date">New Arrivals</a>
+        <a href="product-category/men/men-t-shirt/">T-Shirts</a>
+        <a href="/product-category/men/men-hoodie/">Hoodies</a>
+        <a href="/product-category/men/jackets-men/">Jackets</a>
+        <a href="/product-category/men/men-trousers/">Trousers</a>
+    
 
 	</div>
 	<div class="mainpage-categories-inner">
@@ -145,22 +141,44 @@ defined( 'ABSPATH' ) || exit;
 		
 		wc_reset_loop();
 		?>
-
+        <a href="/product-category/women/?orderby=date">New Arrivals</a>
+        <a href="/product-category/women/women-dress/">Dresses</a>
+        <a href="/product-category/women/women-shirt/">T-Shirts</a>
+        <a href="product-category/women/women-jackets/">Jackets</a>
+        <a href="/product-category/women/women-accessories/">Accessories</a>
 		
 	</div>
 </div>
 
 
 
-<div class="hero-box">
-    <h2 class="">popular<br>products</h2>
+<div class="minpage-brands d-none">
+	<?php  
+	$brands = array();
+	$brands = \Perfect_Woocommerce_Brands\Perfect_Woocommerce_Brands::get_brands(true);
+    shuffle($brands);
+	
+	foreach ($brands as $key => $brand) {
+	?>
+	
+	<a href="/brand/<?php echo $brand->slug ?>/">
+<!--
+		<img src="< ?php echo (isset($brand->brand_image[0]))? $brand->brand_image[0] : '/wp-content/uploads/woocommerce-placeholder-100x100.png' ?>" height="70" />
+		<br/>
+-->
+		<span><?php echo $brand->name ?></span>
+	</a>
+    <?php
+    }
+	?>
 </div>
-<div class="featires my-3 main-line">
-  <?php echo do_shortcode( "[featured_products per_page='15' columns='1' orderby='rand' order='ASC']" ); ?>
-  <!--
-  <a href="/shop?orderby=rand" class="button-shop">SHOW ALL</a>
-  -->
-</div>	
+
+
+
+
+
+
+
 
 	
 <div class="hero-box mb-3">
@@ -179,7 +197,7 @@ foreach ($brands as $key => $brand) {
     $cats[$brand->term_id] = $brand;
 }
 krsort($cats);
-$cats = array_slice($cats, 0, 2); 
+$cats = array_slice($cats, 0, 4); 
 foreach ( $cats as $category ) {
     ?>
 	   <div class="mainpage-recent-brands-wrapper">
@@ -225,27 +243,33 @@ foreach ( $cats as $category ) {
 	
 
 
+<!--
 <div class="hero-box">
     <h2 class="">Be aware of<br/>what's new</h2>
 </div>
 <div class="featires my-3 main-line">
-  <?php echo do_shortcode( "[products per_page='25' columns='1' orderby='id' order='DESC']" ); ?>
-  <!--
+  < ?php echo do_shortcode( "[products per_page='25' columns='1' orderby='id' order='DESC']" ); ?>
+  
+</div>
+-->
+	
+	<!--
   <a href="/shop?orderby=rand" class="button-shop">SHOW ALL</a>
   -->
+	
+	
+	
+	
+	
+	
+	
+	
+<!--
+	<div class="main-about-text mt-5 pt-5">
+  <h2 class="bold">we created 2020s, an online catalog of clothes conceived and created in the 20s, that reflects, characterizes and lets you keep up with what's going on in the culture.</h2>
 </div>
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+-->
 	
 	
 	
@@ -295,14 +319,14 @@ foreach ( $cats as $category ) {
         }
         .mainpage-categories-inner {
         	display: inline-block;
-        	vertical-align: top;
+        	vertical-align: bottom;
         	margin: 0 38px 0 38px;
         	width: 180px;
         	text-align: center;
         }
         .mainpage-categories-inner a {
         	display: block;
-        	vertical-align: top;
+        	vertical-align: bottom;
         	float: none;
             width: 100%;
         	/* font-family: GT America;*/
@@ -332,7 +356,7 @@ foreach ( $cats as $category ) {
         .woocommerce ul.products.columns-1 li.product {
         	margin: 0!important;
            
-        	vertical-align: top;
+        	vertical-align: bottom;
         }
         .mainpage-recent-brands {
             position: relative;
@@ -341,7 +365,7 @@ foreach ( $cats as $category ) {
         .mainpage-recent-brands-wrapper {
         	width: 50%;
         	display: inline-block;
-        	vertical-align: top;
+        	vertical-align: bottom;
         	padding: 0 3% 0 3%;
         	float: left;
         	margin-bottom: 30px;
@@ -408,51 +432,51 @@ foreach ( $cats as $category ) {
 	
 	<script>
     jQuery(document).ready(function() {
-    	jQuery('.minpage-brands').slick({
-    	  arrows: false,
-          infinite: true,
-          slidesToShow: 8,
-          slidesToScroll: 1,
-          autoplay: true,
-          speed: 300,
-          autoplaySpeed: 2000,
-          pauseOnHover: true,
-          responsive: [
-      	    {
-      	      breakpoint: 600,
-      	      settings: {
-      	        slidesToShow: 4
-      	      }
-      	    }
-    	  ]
-        });
-    
-    	let blocked = false;
-    	let blockTimeout = null;
-    	let prevDeltaY = 0;
-    
-    	jQuery(".minpage-brands").on('mousewheel DOMMouseScroll wheel', (function(e) {
-    	    let deltaY = e.originalEvent.deltaY;
-    	    e.preventDefault();
-    	    e.stopPropagation();
-    
-    	    clearTimeout(blockTimeout);
-    	    blockTimeout = setTimeout(function(){
-    	        blocked = false;
-    	    }, 50);
-    
-    	    
-    	    if (deltaY > 0 && deltaY > prevDeltaY || deltaY < 0 && deltaY < prevDeltaY || !blocked) {
-    	        blocked = true;
-    	        prevDeltaY = deltaY;
-    
-    	        if (deltaY > 0) {
-    	        	jQuery(this).slick('slickNext');
-    	        } else {
-    	        	jQuery(this).slick('slickPrev');
-    	        }
-    	    }
-    	}));
+//    	jQuery('.minpage-brands').slick({
+//    	  arrows: false,
+//          infinite: true,
+//          slidesToShow: 8,
+//          slidesToScroll: 1,
+//          autoplay: true,
+//          speed: 300,
+//          autoplaySpeed: 2000,
+//          pauseOnHover: true,
+//          responsive: [
+//      	    {
+//      	      breakpoint: 600,
+//      	      settings: {
+//      	        slidesToShow: 4
+//      	      }
+//      	    }
+//    	  ]
+//        });
+//    
+//    	let blocked = false;
+//    	let blockTimeout = null;
+//    	let prevDeltaY = 0;
+//    
+//    	jQuery(".minpage-brands").on('mousewheel DOMMouseScroll wheel', (function(e) {
+//    	    let deltaY = e.originalEvent.deltaY;
+//    	    e.preventDefault();
+//    	    e.stopPropagation();
+//    
+//    	    clearTimeout(blockTimeout);
+//    	    blockTimeout = setTimeout(function(){
+//    	        blocked = false;
+//    	    }, 50);
+//    
+//    	    
+//    	    if (deltaY > 0 && deltaY > prevDeltaY || deltaY < 0 && deltaY < prevDeltaY || !blocked) {
+//    	        blocked = true;
+//    	        prevDeltaY = deltaY;
+//    
+//    	        if (deltaY > 0) {
+//    	        	jQuery(this).slick('slickNext');
+//    	        } else {
+//    	        	jQuery(this).slick('slickPrev');
+//    	        }
+//    	    }
+//    	}));
 
 //		jQuery('.products.columns-1').slick({
 //    	  arrows: false,
@@ -503,7 +527,8 @@ foreach ( $cats as $category ) {
           slidesToScroll: 1,
           autoplay: true,
           cssEase: 'ease-ut',
-          autoplaySpeed: 10,
+          speed: 300,
+          autoplaySpeed: 1,
           pauseOnHover: false
         });
         

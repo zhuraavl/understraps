@@ -19,25 +19,23 @@ jQuery(document).ready(function ($) {
 
   
   
-//  $(window).on('resize load', function () {
-//    var $el = $('.summary.entry-summary');
-//    $el.each(function () {
-//        $(this).css('position', 'fixed').css({
-//            
-//        top: ($(window).height() - $el.height()) / 2
-//        });
-//    });
-//});
-//   $(window).on('resize load', function () {
-//    var $el = $('.left-product');
-//    $el.each(function () {
-//        $(this).css('position', 'fixed').css({
-//            
-//        top: ($(window).height() - $el.height()) / 2
-//        });
-//    });
-//});
-//  
+  $(window).on('resize load click', function () {
+    var $el = $('.wc-tabs-wrapper'),
+        $setheight = $el.height();
+    $el.each(function () {
+      $('.outer-height-tabs').css('height', $setheight + "px");
+        
+});
+});
+   $(window).on('resize load', function () {
+    var $el = $('.outer-height-buy'),
+    $setheight = $el.height();
+    $el.each(function () {
+      $('.product .summary').css('height', $setheight + "px");
+        
+});
+});
+  
   
   
   
@@ -346,7 +344,7 @@ $(function() {
   
   $('.volume-icon').each(function() {
 
-  var num = Math.floor(Math.random() * 2 + 1),
+  var num = Math.floor(Math.random() * 38 + 1),
     img = $(this);
 
   img.attr('src', '/log/' + num + '.svg');
@@ -357,9 +355,34 @@ $(function() {
   
   
   
+  $(".subcategories-list li a").each(function() {
+    var text = $(this).text();
+    $(this).text(text.replace("Women", "")); 
+});
+   
+  $(".subcategories-list li a").each(function() {
+    var text = $(this).text();
+    $(this).text(text.replace("Women's", ""));
+});
+  
+  $(".subcategories-list li a").each(function() {
+    var text = $(this).text();
+    $(this).text(text.replace("Men", ""));
+});
+  
+  
+  
+  
+  
   
 
 });
+
+
+
+
+
+
 
 
 

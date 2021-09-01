@@ -1,6 +1,23 @@
 $bold: 'ZIGZAG-NotRounded';
 $main: 'Standard Book';
 
+
+
+
+
+
+.single-product {
+  > .container-fluid {
+    padding: 0;
+  }
+}
+.single-product .subscribe-and-socials-footer {
+  display: none !important;
+  background: #fff;
+}
+
+
+
 .woocommerce-product-gallery {
   float: none !important;
   width: 50% !important;
@@ -24,29 +41,47 @@ $main: 'Standard Book';
 }
 
 
-.product .summary {
+.inner-height-buy {
   position: fixed;
+  right: 2.5%;
+  width: 200px;
+  height: 100%;
+  top: 0;
+}
+.product .summary {
+  position: absolute;
   top: 0;
   bottom: 0;
-  right: 2%;
+  right: 0%;
   float: none !important;
   width: 200px !important;
   left: auto;
   z-index: 100;
   margin: auto !important;
-  height: 200px;
+  
+  @include media-breakpoint-down(sm) {
+    position: relative;
+    right: auto;
+    width: 100%;
+    height: auto;
+  }
+}
+.pwb-single-product-brands {
+  display: none;
 }
 .summary.entry-summary .product_title.entry-title {
   font-size: 14px;
   font-family: $main;
   margin-bottom: 0;
   line-height: 1.4;
+  text-transform: uppercase;
+  display: none;
 }
 
 .summary .pwb-single-product-brands a {
   font-family: $bold;
   font-size: 14px;
-  padding: 10px 0;
+  padding: 5px 0;
   display: block;
 }
 .woocommerce div.product form.cart .variations label {
@@ -57,21 +92,43 @@ $main: 'Standard Book';
 .woocommerce div.product form.cart .button {
   text-transform: uppercase;
 }
-.wc-tabs-wrapper {
+
+
+
+
+
+.inner-height-tabs {
   position: fixed;
-  left: 2%;
+  left: 2.5%;
+  width: 200px;
+  height: 100%;
+  top: 0;
+}
+.outer-height-tabs {
+  position: absolute;
+  left: 0;
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 200px;
-  height: 200px;
+  
+}
+.wc-tabs-wrapper {
+  
+  
+  @include media-breakpoint-down(sm) {
+    position: relative;
+    left: auto;
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+  }
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs {
   padding: 0;
   margin: 0;
   border: 0 !important;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   &:before, &:after {
     display: none !important;
   }
@@ -135,6 +192,9 @@ $main: 'Standard Book';
   z-index: 100;
   position: relative;
   padding: 100px 0 0;
+  @include media-breakpoint-down(sm)  {
+    margin-top: 0;
+  }
 }
 .single-brand-info {
   max-width: 450px;
@@ -175,21 +235,42 @@ $main: 'Standard Book';
 
 .summary.entry-summary .price {
   margin: 0;
-  margin: 10px 0 12.5px;
+  margin: 0px 0 15px;
 }
 .summary.entry-summary .price .woocommerce-Price-amount.amount{
-  font-size: 14px;
+  font-size: 16px;
   color: #000;
   
 }
 
-
+.product-images img {
+  pointer-events: auto !important;
+}
 
 
 .single_variation_wrap {
   margin-top: 25px; 
 }
 
+
+.subcategories-list {
+  padding: 0;
+  margin: 0;
+  overflow-x: scroll;
+  white-space: nowrap;
+  text-align: center;
+  &::-webkit-scrollbar {
+    width: 1px !important;
+  }
+  li {
+    padding: 0 1em;
+    display: inline-block;
+    a {
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+  }
+}
 
 
 .woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item) {
@@ -437,3 +518,50 @@ $main: 'Standard Book';
   z-index: 100;
 }
 
+
+
+.product-page-brands-bottom {
+  .woocommerce-loop-product__link p {
+    display: none;
+  } 
+  
+  .woocommerce ul.products li.product .woocommerce-loop-product__title {
+   
+  }
+}
+.related-category {
+   ul.products li.product .woocommerce-loop-product__title {
+    display: none !important;
+  }
+}
+
+.product-brand-bottom-title {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+
+.prod-titles {
+  position: fixed;
+  top: 91vh;
+  width: 300px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  mix-blend-mode: difference;
+  display: block;
+  .brand-name {
+    font-family: $bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+    a {
+      color: #fff;
+    }
+  }
+  h4 {
+    font-size: 16px;
+    color: #fff;
+
+  }
+}

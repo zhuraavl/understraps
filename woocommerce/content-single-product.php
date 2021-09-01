@@ -70,7 +70,16 @@ if ( post_password_required() ) {
   
   </div>
   
+    <div class="prod-titles">
+      <h2 class="brand-name"><?php echo do_shortcode( '[custom_pwb_brandtitle]' ); ?></h2>
+ 
+      <h4><?php echo do_shortcode( '[product_name]' ); ?></h4>
+    </div>
+    
+    
+    <div class="inner-height-buy">
 	<div class="summary entry-summary">
+	  <div class="outer-height-buy">
 		<?php
 		/**
 		 * Hook: woocommerce_single_product_summary.
@@ -87,7 +96,10 @@ if ( post_password_required() ) {
 		do_action( 'woocommerce_single_product_summary' );
 		?>
 	</div>
-
+	</div>
+	</div>
+<div class="inner-height-tabs">
+<div class="outer-height-tabs">
 	<?php
 	/**
 	 * Hook: woocommerce_after_single_product_summary.
@@ -98,6 +110,8 @@ if ( post_password_required() ) {
 	 */
 	do_action( 'woocommerce_after_single_product_summary' );
 	?>
+</div>
+</div>
 </div>
 
 
@@ -133,8 +147,14 @@ if ( post_password_required() ) {
 
 
 <section class="white-bg">
+<div class="container-fluid">
+<div class="text-center product-brand-bottom-title">
+ <p>OTHER IN <?php echo do_shortcode( '[custom_pwb_brandtitle]' ); ?></p>
+  
+</div>
+
 <div class="row">
-      <div class="col-12 string-grid-products px-0 pb-3 text-center">
+      <div class="col-12 string-grid-products px-0 pb-3 pt-3 text-center product-page-brands-bottom">
         
       
 <?php 
@@ -195,7 +215,7 @@ if ( post_password_required() ) {
 <div class="row py-5">
   <div class="col-12 px-0">
 <div class="text-center text-uppercase"><p class="small-title">OTHER IN  <?php echo wc_get_product_category_list($product->get_id()) ?></p></div>
-<div class="related-category">
+<div class="related-category pt-3">
 <?php
 
 if ( is_singular('product') ) {
@@ -285,6 +305,7 @@ if ( is_singular('product') ) {
 </div>
     
   </div>
+</div>
 </div>
 </section>
 
