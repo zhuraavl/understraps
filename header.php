@@ -357,6 +357,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         display: block !important;
     	margin: 15px 0 0 0 !important;
     }
+    .product-name-inner {
+    	display: inline-block;
+    }
     @media (max-width: 600px) {
         #main-menu > li > ul > li {
         	width: 48%;
@@ -404,6 +407,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         	content: "" !important; 
         }
     }
+    
 </style>
 	
 <script>
@@ -478,6 +482,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body <?php body_class(); ?>>
+
 <?php do_action( 'wp_body_open' ); ?>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2KTD5X"
@@ -679,10 +684,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</li>
 				
 				<li id="bag-link">
-					<a title="Bag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-bag"><span class="bag-title">Bag</span>  <span class="cart-customlocation"><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a>
+				
+				<script type="text/javascript">
+				jQuery(document).ready(function() {
+                    var iScrolled = 0;
+					jQuery('#menu-item-dropdown-bag').on("click", function(){
+
+						if(jQuery(this).attr('aria-expanded') == 'true') {
+							jQuery('#page').css('height', '100%');
+							jQuery('#page').css('overflow', 'show');
+							jQuery(window).scrollTop(iScrolled);
+						} else {
+							iScrolled = jQuery(window).scrollTop();
+							jQuery(window).scrollTop(0);
+							jQuery('#page').css('height', '100px');
+							jQuery('#page').css('overflow', 'hidden');
+						}
+					});
+				});
+                 </script>
+                 
+				
+					<a title="Bag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-bag" ><span class="bag-title">Bag</span>  <span class="cart-customlocation"><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a>
 					<ul class="dropdown-menu currency-dropdown" aria-labelledby="menu-item-dropdown-6917" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(372px, 38px, 0px);">
 						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-10963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10965 nav-item serch-menu-item">
-        							<div id="new-woocommerce-cart-form">
+        							<div id="new-woocommerce-cart-form" style="margin-bottom: 40px !important;">
 <form class="woocommerce-cart-form"  action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
 	
@@ -706,7 +732,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						if ( ! $product_permalink ) {
 							echo $thumbnail; // PHPCS: XSS ok.
 						} else {
-							printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail ); // PHPCS: XSS ok.
+						    printf( '<a href="%s" style="background: url(%s) center center no-repeat; background-size: contain;"></a>', esc_url( $product_permalink ), wp_get_attachment_image_url( $_product->get_image_id(), 'thumbnail' ) ); // PHPCS: XSS ok.
 						}
 						?>
 						</td>
