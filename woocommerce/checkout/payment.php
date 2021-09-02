@@ -114,8 +114,8 @@ foreach ( $packages as $i => $package ) {
 			    ?>
 				<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 					<td class="product-name">
-						<a href="<?php echo get_permalink( $_product->get_id() )?>/">
-    						<?php echo '<img src="'.wp_get_attachment_url( $_product->image_id ).'" class="parallax" data-parallax="" data-scale="true">'; ?>
+						<a href="<?php echo get_permalink( $_product->get_id() )?>/" style="background: url(<?php echo wp_get_attachment_url( $_product->image_id )?>) 50% 50% no-repeat; background-size: contain; display: inline-block; width: 70px; height: 70px; float: left;">
+    						<?php //echo '<img src="'.wp_get_attachment_url( $_product->image_id ).'" class="parallax" data-parallax="" data-scale="true">'; ?>
     					</a>
     					<?php 
     						$brands = wp_get_post_terms($_product->get_parent_id(), 'pwb-brand');

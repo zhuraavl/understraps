@@ -180,7 +180,9 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
         color: #000000;
     	margin-left: 10px;
         margin-bottom: 0;
-    }
+    	min-width:90px;
+    	display: inline-block !important;
+   }
     #shipping_method > li,
     .wc_payment_methods > li {
     	margin-bottom: 13px !important;

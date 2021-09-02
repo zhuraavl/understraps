@@ -1,0 +1,262 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* @font-face {
+    font-family: life;
+    src: url('/fonts/LifeLTStd-Roman.otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: life;
+    src: url('/fonts/LifeLTStd-Bold.otf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: life;
+    src: url('/fonts/LifeLTStd-Italic.otf');
+    font-style: italic;
+} */
+
+
+
+/*
+ *
+ * INSTRUCTIONS
+ *
+ * Copy the Legal Disclaimer and the @font-faces statements to your regular CSS file.
+ * The font file(s) should be placed relative to the regular CSS file.
+ *
+ */
+
+/*
+ * Legal Disclaimer for Web licence
+ *
+ * Licence to use self-hosted webfonts for displaying dynamic text on specified website domains. Our package includes WOFF and WOFF2 font formats.
+ *
+ * Should the license page views limit be exceeded the license holder will be required to contact Lineto.com for an upgrade.
+ * 
+ * It is strictly prohibited to rename the font and to download or use these fonts in any other media. 
+ * 
+ * These Web fonts are licensed exclusively for the use on the following domain(s) and their subdomains:
+ *
+ * www.studio-laucke-siebein.com (monthly pageviews: <50K)
+ *
+ */
+
+/* complete */
+
+@font-face {
+    font-family: "BradfordLLWeb";
+    src: url("/fonts/BradfordLLWeb-Regular.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "BradfordLLWeb";
+    src: url("/fonts/BradfordLLWeb-Regular.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "BradfordLLWeb";
+    src: url("/fonts/BradfordLLWeb-Italic.woff") format("woff");
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: "BradfordLLWeb";
+    src: url("/fonts/BradfordLLWeb-Italic.woff2") format("woff2");
+    font-style: italic;
+  }
+  
+  
+  /* subset */
+/*   
+  @font-face {
+    font-family: "BradfordLLSub-RegularSubset";
+    src: url("/fonts/BradfordLLSub-RegularSubset.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "BradfordLLSub-RegularSubset";
+    src: url("/fonts/BradfordLLSub-RegularSubset.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "BradfordLLSub-ItalicSubset";
+    src: url("/fonts/BradfordLLSub-ItalicSubset.woff2") format("woff2");
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: "BradfordLLSub-ItalicSubset";
+    src: url("/fonts/BradfordLLSub-ItalicSubset.woff") format("woff");
+    font-style: italic;
+  }
+   */
+  
+  
+  h2 {
+    font-size: 3rem;
+    line-height: 1.1;
+    font-variant-ligatures: common-ligatures;
+    letter-spacing: 0.0em;
+    margin-bottom: 0.7rem;
+  }
+
+  h3 {
+
+    font-size: 2.2rem;
+    line-height: 1.1;
+    font-variant-ligatures: common-ligatures;
+    letter-spacing: 0.0em;
+    margin-bottom: 0.7rem;
+  }
+
+  h4 {
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  em {
+      font-style: italic;
+  }
+
+body {
+    font-family: 'BradfordLLWeb';
+    font-size: 1.3rem;
+    /* letter-spacing: 0.02em;
+    font-variant-ligatures: none; Ligature reset */
+
+    font-variant-ligatures: common-ligatures;
+    letter-spacing: 0.0em;
+}
+
+a {
+    color:inherit;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    /* text-decoration: none; */
+    /* border-bottom: 2px solid; */
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.header {
+    margin: 1rem;
+    margin-bottom: 0;
+    position:relative;
+    z-index:100;
+}
+
+.header.light {
+    color: white;
+}
+
+.blocks h2 {
+    margin-top:3rem;
+}
+
+.blocks {
+    margin-top:2rem;
+}
+
+main {
+    margin:1rem;
+}
+
+.block {
+    max-width:47rem;
+    margin-bottom: 1rem;
+}
+
+.block video,
+.block img {
+    vertical-align: bottom;
+    margin-top: 3rem;
+    max-width: 100%;
+    height:auto;
+}
+
+.block p+p {
+    margin-top:1rem;
+}
+
+.languages {
+    /* margin:1rem; */
+    margin-left:1rem;
+    text-align: left;
+    max-width: 47rem;
+}
+
+@media (min-width: 940px) {
+    .languages {
+        z-index:101;
+        text-align: right;
+        position: absolute;
+        top:0;
+        left:0;
+        padding:1rem;
+        margin:0;
+        margin-left:20rem;
+        width: 27rem;
+    }
+}
+
+
+.videowrapper{width:100%;height:100vh;overflow:hidden;z-index:2;pointer-events:none}.videowrapper,video{position:absolute;top:0;left:0}video{opacity:0}video.visible{opacity:1}.home{overflow:hidden;background-color:#000}canvas{position:absolute;top:0;left:0;z-index:-1}canvas.orbit{z-index:10}pre.debug{position:fixed;top:0;right:0;width:200px;color:#fff;text-shadow:0 0 10px #000;padding:1rem;overflow:hidden}.orbit-camera,.orbit-controls{position:absolute;bottom:0;color:#fff;background-color:#580000;z-index:20}.orbit-controls{left:0}.orbit-camera{right:0}.scrollsurface{width:100%;height:100vh;position:absolute;top:0;left:0;overflow-y:scroll;-webkit-overflow-scrolling:touch;opacity:.001}.scrollsurface .scrollpane{height:40000vh}a{color:inherit}nav{position:relative;z-index:2;padding:1rem}nav.inverted{color:#fff}nav .router-link-exact-active{text-decoration:none}body{line-height:1.2}.content,nav{opacity:0}.loaded-content .content,.loaded-content nav{opacity:1}.loaded-content .loader,.started-scrolling .first{display:none}.first{position:fixed;top:0;left:0;width:100%;height:100vh;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;pointer-events:none}.first img{width:80%;height:80vh;max-width:none;-o-object-fit:contain;object-fit:contain}.loader{position:fixed;top:0;left:0;background-color:#000;width:100%;height:100vh;z-index:10}.loader img{width:7rem;position:absolute;left:calc(50% - 2.5rem);top:calc(50% - 2.5rem)}
+
+.videowrapper{width:100%;height:100vh;overflow:hidden;z-index:2;pointer-events:none}.videowrapper,video{position:absolute;top:0;left:0}video{opacity:0}video.visible{opacity:1}.home{overflow:hidden;background-color:#000}canvas{position:absolute;top:0;left:0;z-index:-1}canvas.orbit{z-index:10}pre.debug{position:fixed;top:0;right:0;width:200px;color:#fff;text-shadow:0 0 10px #000;padding:1rem;overflow:hidden}.orbit-camera,.orbit-controls{position:absolute;bottom:0;color:#fff;background-color:#580000;z-index:20}.orbit-controls{left:0}.orbit-camera{right:0}.scrollsurface{width:100%;height:100vh;position:absolute;top:0;left:0;overflow-y:scroll;-webkit-overflow-scrolling:touch;opacity:.001}.scrollsurface .scrollpane{height:40000vh}a{color:inherit}nav{position:relative;z-index:2;padding:1rem}nav.inverted{color:#fff}nav .router-link-exact-active{text-decoration:none}body{line-height:1.2}.content,nav{opacity:0}.loaded-content .content,.loaded-content nav{opacity:1}.loaded-content .loader,.started-scrolling .first{display:none}.first{position:fixed;top:0;left:0;width:100%;height:100vh;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;pointer-events:none}.first img{width:80%;height:80vh;max-width:none;-o-object-fit:contain;object-fit:contain}.loader{position:fixed;top:0;left:0;background-color:#000;width:100%;height:100vh;z-index:10}.loader img{width:7rem;position:absolute;left:calc(50% - 2.5rem);top:calc(50% - 2.5rem)}
