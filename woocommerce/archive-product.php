@@ -199,7 +199,7 @@ get_footer( 'shop' );
 	text-align: center;
 }
 .wpfMainWrapper .wpfFilterWrapper {
-	width: 70px !important;
+	width: auto !important;
 	display: inline-block !important;
 }
 .wpfMainWrapper .wpfFilterWrapper .wfpTitle {
@@ -209,6 +209,7 @@ get_footer( 'shop' );
     color: #000000;
 	text-transform: uppercase;
 	font-weight: normal !important;
+    font-family: 'Standard Book';
 }
 .wpfMainWrapper .wpfFilterWrapper .wpfFilterTitle .fa-plus:before {
     content: "\f078" !important;

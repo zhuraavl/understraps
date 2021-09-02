@@ -524,7 +524,7 @@ h1.hero-title.fake  {
   margin-bottom: 0;
 }
 .woocommerce div.product form.cart .button {
-  padding: 15px 35px 13px;
+  padding: 15px 15px 13px;
   border: 1px solid 0;
   font-size: 14px;
   text-align: center;
@@ -3286,4 +3286,10 @@ padding-top: 5px;
       padding: 0 10px !important;
     }
   }
+}
+
+
+.wpfFilterWrapper {
+  min-width: auto;
+  padding: 0 15px;
 }

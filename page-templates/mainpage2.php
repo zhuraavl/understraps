@@ -34,9 +34,9 @@ defined( 'ABSPATH' ) || exit;
 	
 	
 	
-	<script type="text/javascript" src="/wp-content/themes/understraps/js/modernizr.custom.79639.js"></script>
-	<script type="text/javascript" src="/wp-content/themes/understraps/js/jquery.ba-cond.min.js"></script>
-	<script type="text/javascript" src="/wp-content/themes/understraps/js/jquery.slitslider.js"></script>
+	<script type="text/javascript" src="/wp-content/themes/understrap/js/modernizr.custom.79639.js"></script>
+	<script type="text/javascript" src="/wp-content/themes/understrap/js/jquery.ba-cond.min.js"></script>
+	<script type="text/javascript" src="/wp-content/themes/understrap/js/jquery.slitslider.js"></script>
 	<script type="text/javascript">	
 		jQuery(document).ready(function($) {
 			
@@ -80,7 +80,7 @@ defined( 'ABSPATH' ) || exit;
 				
 			});
 		</script>
-		<link rel="stylesheet" href="/wp-content/themes/understraps/css/custom.css">
+		<link rel="stylesheet" href="/wp-content/themes/understrap/css/custom.css">
 		<style>
             .sl-slider-wrapper {
             	width: 800px;
