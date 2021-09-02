@@ -118,7 +118,7 @@ header#hedaer {
     background: #fff;
   }
   @include media-breakpoint-down(xs) {
-    height: 62px;
+    padding: 0;
   }
   .col-6 {
     position: static;
@@ -2972,7 +2972,7 @@ div.wpcf7 .ajax-loader {
     top: 60px;
     width: 100%;
     background: #fff;
-    padding: 10px 0;
+    padding: 0px 0 5px;
     left: 0;
     display: none;
     .left-side-menu {
@@ -3084,6 +3084,9 @@ div.wpcf7 .ajax-loader {
 .parallax-container {
   .parallax {
     margin-bottom: 200px;
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 100px;
+    }
   }
 }
 
@@ -3284,6 +3287,9 @@ padding-top: 5px;
     a {
       text-transform: uppercase;
       padding: 0 10px !important;
+      @include media-breakpoint-down(xs) {
+        padding: 0 7px !important;
+      }
     }
   }
 }
@@ -3292,4 +3298,12 @@ padding-top: 5px;
 .wpfFilterWrapper {
   min-width: auto;
   padding: 0 15px;
+  width: auto !important;
+  margin-top: 0 !important;
+}
+
+#bag-link span {
+  @include media-breakpoint-down(xs) {
+    font-size: 10px !important;
+  }
 }
