@@ -84,7 +84,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     body header#hedaer ul.dropdown-menu.show {
     	top: 40px!important;
     	padding-top: 100px;
-    	padding-bottom: 100px;
+    	padding-bottom: 100px !important;
     }
     #main-menu > li > ul {
     	padding-left: 10%;
@@ -97,8 +97,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     #main-menu > li > ul.brand-dropdown {
     	width: 100% !important;
     	column-width: 18%;
-    	column-count: 5;
+    	column-count: 3;
     	column-gap: 1%;
+    	padding-left: 20% !important;
+    	padding-right: 20% !important;
+    	box-sizing: border-box;
+    	max-height: 1000000vh !important;
     }
     #main-menu > li > ul.brand-dropdown > li {
     	width: 100% !important;
@@ -629,7 +633,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</li>
 				
 				<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6917" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-6917 nav-item">
-          			<a title="brands" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-6917">brands</a>
+          			<a title="brands" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-brands">brands</a>
 					<ul class="dropdown-menu brand-dropdown" aria-labelledby="menu-item-dropdown-6917" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(372px, 38px, 0px);">
 						
 						<?php  
@@ -688,9 +692,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<script type="text/javascript">
 				jQuery(document).ready(function() {
                     var iScrolled = 0;
-					jQuery('#menu-item-dropdown-bag').on("click", function(){
+					jQuery('.menu-item-dropdown-bag').on("click", function(){
 
-						if(jQuery(this).attr('aria-expanded') == 'true') {
+						if(jQuery('#menu-item-dropdown-bag').attr('aria-expanded') == 'true') {
 							jQuery('#page').css('height', '100%');
 							jQuery('#page').css('overflow', 'show');
 							jQuery(window).scrollTop(iScrolled);
@@ -701,12 +705,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							jQuery('#page').css('overflow', 'hidden');
 						}
 					});
+					
 				});
                  </script>
                  
 				
-					<a title="Bag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-bag" ><span class="bag-title">Bag</span>  <span class="cart-customlocation"><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a>
-					<ul class="dropdown-menu currency-dropdown" aria-labelledby="menu-item-dropdown-6917" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(372px, 38px, 0px);">
+					<a title="Bag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link menu-item-dropdown-bag" id="menu-item-dropdown-bag" ><span class="bag-title">Bag</span>  <span class="cart-customlocation"><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a>
+					<ul class="dropdown-menu currency-dropdown menu-item-dropdown-bag" aria-labelledby="menu-item-dropdown-6917" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(372px, 38px, 0px);">
 						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-10963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10965 nav-item serch-menu-item">
         							<div id="new-woocommerce-cart-form" style="margin-bottom: 40px !important;">
 <form class="woocommerce-cart-form"  action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
