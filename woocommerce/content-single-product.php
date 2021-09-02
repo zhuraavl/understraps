@@ -148,13 +148,7 @@ if ( post_password_required() ) {
 
 <section class="white-bg">
 <div class="container-fluid">
-<div class="text-center product-brand-bottom-title">
- <p>OTHER IN <?php echo do_shortcode( '[custom_pwb_brandtitle]' ); ?></p>
-  
-</div>
 
-<div class="row">
-      <div class="col-12 string-grid-products px-0 pb-3 pt-3 text-center product-page-brands-bottom">
         
       
 <?php 
@@ -185,6 +179,15 @@ if ( post_password_required() ) {
 		            $products = new WP_Query( $args );
 		            
 		            if ( $products->have_posts() ) {
+		                ?>
+		                <div class="text-center product-brand-bottom-title">
+                         <p>OTHER IN <?php echo do_shortcode( '[custom_pwb_brandtitle]' ); ?></p>
+                          
+                        </div>
+                        
+                        <div class="row">
+                              <div class="col-12 string-grid-products px-0 pb-3 pt-3 text-center product-page-brands-bottom">
+		                <?php 
 		                echo '<ul class="products columns-5">';
 		                while ( $products->have_posts() ) {
 		                    
@@ -192,7 +195,12 @@ if ( post_password_required() ) {
 		                    
 		                    wc_get_template_part( 'content', 'product' );
 		                }
+		                
 		                echo '</ul>';
+		                ?>
+                          </div>
+                        </div>
+		                <?php 
 		            }
 		            
 		            wp_reset_postdata();
@@ -203,8 +211,6 @@ if ( post_password_required() ) {
 		
 		?>
      
-      </div>
-    </div>
 
 
 
