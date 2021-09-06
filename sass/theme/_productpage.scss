@@ -47,6 +47,12 @@ $main: 'Standard Book';
   width: 200px;
   height: 100%;
   top: 0;
+  @include media-breakpoint-down(sm)  {
+    position: relative;
+    width: 100%;
+    right: auto;
+    padding-top: 35px;
+  }
 }
 .product .summary {
   position: absolute;
@@ -68,6 +74,9 @@ $main: 'Standard Book';
 }
 .pwb-single-product-brands {
   display: none;
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
 }
 .summary.entry-summary .product_title.entry-title {
   font-size: 14px;
@@ -76,6 +85,10 @@ $main: 'Standard Book';
   line-height: 1.4;
   text-transform: uppercase;
   display: none;
+  @include media-breakpoint-down(sm) {
+    display: block;
+    margin-bottom: 20px;
+  }
 }
 
 .summary .pwb-single-product-brands a {
@@ -103,6 +116,12 @@ $main: 'Standard Book';
   width: 200px;
   height: 100%;
   top: 0;
+  @include media-breakpoint-down(sm) {
+    position: relative;
+    left: auto;
+    width: 300px;
+    margin: auto;
+  }
 }
 .outer-height-tabs {
   position: absolute;
@@ -110,7 +129,10 @@ $main: 'Standard Book';
   top: 0;
   bottom: 0;
   margin: auto;
-  
+  right: 0;
+  @include media-breakpoint-down(sm) {
+    position: relative; 
+  }
 }
 .wc-tabs-wrapper {
   
@@ -249,7 +271,7 @@ $main: 'Standard Book';
 
 
 .single_variation_wrap {
-  margin-top: 25px; 
+  margin-top: 20px; 
 }
 
 
@@ -435,6 +457,7 @@ $main: 'Standard Book';
   @include media-breakpoint-down(xs) {
     width: 100%;
     overflow: hidden;
+    padding-top: 15vh;
   }
   img {
     max-height: 100vh;

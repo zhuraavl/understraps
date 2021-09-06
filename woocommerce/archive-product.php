@@ -199,11 +199,10 @@ get_footer( 'shop' );
 	text-align: center;
 }
 .wpfMainWrapper .wpfFilterWrapper {
-	width: auto !important;
+	min-width: auto !important;
 	display: inline-block !important;
 }
 .wpfMainWrapper .wpfFilterWrapper .wfpTitle {
-	font-family: Roboto;
     font-size: 12px;
     line-height: 28px;
     color: #000000;
@@ -211,6 +210,11 @@ get_footer( 'shop' );
 	font-weight: normal !important;
     font-family: 'Standard Book';
 }
+  @media (max-width: 575.98px) {
+    .wpfMainWrapper .wpfFilterWrapper .wfpTitle {
+      font-size: 10px;
+    }
+  }
 .wpfMainWrapper .wpfFilterWrapper .wpfFilterTitle .fa-plus:before {
     content: "\f078" !important;
 }

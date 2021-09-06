@@ -82,6 +82,8 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
     }
     #add_payment_method #payment ul.payment_methods li input, .woocommerce-cart #payment ul.payment_methods li input, .woocommerce-checkout #payment ul.payment_methods li input {
     	margin: 0 !important;
+        display: inline-block;
+        vertical-align: baseline;
     }
     #page-wrapper .woocommerce form .form-row input, 
     #page-wrapper .woocommerce form .form-row textarea {
@@ -176,11 +178,11 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
     input[type='radio'] + label {
     	font-family: Standard Book;
         font-size: 12px;
-        line-height: 20px;
+        line-height: 22px;
         color: #000000;
     	margin-left: 10px;
         margin-bottom: 0;
-    	min-width:90px;
+    	
     	display: inline-block !important;
    }
     #shipping_method > li,
