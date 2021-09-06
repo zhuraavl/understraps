@@ -60,7 +60,7 @@ $container = get_theme_mod( 'understrap_container_type' );
       <div class="col-12 col-sm-12 text-center footer-menu">
        <ul>
        <li><a href="/about/">About</a></li>
-       <li><a href="/shipping/">Shipping & Returns</a></li>
+       <li><a href="/shipping/">Ship & Return</a></li>
        <li><a href="/terms/">Terms</a></li>
        <li><a href="/contact/">Contact</a></li>
         
@@ -149,15 +149,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	font-size: 20px;
 	padding-top: 10px;
 }
-.pay-icos {
-	width: 100%;
-	display: block;
-	margin-top: 30px;
-	margin-bottom: 10px;
-}
-.pay-icos img {
-    margin: 0 10px 0 10px;
-}
+
 .mainpage-subscribe input {
 	text-align: center;
 }

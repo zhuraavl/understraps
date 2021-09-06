@@ -3288,7 +3288,7 @@ padding-top: 5px;
       text-transform: uppercase;
       padding: 0 10px !important;
       @include media-breakpoint-down(xs) {
-        padding: 0 7px !important;
+        padding: 0 5px !important;
       }
     }
   }
@@ -3306,4 +3306,19 @@ padding-top: 5px;
   @include media-breakpoint-down(xs) {
     font-size: 10px !important;
   }
+}
+
+
+.pay-icos {
+	width: 100%;
+	display: block;
+	margin-top: 30px;
+	margin-bottom: 10px;
+  @include media-breakpoint-down(xs) {
+    margin: 0px auto 10px;
+    
+  }
+}
+.pay-icos img {
+    margin: 0 10px 0 10px;
 }
