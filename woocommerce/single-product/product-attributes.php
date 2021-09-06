@@ -24,6 +24,13 @@ if ( ! $product_attributes ) {
 }
 ?>
 <table class="woocommerce-product-attributes shop_attributes">
+	<tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--categories">
+		<th class="woocommerce-product-attributes-item__label">CATEGORIES</th>
+		<td class="woocommerce-product-attributes-item__value"><?php 
+			global  $post ;?>
+            <?php echo wc_get_product_category_list($post->ID) ?>
+			</td>
+	</tr>
 	<?php foreach ( $product_attributes as $product_attribute_key => $product_attribute ) : ?>
 		<tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--<?php echo esc_attr( $product_attribute_key ); ?>">
 			<th class="woocommerce-product-attributes-item__label"><?php echo wp_kses_post( $product_attribute['label'] ); ?></th>

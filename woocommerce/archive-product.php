@@ -102,7 +102,7 @@ if ( is_product_category() ) {
   
 ?>
 
-
+<div class="filter-open-wrapper" style="font-size: 12px; text-align: center; line-height: 28px; padding-top: 5px; cursor: pointer;" onclick="jQuery('.wpfMainWrapper').show(); jQuery(this).hide();">FILTERS +</div>
 <?php echo do_shortcode('[wpf-filters id=1]') ?>
 <!-- 
   <div class="position-relative overflow-md-hidden bottom-menu-box">
@@ -216,10 +216,24 @@ get_footer( 'shop' );
     }
   }
 .wpfMainWrapper .wpfFilterWrapper .wpfFilterTitle .fa-plus:before {
-    content: "\f078" !important;
+    content: "" !important;
+       width: 7px;
+    height: 7px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    margin-right: 15px;
+    transform: rotate(135deg);
+    margin-bottom: 3px;
 }
 .wpfMainWrapper .wpfFilterWrapper .wpfFilterTitle .fa-minus:before {
-	content: "\f077" !important;
+	 content: "" !important;
+       width: 7px;
+    height: 7px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    margin-right: 15px;
+    transform: rotate(-45deg);
+        margin-bottom: -1px;
 }
 .wpfMainWrapper .wpfFilterWrapper .wpfFilterTitle .wpfTitleToggle {
     font-size: 12px;
@@ -290,7 +304,6 @@ get_footer( 'shop' );
 jQuery( document ).ready(function() {
 	jQuery('.wpfFilterWrapper').each(function(){
 		if(!jQuery(this).hasClass('wpfNotActive')) {
-			console.log(jQuery(this));
 			jQuery(this).children('.wpfFilterTitle').trigger("click");
 		}
 	});
@@ -311,5 +324,6 @@ jQuery( document ).ready(function() {
 	jQuery('.wpfFilterWrapper').on('click', function(){
 		jQuery(this).toggleClass('wpfActiveReal');
 	});	
+	jQuery('.wpfMainWrapper').hide();
 });
 </script>
