@@ -33,13 +33,89 @@ if ( ! empty( $product_tabs ) ) : ?>
 	<div class="woocommerce-tabs wc-tabs-wrapper">
 		<ul class="tabs wc-tabs" role="tablist">
 			<?php foreach ( $product_tabs as $key => $product_tab ) : ?>
-				<li class="<?php echo esc_attr( $key ); ?>_tab" id="tab-title-<?php echo esc_attr( $key ); ?>" role="tab" aria-controls="tab-<?php echo esc_attr( $key ); ?>">
+				<li style="padding: 0 0.5em;" class="<?php echo esc_attr( $key ); ?>_tab" id="tab-title-<?php echo esc_attr( $key ); ?>" role="tab" aria-controls="tab-<?php echo esc_attr( $key ); ?>">
 					<a href="#tab-<?php echo esc_attr( $key ); ?>">
 						<?php echo wp_kses_post( apply_filters( 'woocommerce_product_' . $key . '_tab_title', $product_tab['title'], $key ) ); ?>
 					</a>
 				</li>
 			<?php endforeach; ?>
+			<?php 
+			global  $post ;
+			$prod_id = size_chart_get_product_chart_id( $post->ID );
+			if($prod_id) {
+			?>
+			<li style="padding: 0 0.5em;">
+					<a class="" href="javascript:void(0);" id="chart-button">SIZE GUIDE</a>
+            	<script>
+            	(function($) {
+
+            		$('.tabs #chart-button').click(function() {
+            			var modal = document.getElementById('md-size-chart-modal');
+            			modal.style.display = 'block';
+            			$('.tabs #chart-button').hide();
+            		});
+            		$('.outer-height-buy .button-wrapper').hide();
+            		$('div#md-size-chart-modal .remodal-close').click(function() {
+            			$('.tabs #chart-button').show();
+            		});
+
+            		$('div.md-size-chart-overlay').click(function() {
+            			$('.tabs #chart-button').show();
+            		});
+
+            		
+            	})(jQuery);
+            	            	
+            	</script>
+            	<style>
+            	.woocommerce div.product {
+            		z-index: 9999;
+            	}
+            	</style>
+			</li>
+			<?php 
+			}
+			?>
 		</ul>
+		
+		<script>
+		(function($) {
+    			function is_shown(target) {
+    				var wt = $(window).scrollTop(); 
+    				var wh = $(window).height();    
+    				var eh = $(target).outerHeight();  
+    				var et = $(target).offset().top;
+    			 
+    				if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)){
+    					return true;
+    				} else {
+    					return false;    
+    				}
+    			}
+    			 
+    			
+        		 
+        		$(window).scroll(function(){
+        			if (is_shown('.product-images.parallax-container')) {
+            			$('.prod-titles').show();
+        			} else {
+        				$('.prod-titles').hide();
+        			}
+        		});
+        			
+        		$(document).ready(function(){ 
+        			if (is_shown('.product-images.parallax-container')) {
+            			$('.prod-titles').show();
+        			} else {
+        				$('.prod-titles').hide();
+        			}
+        		});
+		 })(jQuery); 	
+
+            		
+            		   	
+         </script>
+		
 		<?php foreach ( $product_tabs as $key => $product_tab ) : ?>
 			<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--<?php echo esc_attr( $key ); ?> panel entry-content wc-tab" id="tab-<?php echo esc_attr( $key ); ?>" role="tabpanel" aria-labelledby="tab-title-<?php echo esc_attr( $key ); ?>">
 				<?php

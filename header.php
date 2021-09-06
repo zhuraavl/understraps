@@ -70,6 +70,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type='text/javascript' src='/wp-content/plugins/perfect-woocommerce-brands/assets/lib/slick/slick.min.js' id='pwb-lib-slick-js'></script>
 	
 <style>
+header#hedaer ul.dropdown-menu.show {
+	max-height: 100000000000px !important;
+}
+header#hedaer #bag-link ul.dropdown-menu.show {
+	max-height: 100vh !important;
+}
+
     #hedaer {
     	background: white;
     	transition: top 0.2s ease-in-out !important;
@@ -94,7 +101,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     	width: 19%;
     	vertical-align: top;
     }
-    #main-menu > li > ul.brand-dropdown {
+    #main-menu > li > ul.brand-dropdown ul {
     	width: 100% !important;
     	column-width: 18%;
     	column-count: 3;
@@ -369,12 +376,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         	width: 48%;
         	vertical-align: top;
         }
-        #main-menu > li > ul.brand-dropdown {
+        #main-menu > li > ul.brand-dropdown ul {
         	width: 100% !important;
         	column-width: 48%;
         	column-count: 2;
         	column-gap: 1%;
+        	padding-left: 5% !important;
+        	padding-right: 5% !important;
+        	box-sizing: border-box;
         }
+        #main-menu > li > ul.wo-men-dropdown {
+    	   width: 100% !important;
+        	column-width: 48%;
+        	column-count: 2;
+        	column-gap: 1%;
+        	padding-left: 5% !important;
+        	padding-right: 5% !important;
+        	box-sizing: border-box;
+        }
+        #main-menu > li > ul.wo-men-dropdown > li {
+    	   width: 100% !important;
+        	padding-top: 0px !important;
+        	padding-bottom: 35px !important;
+        }
+        
         .serch-menu-item {
         	width: 100% !important;
         }    
@@ -461,10 +486,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             // Make sure they scroll more than delta
             if(Math.abs(lastScrollTop - st) <= delta)
                 return;
+
+			console.log(jQuery('.menu-item.show').outerHeight());
             
             // If they scrolled down and are past the navbar, add class .nav-up.
             // This is necessary so you never see what is "behind" the navbar.
-            if (st > lastScrollTop && st > 0){
+            if (st > lastScrollTop && st > 0 && !jQuery('.menu-item.show').outerHeight()){
                 // Scroll Down
                 jQuery('header').removeClass('nav-down').addClass('nav-up');
                 jQuery('.volume-icon-box').removeClass('logo-down').addClass('logo-up');
@@ -633,9 +660,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</li>
 				
 				<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6917" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-6917 nav-item">
-          			<a title="brands" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-brands">brands</a>
+          			
+          			<script type="text/javascript">
+    				jQuery(document).ready(function() {
+                        var iScrolled = 0;
+    					jQuery('.menu-item-dropdown-brands').on("click", function(){
+    
+    						if(jQuery('#menu-item-dropdown-brands').attr('aria-expanded') == 'true') {
+    							jQuery('#page').css('height', '100%');
+    							jQuery('#page').css('overflow', 'show');
+    							jQuery(window).scrollTop(iScrolled);
+    						} else {
+    							iScrolled = jQuery(window).scrollTop();
+    							jQuery(window).scrollTop(0);
+    							jQuery('#page').css('height', '100px');
+    							jQuery('#page').css('overflow', 'hidden');
+    						}
+    					});
+    					
+    				});
+                    </script>
+          			
+          			<a title="brands" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link menu-item-dropdown-brands" id="menu-item-dropdown-brands">brands</a>
 					<ul class="dropdown-menu brand-dropdown" aria-labelledby="menu-item-dropdown-6917" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(372px, 38px, 0px);">
-						
+						<li>
+						<div id="new-woocommerce-cart-form" style="margin-bottom: 40px !important;">
+        							<ul>
 						<?php  
                     	$brands = array();
                     	$brands = \Perfect_Woocommerce_Brands\Perfect_Woocommerce_Brands::get_brands(true);
@@ -673,7 +723,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     	    }
                         }
                     	?>
-						
+						</ul>
+						</div>
+						</li>
 					</ul>
 				</li>
 				<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6917" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-6917 nav-item">
