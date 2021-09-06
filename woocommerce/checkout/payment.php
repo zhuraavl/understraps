@@ -114,19 +114,19 @@ foreach ( $packages as $i => $package ) {
 			    ?>
 				<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 					<td class="product-name">
-						<a href="<?php echo get_permalink( $_product->get_id() )?>/" style="background: url(<?php echo wp_get_attachment_url( $_product->image_id )?>) 50% 50% no-repeat; background-size: contain; display: inline-block; width: 70px; height: 70px; float: left;">
+						<a href="<?php echo get_permalink( $_product->get_id() )?>" style="background: url(<?php echo wp_get_attachment_url( $_product->image_id )?>) 50% 50% no-repeat; background-size: contain; display: inline-block; width: 52px; height: 52px; float: left; border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 7px; margin-right: 18px;">
     						<?php //echo '<img src="'.wp_get_attachment_url( $_product->image_id ).'" class="parallax" data-parallax="" data-scale="true">'; ?>
     					</a>
     					<?php 
-    						$brands = wp_get_post_terms($_product->get_parent_id(), 'pwb-brand');
+    					   $brands = wp_get_post_terms($_product->get_ID(), 'pwb-brand');
     					?>
-    					<a href="/brand/<?php echo $brands[0]->slug ?>/" class="brand-name">
+    					<a href="/brand/<?php echo $brands[0]->slug ?>/" class="brand-name" style="margin-top: 18px;">
     						<?php 
     						    echo $brands[0]->name;
     						?>
     					</a>
     					<br/>
-    					<a href="<?php echo get_permalink( $_product->get_id() )?>/" class="product-name">
+    					<a href="<?php echo get_permalink( $_product->get_id() )?>" class="product-name">
     						<?php echo $_product->get_title() ?>
     						<?php // echo $_product->get_name() ?>
 						</a>

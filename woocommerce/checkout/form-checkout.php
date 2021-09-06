@@ -198,6 +198,11 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
     	background: url(/wp-content/themes/understraps/pic/paypal.svg) 100% 50% no-repeat;
     	padding-right: 50px;
     }
+    .wc_payment_methods  label,
+    .woocommerce-shipping-methods  label {
+    	min-width: 100px;
+    	text-align: left;
+    }
     .f-container .input-label {
     	text-align: left;
     	font-family: Standard Book;
