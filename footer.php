@@ -161,24 +161,7 @@ $container = get_theme_mod( 'understrap_container_type' );
     color: #000000 !important;
 	display: none;
 }
-.mainpage-subscribe-title h2 {
-	font-family: ZIGZAG-NotRounded;
-    font-size: 24px;
-    line-height: 29px;
-    text-align: center;
-    color: #000000;
-	margin-bottom: 15px;
-}
-.home .mainpage-subscribe-title h2 {
-	font-family: ZIGZAG-NotRounded;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 60px;
-    line-height: 72px;
-    text-align: center;
-    color: #000000;
-	margin-bottom: 25px;
-}
+
 .home .socs {
 	margin-bottom: 85px;
 }
