@@ -73,7 +73,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 header#hedaer ul.dropdown-menu.show {
 	max-height: 100000000000px !important;
 }
-header#hedaer #bag-link ul.dropdown-menu.show {
+header#hedaer #bag-link ul.dropdown-menu.show,
+header#hedaer ul.brand-dropdown.dropdown-menu.show {
 	max-height: 100vh !important;
 }
 
@@ -509,7 +510,7 @@ header#hedaer #bag-link ul.dropdown-menu.show {
         }
 	});
 </script>
-<script type="text/javascript" src="/wp-content/themes/understraps/js/jquery.cookie.js"></script>	
+<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/jquery.cookie.js"></script>	
 </head>
 
 <body <?php body_class(); ?>>

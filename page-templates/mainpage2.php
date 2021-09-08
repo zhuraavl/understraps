@@ -239,7 +239,7 @@ if($_GET['lll']) {
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
-	<link rel="stylesheet" href="/wp-content/themes/understraps/css/app.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/app.css">
 </head>
 
 
@@ -1028,14 +1028,14 @@ if($_GET['lll']) {
 	//# sourceMappingURL=app.js.map
 
 	</script>
-	<script type="text/javascript" src="/wp-content/themes/understraps/js/chunk-vendors.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/chunk-vendors.js"></script>
 	
 
 	
 	
-	<script type="text/javascript" src="/wp-content/themes/understrap/js/modernizr.custom.79639.js"></script>
-	<script type="text/javascript" src="/wp-content/themes/understrap/js/jquery.ba-cond.min.js"></script>
-	<script type="text/javascript" src="/wp-content/themes/understrap/js/jquery.slitslider.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/modernizr.custom.79639.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/jquery.ba-cond.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/jquery.slitslider.js"></script>
 	<script type="text/javascript">	
 		jQuery(document).ready(function($) {
 			

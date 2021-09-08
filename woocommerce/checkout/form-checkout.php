@@ -191,11 +191,11 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
     	text-align :center !important;
     }
     .payment_method_fondy label {
-    	background: url(/wp-content/themes/understraps/pic/visa.svg) 100% 50% no-repeat;
+    	background: url(<?php echo get_template_directory_uri() ?>/pic/visa.svg) 100% 50% no-repeat;
     	padding-right: 60px;
     }
     .payment_method_paypal label {
-    	background: url(/wp-content/themes/understraps/pic/paypal.svg) 100% 50% no-repeat;
+    	background: url(<?php echo get_template_directory_uri() ?>/pic/paypal.svg) 100% 50% no-repeat;
     	padding-right: 50px;
     }
     .wc_payment_methods  label,
@@ -1245,19 +1245,19 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 .iti__flag {
   height: 15px;
   box-shadow: 0px 0px 1px 0px #888;
-  background-image: url("/wp-content/themes/understraps/img/flags.png");
+  background-image: url("<?php echo get_template_directory_uri() ?>/img/flags.png");
   background-repeat: no-repeat;
   background-color: #DBDBDB;
   background-position: 20px 0; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .iti__flag {
-      background-image: url("/wp-content/themes/understraps/img/flags@2x.png"); } }
+      background-image: url("<?php echo get_template_directory_uri() ?>/img/flags@2x.png"); } }
 
 .iti__flag.iti__np {
   background-color: transparent; }
 </style>
 
-<script type="text/javascript" src="/wp-content/themes/understraps/js/intlTelInput.js"></script>	
+<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/intlTelInput.js"></script>	
 
 <script>
 	jQuery(document).ready(function() {
@@ -1272,7 +1272,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 		      callback(countryCode);
 		    });
 		  },
-		  utilsScript: "/wp-content/themes/understraps/js/utils.js?1613236686837" // just for formatting/placeholders etc
+		  utilsScript: "<?php echo get_template_directory_uri() ?>/utils.js?1613236686837" // just for formatting/placeholders etc
 		});
 	});
 </script>
