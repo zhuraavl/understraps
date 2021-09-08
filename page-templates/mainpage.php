@@ -178,6 +178,7 @@ defined( 'ABSPATH' ) || exit;
 
 
 
+<!--
 
 
 	
@@ -241,6 +242,7 @@ foreach ( $cats as $category ) {
 </div>
 	
 	
+-->
 
 
 <!--
