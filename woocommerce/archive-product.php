@@ -102,7 +102,7 @@ if ( is_product_category() ) {
   
 ?>
 
-<div class="filter-open-wrapper" style="font-size: 12px; text-align: center; line-height: 28px; padding-top: 5px; cursor: pointer;" onclick="jQuery('.wpfMainWrapper').show(); jQuery(this).hide();">FILTERS +</div>
+<div class="filter-open-wrapper" style="text-align: center; line-height: 28px; padding-top: 5px; cursor: pointer;" onclick="jQuery('.wpfMainWrapper').show(); jQuery(this).hide();">+</div>
 <?php echo do_shortcode('[wpf-filters id=1]') ?>
 <!-- 
   <div class="position-relative overflow-md-hidden bottom-menu-box">
@@ -304,6 +304,8 @@ get_footer( 'shop' );
 .wpfActiveReal .fa-minus {
 	opacity: 0.5;
 }
+  
+  
 </style>
 <script>
 jQuery( document ).ready(function() {
