@@ -75,8 +75,59 @@ if ( post_password_required() ) {
  
       <h4><?php echo do_shortcode( '[product_name]' ); ?></h4>
     </div>
-    
-    
+    <script>
+		(function($) {
+    			function is_shown(target) {
+    				var wt = $(window).scrollTop(); 
+    				var wh = $(window).height();    
+    				var eh = $(target).outerHeight();  
+    				var et = $(target).offset().top;
+
+    				if (wt + wh >= et && wt + wh - eh * 2 <= et + (/*wh*/ 50 - eh)){
+    					return true;
+    				} else {
+    					return false;    
+    				}
+    			}
+			/*
+    			function is_shown(target) {
+    				var wt = $(window).scrollTop(); 
+    				var wh = $(window).height();    
+    				var eh = $(target).height();  
+    				var et = $(target).offset().top;
+    			 
+    				if (et >= wt && et + eh <= wh + wt){
+    					return true;
+    				} else {
+    					return false;    
+    				}
+    			}
+    		*/
+        		$(window).scroll(function(){
+        			if (is_shown('.product-images.parallax-container')) {
+            			$('.prod-titles').show();
+        			} else {
+        				$('.prod-titles').hide();
+        			}
+        		});
+        			
+        		$(document).ready(function(){ 
+        			if (is_shown('.product-images.parallax-container')) {
+            			$('.prod-titles').show();
+        			} else {
+        				$('.prod-titles').hide();
+        			}
+        		});
+		 })(jQuery); 		   	
+    </script>
+    <style>
+    .woocommerce.woocommerce-page .related-category .product, .woocommerce.woocommerce-page .string-grid-products .product {
+            max-width: 180px;
+    }
+    .woocommerce.woocommerce-page .related-category .product img, .woocommerce.woocommerce-page .string-grid-products .product img {
+    	padding: 0;
+    }
+    </style>
     <div class="inner-height-buy">
 	<div class="summary entry-summary">
 	  <div class="outer-height-buy">

@@ -201,6 +201,8 @@ get_footer( 'shop' );
 .wpfMainWrapper .wpfFilterWrapper {
 	min-width: auto !important;
 	display: inline-block !important;
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
 }
 .wpfMainWrapper .wpfFilterWrapper .wfpTitle {
     font-size: 12px;
@@ -255,12 +257,15 @@ get_footer( 'shop' );
 	padding: 25px 15% 40px 15%;	
 }
 #wpfBlock_1 .wpfFilterContent .wpfFilterVerScroll {
-	column-width: 15%;
+	/*column-width: 15%;
 	column-count: 4;
-	column-gap: 3%;
-}
-.wpfFilterVerScroll li {
+	column-gap: 3%;*/
 	text-align: center;
+}
+#wpfBlock_1 li {
+	text-align: center;
+	width: 25% !important;
+	display: inline-block;
 }
 .wpfFilterVerScroll li .wpfCheckbox,
 .wpfFilterButtons,

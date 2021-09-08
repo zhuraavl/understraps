@@ -78,43 +78,7 @@ if ( ! empty( $product_tabs ) ) : ?>
 			?>
 		</ul>
 		
-		<script>
-		(function($) {
-    			function is_shown(target) {
-    				var wt = $(window).scrollTop(); 
-    				var wh = $(window).height();    
-    				var eh = $(target).outerHeight();  
-    				var et = $(target).offset().top;
-    			 
-    				if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)){
-    					return true;
-    				} else {
-    					return false;    
-    				}
-    			}
-    			 
-    			
-        		 
-        		$(window).scroll(function(){
-        			if (is_shown('.product-images.parallax-container')) {
-            			$('.prod-titles').show();
-        			} else {
-        				$('.prod-titles').hide();
-        			}
-        		});
-        			
-        		$(document).ready(function(){ 
-        			if (is_shown('.product-images.parallax-container')) {
-            			$('.prod-titles').show();
-        			} else {
-        				$('.prod-titles').hide();
-        			}
-        		});
-		 })(jQuery); 	
-
-            		
-            		   	
-         </script>
+		
 		
 		<?php foreach ( $product_tabs as $key => $product_tab ) : ?>
 			<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--<?php echo esc_attr( $key ); ?> panel entry-content wc-tab" id="tab-<?php echo esc_attr( $key ); ?>" role="tabpanel" aria-labelledby="tab-title-<?php echo esc_attr( $key ); ?>">
