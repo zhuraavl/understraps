@@ -122,7 +122,7 @@ if ( post_password_required() ) {
     </script>
     <style>
     .woocommerce.woocommerce-page .related-category .product, .woocommerce.woocommerce-page .string-grid-products .product {
-            max-width: 180px;
+            max-width: 140px;
     }
     .woocommerce.woocommerce-page .related-category .product img, .woocommerce.woocommerce-page .string-grid-products .product img {
     	padding: 0;

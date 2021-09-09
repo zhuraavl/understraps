@@ -178,6 +178,7 @@ defined( 'ABSPATH' ) || exit;
 
 
 
+<!--
 
 
 	
@@ -241,6 +242,7 @@ foreach ( $cats as $category ) {
 </div>
 	
 	
+-->
 
 
 <!--
@@ -335,12 +337,7 @@ foreach ( $cats as $category ) {
             text-align: center;
             text-transform: uppercase;
         }
-        .mainpage-categories-inner a.mainpage-categories-inner-big {
-            max-width: 180px;
-        	margin: 0 auto 15px auto;
-            padding: 13px 0 10px;
-            line-height: 24px;
-        }
+        
         .mainpage-categories-inner .products.columns-4 {
         	padding: 0 !important;
         	margin-bottom: 0 !important;

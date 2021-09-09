@@ -2694,6 +2694,7 @@ ul.products li.pif-has-gallery a.woocommerce-loop-product__link .wp-post-image--
     font-family: $bold;
     @include media-breakpoint-down(xs) {
       font-size: 30px;
+      max-width: 300px;
     }
   }
 }
@@ -3321,4 +3322,47 @@ padding-top: 5px;
 }
 .pay-icos img {
     margin: 0 10px 0 10px;
+}
+
+
+
+
+
+
+
+.mainpage-categories-inner a.mainpage-categories-inner-big {
+  max-width: 180px;
+  margin: 0 auto 15px auto;
+  padding: 13px 0 10px;
+  line-height: 24px;
+  @include media-breakpoint-down(xs) {
+    padding: 7px 0 10px;
+    line-height: 12px;
+  }
+}
+
+
+
+.mainpage-subscribe-title h2 {
+	font-family: ZIGZAG-NotRounded;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #000000;
+	margin-bottom: 15px;
+}
+.home .mainpage-subscribe-title h2 {
+	font-family: ZIGZAG-NotRounded;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 72px;
+    text-align: center;
+    color: #000000;
+	margin-bottom: 25px;
+  @include media-breakpoint-down(xs) {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 15px;
+  }
 }

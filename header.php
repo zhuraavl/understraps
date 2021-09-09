@@ -678,7 +678,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     							jQuery('#page').css('overflow', 'hidden');
     						}
     					});
-    					
+    					jQuery('#page').on("click", function(){
+							jQuery('#page').css('height', '100%');
+							jQuery('#page').css('overflow', 'show');
+							jQuery(window).scrollTop(iScrolled);
+    					});
     				});
                     </script>
           			
