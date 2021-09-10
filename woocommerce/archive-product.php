@@ -250,7 +250,7 @@ get_footer( 'shop' );
     width: 100%;
     left: 0;
     height: auto !important;
-    z-index: 888;
+    z-index: 103;
 }
 .wpfFilterContent .wpfFilterVerScroll { 
 	max-height: 20000px !important;
@@ -304,7 +304,15 @@ get_footer( 'shop' );
 .wpfActiveReal .fa-minus {
 	opacity: 0.5;
 }
-  
+
+.wpfFilterVerScroll li label {
+	text-align: center;  
+}
+.wpfLoaderLayout,
+.wpfPreviewLoader {
+	display: none !important;
+}
+
   
 </style>
 <script>
@@ -332,5 +340,14 @@ jQuery( document ).ready(function() {
 		jQuery(this).toggleClass('wpfActiveReal');
 	});	
 	jQuery('.wpfMainWrapper').hide();
+
+	jQuery('.wpfFilterTitle').on('click', function(){
+		jQuery('.wpfFilterContent').addClass('wpfHide');
+		jQuery('.wpfFilterContent').addClass('wpfBlockAnimated');
+		jQuery('.wpfFilterWrapper').not(jQuery(this).parent()).removeClass('wpfActiveReal');
+		jQuery('.wpfFilterTitle').not(this).children('.fa-minus').removeClass('fa-minus').addClass('fa-plus');
+		jQuery(this).closest('.wpfFilterContent').removeClass('wpfHide');
+		jQuery(this).closest('.wpfFilterContent').removeClass('wpfBlockAnimated');
+	});
 });
 </script>

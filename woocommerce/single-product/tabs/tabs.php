@@ -45,7 +45,7 @@ if ( ! empty( $product_tabs ) ) : ?>
 			if($prod_id) {
 			?>
 			<li style="padding: 0 0.5em;">
-					<a class="" href="javascript:void(0);" id="chart-button">SIZE GUIDE</a>
+					<p class="" id="chart-button">SIZE GUIDE</p>
             	<script>
             	(function($) {
 
@@ -69,8 +69,17 @@ if ( ! empty( $product_tabs ) ) : ?>
             	</script>
             	<style>
             	.woocommerce div.product {
-            		z-index: 9999;
+            		z-index: 104;
             	}
+                .woocommerce div.product .woocommerce-tabs ul.tabs li p {
+                    font-size: 12px;
+                    font-weight: 400;
+                	cursor: pointer;
+                	display: inline-block !important;
+                }
+                .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+                    background: transparent !important;
+                }
             	</style>
 			</li>
 			<?php 
