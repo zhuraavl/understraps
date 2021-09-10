@@ -304,6 +304,7 @@ get_footer( 'shop' );
 .wpfActiveReal .fa-minus {
 	opacity: 0.5;
 }
+
 .wpfFilterVerScroll li label {
 	text-align: center;  
 }
@@ -311,6 +312,7 @@ get_footer( 'shop' );
 .wpfPreviewLoader {
 	display: none !important;
 }
+
   
 </style>
 <script>
