@@ -927,6 +927,10 @@ p#order_comments_field label {
   }
 }
 
+.content-area {
+  padding: 0;
+}
+
 
 .woocommerce-checkout {
   .site-main {
@@ -1400,12 +1404,14 @@ p#order_comments_field label {
   }
   
   .product {
-    margin: 0 -2px 15px !important;
-  float: none !important;
+    margin: 0 0px 15px !important;
+    float: none !important;
     display: inline-block;
-    max-width: 220px;
+    max-width: 150px;
+    padding: 0 15px;
     @include media-breakpoint-down(xs) {
-      max-width: 150px;
+      max-width: 125px;
+      padding: 0 10px;
     }
     .product-info-single-main {
       padding: 0; 
@@ -1440,6 +1446,9 @@ p#order_comments_field label {
     }
     img {
       max-width: 140px;
+      @include media-breakpoint-down(xs) {
+        max-width: 100%;
+      }
     }
   }
 }
