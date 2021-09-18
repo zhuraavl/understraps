@@ -83,7 +83,7 @@ if ( post_password_required() ) {
     				var eh = $(target).outerHeight();  
     				var et = $(target).offset().top;
 
-    				if (wt + wh >= et && wt + wh - eh * 2 <= et + (/*wh*/ 50 - eh)){
+    				if (wt + wh >= et && wt + wh - eh * 2 <= et + (/*wh*/ 0 - eh - 30)){
     					return true;
     				} else {
     					return false;    
@@ -121,9 +121,7 @@ if ( post_password_required() ) {
 		 })(jQuery); 		   	
     </script>
     <style>
-    .woocommerce.woocommerce-page .related-category .product, .woocommerce.woocommerce-page .string-grid-products .product {
-            max-width: 140px;
-    }
+    
     .woocommerce.woocommerce-page .related-category .product img, .woocommerce.woocommerce-page .string-grid-products .product img {
     	padding: 0;
     }
@@ -232,7 +230,7 @@ if ( post_password_required() ) {
 		            if ( $products->have_posts() ) {
 		                ?>
 		                <div class="text-center product-brand-bottom-title">
-                         <p>OTHER IN <?php echo do_shortcode( '[custom_pwb_brandtitle]' ); ?></p>
+                          <p>By <span class="bold"><?php echo do_shortcode( '[custom_pwb_brandtitle]' ); ?></span></p>
                           
                         </div>
                         
@@ -271,7 +269,7 @@ if ( post_password_required() ) {
 <!--/////////-->
 <div class="row py-5">
   <div class="col-12 px-0">
-<div class="text-center text-uppercase"><p class="small-title">OTHER IN  <?php echo wc_get_product_category_list($product->get_id()) ?></p></div>
+<div class="text-center text-uppercase"><p class="small-title"><?php echo wc_get_product_category_list($product->get_id()) ?></p></div>
 <div class="related-category pt-3">
 <?php
 
