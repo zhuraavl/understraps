@@ -83,7 +83,7 @@ if ( post_password_required() ) {
     				var eh = $(target).outerHeight();  
     				var et = $(target).offset().top;
 
-    				if (wt + wh >= et && wt + wh - eh * 2 <= et + (/*wh*/ 50 - eh)){
+    				if (wt + wh >= et && wt + wh - eh * 2 <= et + (/*wh*/ 0 - eh - 30)){
     					return true;
     				} else {
     					return false;    

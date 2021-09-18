@@ -122,12 +122,12 @@ $container = get_theme_mod( 'understrap_container_type' );
         <?php 
   		  if(isset($_GET['opencart'])) {
   		?>
-  			console.log('111');
-
   			jQuery('#menu-item-dropdown-bag').trigger("click");
-  			//jQuery('#bag-link').addClass("show");
-  			//jQuery('#bag-link ul').addClass("show");
-  			//jQuery('#menu-item-dropdown-bag').attr("aria-expanded", "true");
+  			var iScrolled = 0;
+			iScrolled = jQuery(window).scrollTop();
+			jQuery(window).scrollTop(0);
+			jQuery('#page').css('height', '100px');
+			jQuery('#page').css('overflow', 'hidden');
   		<?php 
   	        }
   		?>

@@ -91,7 +91,7 @@ header#hedaer ul.brand-dropdown.dropdown-menu.show {
     }
     body header#hedaer ul.dropdown-menu.show {
     	top: 40px!important;
-    	padding-top: 100px;
+    	padding-top: 120px;
     	padding-bottom: 100px !important;
     }
     #main-menu > li > ul {
@@ -373,6 +373,11 @@ header#hedaer ul.brand-dropdown.dropdown-menu.show {
     	display: inline-block;
     }
     @media (max-width: 600px) {
+        body header#hedaer ul.dropdown-menu.show {
+        	top: 20px!important;
+        	padding-top: 120px;
+        	padding-bottom: 100px !important;
+        }
         #main-menu > li > ul > li {
         	width: 48%;
         	vertical-align: top;
@@ -679,9 +684,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     						}
     					});
     					jQuery('#page').on("click", function(){
-							jQuery('#page').css('height', '100%');
-							jQuery('#page').css('overflow', 'show');
-							jQuery(window).scrollTop(iScrolled);
+    						if(jQuery('#menu-item-dropdown-brands').attr('aria-expanded') == 'true' || jQuery('#menu-item-dropdown-bag').attr('aria-expanded') == 'true') {
+    							jQuery('#page').css('height', '100%');
+    							jQuery('#page').css('overflow', 'show');
+    							jQuery(window).scrollTop(iScrolled);
+    						}
     					});
     				});
                     </script>
