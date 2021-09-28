@@ -66,7 +66,7 @@ defined( 'ABSPATH' ) || exit;
 
 
 
-<div class="mainpage-categories mt-5">
+<div class="mainpage-categories mt-3">
 	<div class="mainpage-categories-inner">
 	<?php 
 		
@@ -294,137 +294,7 @@ foreach ( $cats as $category ) {
 	<?php wp_footer(); ?>
 	
 	<style>
-        .minpage-brands {
-        	margin: 40px 0px 20px 0px;
-        }
-        .minpage-brands a img {
-        	max-height: 70px;
-        	margin: 0 auto 0 auto;
-        }
-        .minpage-brands a {
-        	display: inline-block;
-        	
-        	text-align: center;
-        }
-        .minpage-brands a span {
-        	font-family: ZIGZAG-NotRounded;
-            font-size: 16px;
-            line-height: 19px;
-            text-align: center;
-            text-transform: uppercase;
-        }
-        .mainpage-categories {
-        	display: inline-block;
-        	text-align: center;
-        	width: 100%;
-        	
-        }
-        .mainpage-categories-inner {
-        	display: inline-block;
-        	vertical-align: bottom;
-        	margin: 0 38px 0 38px;
-        	width: 180px;
-        	text-align: center;
-        }
-        .mainpage-categories-inner a {
-        	display: block;
-        	vertical-align: bottom;
-        	float: none;
-            width: 100%;
-        	/* font-family: GT America;*/
-            font-size: 12px;
-            line-height: 32px;
-            text-align: center;
-            text-transform: uppercase;
-        }
         
-        .mainpage-categories-inner .products.columns-4 {
-        	padding: 0 !important;
-        	margin-bottom: 0 !important;
-        }
-        .featires.my-3.main-line {
-        	max-width: 100%;
-        	margin-top: 60px !important;
-        }
-        .featires.my-3.main-line img {
-        	height: 280px !important;
-        	width: auto;
-        }
-        .woocommerce ul.products.columns-1 li.product {
-        	margin: 0!important;
-           
-        	vertical-align: bottom;
-        }
-        .mainpage-recent-brands {
-            position: relative;
-            overflow: hidden;
-        }
-        .mainpage-recent-brands-wrapper {
-        	width: 50%;
-        	display: inline-block;
-        	vertical-align: bottom;
-        	padding: 0 3% 0 3%;
-        	float: left;
-        	margin-bottom: 30px;
-        }
-        
-        .mainpage-recent-brands-wrapper a {
-        	font-family: ZIGZAG-NotRounded;
-            font-size: 24px;
-            line-height: 29px;
-            text-align: center;
-        	width: 100%;
-        	display: inline-block;
-        	text-align: center;
-        	margin-top: 20px;
-        }
-        .big-dots {
-        	width: 100%;
-        	text-align: center;
-        	margin: 33px 0 70px 0;
-        }
-        .big-dots div {
-        	width: 25px;
-            height: 25px;
-            background: #000000;
-        	border-radius: 25px;
-        	margin: 0 5px 0 5px;
-        	display: inline-block;
-        	vertical-align: top;
-        }
-        .mainpage-subscribe {
-        	margin-top: 25px;
-        }
-        @media (max-width: 600px) {
-            .minpage-brands {
-            	margin: 30px 0 30px 0;
-            }
-            .minpage-brands a span {
-                font-family: Roboto;
-                font-size: 14px;
-                line-height: 16px;
-                text-align: center;
-                text-transform: uppercase;
-            }
-            .mainpage-categories-inner {
-            	display: inline-block;
-            	vertical-align: top;
-            	margin: 0 8px 0 8px;
-            	width: 110px;
-            	text-align: center;
-            }
-            .mainpage-categories-inner a {
-                font-size: 10px;
-                line-height: 24px;
-            }
-            .mainpage-recent-brands-wrapper { 
-            	width: 100%;
-            	display: none;
-            }
-            .mainpage-recent-brands-wrapper:first-child { 
-            	display: inline-block;
-            }
-        }
     </style>
 	
 	<script>

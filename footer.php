@@ -162,9 +162,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	display: none;
 }
 
-.home .socs {
-	margin-bottom: 85px;
-}
+
 #wrapper-footer {
     margin-top: 0 !important;
     padding-top: 0 !important;
