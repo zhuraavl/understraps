@@ -52,15 +52,18 @@ if ( ! empty( $product_tabs ) ) : ?>
             		$('.tabs #chart-button').click(function() {
             			var modal = document.getElementById('md-size-chart-modal');
             			modal.style.display = 'block';
-            			$('.tabs #chart-button').hide();
+            			$('.woocommerce div.product').css('z-index', '104');
+            			$('.woocommerce-tabs').hide();
             		});
             		$('.outer-height-buy .button-wrapper').hide();
             		$('div#md-size-chart-modal .remodal-close').click(function() {
-            			$('.tabs #chart-button').show();
+            			$('.woocommerce-tabs').show();
+            			$('.woocommerce div.product').css('z-index', '100');
             		});
 
             		$('div.md-size-chart-overlay').click(function() {
-            			$('.tabs #chart-button').show();
+            			$('.woocommerce-tabs').show();
+            			$('.woocommerce div.product').css('z-index', '100');
             		});
 
             		
@@ -69,7 +72,7 @@ if ( ! empty( $product_tabs ) ) : ?>
             	</script>
             	<style>
             	.woocommerce div.product {
-            		z-index: 104;
+            		/*z-index: 104;*/
             	}
                 .woocommerce div.product .woocommerce-tabs ul.tabs li p {
                     font-size: 12px;

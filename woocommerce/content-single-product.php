@@ -51,8 +51,11 @@ if ( post_password_required() ) {
   
 </div>
 -->
-
-
+<script>
+(function($) {
+	$('#page').append('<div class="prod-titles" style="text-align: center;"><h2 class="brand-name"><?php echo do_shortcode( '[custom_pwb_brandtitle]' ); ?></h2><h4><?php echo do_shortcode( '[product_name]' ); ?></h4></div>');
+})(jQuery);
+</script>
 
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
   <div class="product-images parallax-container">
@@ -70,11 +73,7 @@ if ( post_password_required() ) {
   
   </div>
   
-    <div class="prod-titles">
-      <h2 class="brand-name"><?php echo do_shortcode( '[custom_pwb_brandtitle]' ); ?></h2>
- 
-      <h4><?php echo do_shortcode( '[product_name]' ); ?></h4>
-    </div>
+    
     <script>
 		(function($) {
     			function is_shown(target) {
