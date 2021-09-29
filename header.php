@@ -15,6 +15,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+
+
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
@@ -373,6 +378,9 @@ header#hedaer ul.brand-dropdown.dropdown-menu.show {
     	display: inline-block;
     }
     @media (max-width: 600px) {
+    	#main #wpfBlock_1 li {
+    		width: 50% !important;
+        }
         body header#hedaer ul.dropdown-menu.show {
         	top: 20px!important;
         	padding-top: 120px;
@@ -515,7 +523,7 @@ header#hedaer ul.brand-dropdown.dropdown-menu.show {
         }
 	});
 </script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/jquery.cookie.js"></script>	
+<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/jquery.cookie.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
