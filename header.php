@@ -75,6 +75,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type='text/javascript' src='/wp-content/plugins/perfect-woocommerce-brands/assets/lib/slick/slick.min.js' id='pwb-lib-slick-js'></script>
 	
 <style>
+    .product .summary {
+    	height: 90px;
+    }
+    .outer-height-tabs {
+    	height: 173px;
+    }
+
+
 header#hedaer ul.dropdown-menu.show {
 	max-height: 100000000000px !important;
 }
