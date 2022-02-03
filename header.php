@@ -104,8 +104,8 @@ header#hedaer ul.brand-dropdown.dropdown-menu.show {
     }
     body header#hedaer ul.dropdown-menu.show {
     	top: 40px!important;
-    	padding-top: 120px;
-    	padding-bottom: 100px !important;
+    	padding-top: 40px;
+    	padding-bottom: 50px !important;
     }
     #main-menu > li > ul {
     	padding-left: 10%;
@@ -554,8 +554,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="site" id="page">
     
-  <img class="volume-icon" src="">
-<a href="/" class="volume-icon-box"></a>
+  
 	
 
 
@@ -756,6 +755,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</li>
 					</ul>
 				</li>
+<!--
 				<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6917" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-6917 nav-item">
           			<a title="search" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-6917">search</a>
 					<ul class="dropdown-menu search-dropdown" aria-labelledby="menu-item-dropdown-6917" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(372px, 38px, 0px);">
@@ -766,6 +766,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</li>
 					</ul>
 				</li>
+-->
 				
 				<li id="bag-link">
 				

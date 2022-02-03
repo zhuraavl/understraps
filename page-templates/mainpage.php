@@ -43,13 +43,15 @@ defined( 'ABSPATH' ) || exit;
        
        
         
-	<div class="hero-box mt-5">
+<!--
+	<div class="hero-box">
  
-    <h2 class="">NEWEST FASHION BRANDS</h2>
-<!--    <p class="hero-descr"></p>-->
+    <h5 class="">NEWEST FASHION BRANDS</h5>
+    <p class="hero-descr"></p>
 
 </div>
-
+-->
+<div class="py-4"></div>
 <div class="featires main-line">
   <?php echo do_shortcode( "[featured_products per_page='15' columns='1' orderby='rand' order='ASC']" ); ?>
   <!--
@@ -67,6 +69,7 @@ defined( 'ABSPATH' ) || exit;
 
 
 <div class="mainpage-categories mt-3">
+<!--
 	<div class="mainpage-categories-inner">
 	<?php 
 		
@@ -108,6 +111,8 @@ defined( 'ABSPATH' ) || exit;
     
 
 	</div>
+-->
+<!--
 	<div class="mainpage-categories-inner">
 		
 		<?php 
@@ -148,6 +153,7 @@ defined( 'ABSPATH' ) || exit;
         <a href="/product-category/women/women-accessories/">Accessories</a>
 		
 	</div>
+-->
 </div>
 
 

@@ -83,20 +83,20 @@ body {
 
 
 h1.hero-title {
-  font-size: 60px;
+  font-size: 18px;
   max-width: 500px;
   text-align: center;
   line-height: 1.1;
   margin: 0 auto;
-  margin-top: 45px;
+  margin-top: 5px;
   margin-bottom: 0px;
   font-family: $bold;
   //font-family: 'One';
   @include media-breakpoint-down(xs) {
    
 
-    font-size: 30px;
-    margin-top: 35px;
+    font-size: 16px;
+    margin-top: 0px;
   }
   
 }
@@ -126,9 +126,7 @@ header#hedaer {
       padding: 0;
     }
   }
-  .dropdown-toggle {
-    text-transform: uppercase;
-  }
+  
   a {
     color: #000;
     font-size: 12px;
@@ -986,55 +984,57 @@ p#order_comments_field label {
     
   }
   
+  
+  
 }
 
-.diff-logo {
-  background: #fff;
-}
+
+//.diff-logo {
+//  background: #fff;
+//}
 
 .volume-icon-box {
-  position: fixed;
+  
   width: 160px;
   text-align: center;
-  z-index: 10001;
-  top: 5px;
-  left: 0;
+//  z-index: 10001;
+  
   right: 0;
-  height: 50px;
+//  height: 50px;
   margin: auto;
   border: 0;
-  opacity: 0;
+//  opacity: 0;
   @include media-breakpoint-down(xs)  {
     width: 120px;
     top: 10px;
   }
 }
 
-.volume-icon {
-  mix-blend-mode: difference;
-  position: fixed;
-  width: 100%;
-  text-align: center;
-  z-index: 10000;
-  top: 0px;
-  left: 0;
-  right: 0;
-  height: 30px !important;
-  margin: auto;
-  overflow: hidden;
-  @include media-breakpoint-down(xs)  {
-  }
-}
-.volume-icon, .volume-icon-box {
-  transform: translateY(72px);
-  transition: all 0.2s ease-in-out;
-  &.logo-down {
-    transform: translateY(72px);
-  }
-  &.logo-up {
-    transform: translateY(20px);
-  }
-}
+//.volume-icon {
+//  mix-blend-mode: difference;
+//  position: fixed;
+//  width: 100%;
+//  text-align: center;
+//  z-index: 10000;
+//  top: 0px;
+//  left: 0;
+//  right: 0;
+//  height: 30px !important;
+//  margin: auto;
+//  overflow: hidden;
+//  @include media-breakpoint-down(xs)  {
+//  }
+//}
+//.volume-icon, .volume-icon-box {
+//  transform: translateY(72px);
+//  transition: all 0.2s ease-in-out;
+//  &.logo-down {
+//    transform: translateY(72px);
+//  }
+//  &.logo-up {
+//    transform: translateY(20px);
+//  }
+//}
 
 
 #wrapper-footer {
@@ -1530,13 +1530,13 @@ p#order_comments_field label {
   
   
   h1.hero-title {
-    font-size: 60px;
+    font-size: 18px;
     max-width: 500px;
     margin-bottom: 0px;
     
     
     @include media-breakpoint-down(xs) {
-      font-size: 30px;
+      font-size: 16px;
       margin-top: 0px;
     }
   }
@@ -1591,7 +1591,7 @@ p#order_comments_field label {
 
 .archive {
   .wrapper {
-    padding-top: 50px; 
+    
   }
   .woocommerce-info {
     text-align: center;
@@ -3293,10 +3293,12 @@ padding-top: 5px;
   list-style: none;
   }
   
+  
+  
   li {
     display: inline-block;
     a {
-      text-transform: uppercase;
+      
       padding: 0 10px !important;
       @include media-breakpoint-down(xs) {
         padding: 0 5px !important;
@@ -3304,6 +3306,7 @@ padding-top: 5px;
     }
   }
 }
+
 
 
 .wpfFilterWrapper {
@@ -3398,4 +3401,18 @@ padding-top: 5px;
 }
 .md-size-chart-modal-body {
   padding: 30px 10px;
+}
+
+
+ul.wc_payment_methods.payment_methods .wc-stripe_cc-container.wc-stripe-gateway-container{
+  border: 1px solid;
+  padding-top: 15px;
+  border-radius: 15px;
+}
+ul.wc_payment_methods.payment_methods + p.h2 {
+    display: none !important;
+  }
+
+.understrap.woocommerce .tabs.wc-tabs {
+  display: none !important;
 }

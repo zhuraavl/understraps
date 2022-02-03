@@ -16,20 +16,33 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
 
+<!--
+<img class="volume-icon" src="">
+<a href="/" class="volume-icon-box"></a>
+-->
+
+
+
+<!--
+<div class="socs">
+		<a href="https://www.instagram.com/2020s.shop.official/"><img src="/wp-content/themes/understrap/pic/instagram-2.svg" alt="" width="20px"></a>
+		
+		<a href=""><img src="/wp-content/themes/understrap/pic/pin.svg" alt="" width="20px"></a>
+		
+	</div>
+-->
+
+<!--
 <section class="white-bg subscribe-and-socials-footer mb-5">
 <div class="hero-box mainpage-subscribe-title">
     <h2 class="">Subscribe to our<br/>updates</h2>
 </div>
 <div class="mainpage-subscribe">
 	<?php echo do_shortcode('[contact-form-7 id="233" title="Contact form 1"]') ?>  
-	<div class="socs">
-		<a href="https://www.instagram.com/2020s.shop.official/"><img src="/wp-content/themes/understrap/pic/instagram-2.svg" alt="" width="20px"></a>
-		<a href=""><img src="/wp-content/themes/understrap/pic/face.svg" alt="" width="10px"></a>
-		<a href=""><img src="/wp-content/themes/understrap/pic/pin.svg" alt="" width="20px"></a>
-		<a href=""><img src="/wp-content/themes/understrap/pic/twitt.svg" alt="" width="20px"></a>
-	</div>
+	
 </div>
 </section>
+-->
 
 
 
@@ -62,9 +75,13 @@ $container = get_theme_mod( 'understrap_container_type' );
        <li><a href="/about/">About</a></li>
        <li><a href="/shipping/">Ship & Return</a></li>
        <li><a href="/terms/">Terms</a></li>
-       <li><a href="/contact/">Contact</a></li>
+       <li>
+          <a href="https://www.instagram.com/2020s.shop.official/"><img src="/wp-content/themes/understrap/pic/instagram-2.svg" alt="" width="15px"></a>
+        </li>
+<!--       <li><a href="/contact/">Contact</a></li>-->
         
         
+<!--
         <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6917">
 				
 					<div style="display: none !important"><?php echo do_shortcode('[woo-currency-switcher]')?></div>
@@ -89,15 +106,19 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<?php }?>
 					</ul>
 				</li>
+-->
         
+<!--        <li><a href=""><img src="/wp-content/themes/understrap/pic/pin.svg" alt="" width="20px"></a></li>-->
         </ul>
       </div>
-     <div class="pay-icos text-center">
+<!--     <div class="pay-icos text-center">-->
 <!--        <img src="< ?php echo get_template_directory_uri(); ?>/pic/image7.svg" alt="" class="mx-1" width="35px">-->
+<!--
         <img src="<?php echo get_template_directory_uri(); ?>/pic/image8.svg" alt="" class="mx-1" width="35px">
         <img src="<?php echo get_template_directory_uri(); ?>/pic/image10.svg" alt="" class="mx-1" width="35px">
         <img src="<?php echo get_template_directory_uri(); ?>/pic/image9.svg" alt="" class="mx-1" width="35px">
-     </div>
+-->
+<!--     </div>-->
       
 
 	
